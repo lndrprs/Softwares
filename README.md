@@ -73,14 +73,33 @@
   </details>
 
   <details>
-  <summary> 1.2 Modelos de Dados </summary>
+  <summary> 1.2 Modelos de Dados e Métricas </summary>
   <div>
 
-    - 
+    - Prometheus armazena todos os dados como séries temporais: sequências de valores associados a timestamps que pertencem à mesma métrica;
+    - Cada série temporal é identificada exclusivamente por:
+      - Nome da Métrica;
+      - Pares opcionais de Chave / Valors (Labels) 
+
+    - Dimensões diferentes da métrica são "modelos de dados dimensionais";
+    - Labels são instâncias diferentes de uma mesma métrica - ou seja, as dimensões diferentes;
+
+    - Tipos de Métricas 
+      - Counter: Métrica cumulativa que representa um único contador crescente
+        - Só pode aumentar;
+        - Pode ser reiniciado para zero quando há restart;
+        - Para números que podem diminuir, counter não é indicado;
+        - "Quanto já aconteceu". 
+
+      - Gauge: Métrica de único valor número que pode aumentar ou diminuir livremente; 
+        - Temperatura, utilização de memória, CPU, conexões, etc.; 
+        - "Quanto existe agora". 
 
   </div>
   </details>  
 
 <br>
+
+</div>
 
 ----
