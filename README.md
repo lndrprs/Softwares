@@ -25,7 +25,11 @@
   <div>
 
     - Prometheus é um sistema de monitoramento e alerta Open Source, criado originalmente na SoundCloud;
-    - Foi adicionado na CNCF (Cloud Native Computing Foundation) em 2016, sendo o segundo projeto hospedado após Kubernetes.  
+    - Foi adicionado na CNCF (Cloud Native Computing Foundation) em 2016, sendo o segundo projeto hospedado após Kubernetes. Ou seja, é Cloud Native;
+    - A maioria dos componentes do Prometheus são escritos em Go; 
+    - Prometheus não coleta Logs, sendo voltado para métricas; 
+    - Para Alertas, é usado o ALertmanager;
+    - Para Exportadores: <a href="https://prometheus.io/docs/instrumenting/exporters/">Exporters</a>
   
     - Características: 
       • Modelo de dados multidimensional, com dados de séries temporais identificados pelo nome da métrica e por pares de chave/valor.  
@@ -69,7 +73,7 @@
   </details>
 
   <details>
-  <summary> 1.2 Primeiros Passos </summary>
+  <summary> 1.2 Modelos de Dados </summary>
   <div>
 
     - 
@@ -80,5 +84,3 @@
 <br>
 
 ----
-
-</div>
