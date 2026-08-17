@@ -73,7 +73,7 @@
   </details>
 
   <details>
-  <summary> 1.2 Modelos de Dados e Métricas </summary>
+  <summary> 1.2 Conceitos </summary>
   <div>
 
     - Prometheus armazena todos os dados como séries temporais: sequências de valores associados a timestamps que pertencem à mesma métrica;
@@ -95,6 +95,20 @@
         - Temperatura, utilização de memória, CPU, conexões, etc.; 
         - "Quanto existe agora". 
 
+      - Histogram: Registra observações, como duração das requisições, tamanho das respostas, latência...
+        - Contabiliza essas observaçoes em buckets / intervalos configuráveis; 
+        - Também fornece a soma de todos os valores observados e quantidade total de observações.  
+          
+      - Summary: Similar ao Histogram, gera amostras de observações e calcula quantis configuráveis em uma janela de tempo;
+        - Exemplo: p50, p90, p99. 
+
+    - Jobs e Instâncias
+      - Um endpoint que pode ser "raspado" é uma instância, correspondendo a um processo; 
+      - Conjuntos de instâncias com o mesmo propósito, é um job. Exemplo:
+          - job: api-server 
+            - instância 1: 1.2.3.4:5670
+            - instância 3: 1.2.3.4:5671
+            
   </div>
   </details>  
 
