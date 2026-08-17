@@ -15,7 +15,7 @@
 
 
 <details>
-  <summary><b> 1. Prometheus </b></summary>
+  <summary><b> 1. Prometheus - Referência: <a href="https://prometheus.io/docs/introduction/overview/"> Documentação Técnica</a></b></summary>
   <div align="left">
     
 <br>
@@ -61,7 +61,6 @@
       • Os targets / alvos são descobertos por meio do Service Discovery ou Configuração Estática;
         - Prometheus consegue descobrir automaticamente os alvos;
         - Isso porque ele verifica o "namespace" total, e não os pods de forma unitária.
-
 
       • Suporte a vários modos de geração de gráficos e Dashboards 
         - É possível verificar acessando o endpoint /graph 
