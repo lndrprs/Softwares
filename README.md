@@ -29,7 +29,7 @@
     - A maioria dos componentes do Prometheus são escritos em Go; 
     - Prometheus não coleta Logs, sendo voltado para métricas; 
     - Para Alertas, é usado o Alertmanager;
-    - Para Exportadores: <a href="https://prometheus.io/docs/instrumenting/exporters/"> Exporters</a>
+    - Para Exportadores: <a href="https://prometheus.io/docs/instrumenting/exporters/">Exporters</a>
   
     - Características: 
       • Modelo de dados multidimensional, com dados de séries temporais identificados pelo nome da métrica e por pares de chave/valor.  
