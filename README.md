@@ -28,8 +28,8 @@
     - Foi adicionado na CNCF (Cloud Native Computing Foundation) em 2016, sendo o segundo projeto hospedado após Kubernetes. Ou seja, é Cloud Native;
     - A maioria dos componentes do Prometheus são escritos em Go; 
     - Prometheus não coleta Logs, sendo voltado para métricas; 
-    - Para Alertas, é usado o ALertmanager;
-    - Para Exportadores: <a href="https://prometheus.io/docs/instrumenting/exporters/">Exporters</a>
+    - Para Alertas, é usado o Alertmanager;
+    - Para Exportadores: <a href="https://prometheus.io/docs/instrumenting/exporters/"> Exporters</a>
   
     - Características: 
       • Modelo de dados multidimensional, com dados de séries temporais identificados pelo nome da métrica e por pares de chave/valor.  
