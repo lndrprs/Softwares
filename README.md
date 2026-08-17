@@ -108,11 +108,9 @@
           - job: api-server 
             - instância 1: 1.2.3.4:5670
             - instância 3: 1.2.3.4:5671
-            
+
   </div>
   </details>  
-
-<br>
 
 ----
 
