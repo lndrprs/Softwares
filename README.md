@@ -116,7 +116,7 @@
   <summary> 1.3 Servidor Prometheus </summary>
   <div>
 
-    - Prometheus coleta as métricas a partir da consiguração de alvos / targets, raspando endpoints HTTP;
+    - Prometheus coleta as métricas a partir da configuração de alvos / targets, raspando endpoints HTTP;
     - Ele mesmo expões métricas próprias para monitoramento da própria saúde: localhost:9090/metrics;
     - A configuração é feita no arquivo: prometheus.yml 
       - Guia de Configuração: https://prometheus.io/docs/prometheus/latest/configuration/configuration/
@@ -124,7 +124,24 @@
     - Para montagem de um ambiente teste com o Docker, ver as imagens: https://hub.docker.com/u/prom
       - Demais processos de instalação: https://prometheus.io/docs/prometheus/latest/installation/
 
-    -     
+    - Prometheus possui 2 tipos de regras:
+      - Recording Rules: Pré-carrega expressões pesadas e salva o resultado como um novo conjunto de série temporal (Sendo mais rápido para consultar);
+      - Alerting Rules: Permite definir condições de alerta baseados nas expressões e envia notificações para serviços externos.     
+      - Os arquivos de regras devem ser carregados na configuração, em rule_files; 
+
+    - Templates 
+      - Servem para gerar conteúdos dinâmicos dentro das regras de alerta, anotações ou mensagens do AlertManager; 
+      - Como se fossem mini scripts dentro das regras, formatando strings, acessando labels, fazendo cálculos simples, etc. 
+      - Referências de Templates: https://prometheus.io/docs/prometheus/latest/configuration/template_reference/
+
+    - Promtool
+      - Ferramenta CLI do Prometheus, usada para testar, validar e depurar configurações e alertas; 
+      - Ele verifica YAML inválido, regras quebradas, alertas que não disparam, expressões PromQL malformadas, ou erros que só aparecem em runtime;
+      - Muito útil para ambientes de produção. 
+
+    - Agent Mode 
+
+
 
   </div>
   </details>    
