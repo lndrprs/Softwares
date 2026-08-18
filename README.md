@@ -112,6 +112,23 @@
   </div>
   </details>  
 
+  <details>
+  <summary> 1.3 Servidor Prometheus </summary>
+  <div>
+
+    - Prometheus coleta as métricas a partir da consiguração de alvos / targets, raspando endpoints HTTP;
+    - Ele mesmo expões métricas próprias para monitoramento da própria saúde: localhost:9090/metrics;
+    - A configuração é feita no arquivo: prometheus.yml 
+      - Guia de Configuração: https://prometheus.io/docs/prometheus/latest/configuration/configuration/
+
+    - Para montagem de um ambiente teste com o Docker, ver as imagens: https://hub.docker.com/u/prom
+      - Demais processos de instalação: https://prometheus.io/docs/prometheus/latest/installation/
+
+    -     
+
+  </div>
+  </details>    
+
 ----
 
 </div>
