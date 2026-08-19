@@ -151,6 +151,8 @@
         - Encaminha toas ou parte das métricas coletadas, para um local remoto; 
         - O Prometheus pode enviar as métricas para um ou mais destinos que suportem a API Remote Write.
 
+      - HTTP API   
+
 
   </div>
   </details>    
@@ -163,8 +165,10 @@
       - Linguagem de consultas funcional: Prometheus Query Language; 
       - Permite selecionar e agregar dados de séries temporais em tempo real; 
       - Tipos de Consulta:
-        - Instantânea (Instant Query): 
-        - Intervalo (Range Query): 
+        - Instantânea (Instant Query): único ponto no tempo;
+        - Intervalo (Range Query): intervalos igualmente espaçados entre um horário inicial e final.
+        - Na Interface Web do Prometheus, Table é para instantâneas e Graph para Intervalo.   
+      - Para Regras de Consulta do PromQL: https://prometheus.io/docs/prometheus/latest/querying/basics/  
 
 
   </div>
