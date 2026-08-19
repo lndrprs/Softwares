@@ -140,11 +140,36 @@
       - Muito útil para ambientes de produção. 
 
     - Agent Mode 
+      - No binário do Prometheus há também o modo Agente integrado; 
+        - Utiliza as mesmas APIs, semântica, configuração e mecanismos de descoberta do modo Servidor;
+        - Porém, alguns recursos são desativados: Consultas locais, TSDB, Alertas e Avaliação de Regras;
+        - O binário é otimizado para realizar a raspagem e enviar as métricas por meio do Remote Write;
+        - Utiliza apenas uma fração de recursos, em comparação ao modo Servidor;
+        - Para utilizar o modo agente: prometheus --agent 
 
+      - Remote Write 
+        - Encaminha toas ou parte das métricas coletadas, para um local remoto; 
+        - O Prometheus pode enviar as métricas para um ou mais destinos que suportem a API Remote Write.
 
 
   </div>
   </details>    
+
+  <details>
+  <summary> 1.4 Consultas | Querying </summary>
+  <div>
+
+    - PromQL 
+      - Linguagem de consultas funcional: Prometheus Query Language; 
+      - Permite selecionar e agregar dados de séries temporais em tempo real; 
+      - Tipos de Consulta:
+        - Instantânea (Instant Query): 
+        - Intervalo (Range Query): 
+
+
+  </div>
+  </details>    
+
 
 ----
 
