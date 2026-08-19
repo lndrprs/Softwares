@@ -147,28 +147,37 @@
         - Utiliza apenas uma fração de recursos, em comparação ao modo Servidor;
         - Para utilizar o modo agente: prometheus --agent 
 
-      - Remote Write 
+    - Remote Write 
         - Encaminha toas ou parte das métricas coletadas, para um local remoto; 
         - O Prometheus pode enviar as métricas para um ou mais destinos que suportem a API Remote Write.
 
-      - HTTP API   
+    - HTTP API   
+      - Para ver especificações da API: http://localhost:9090/api/v1/openapi.yml
+      - Exemplos de Consultas: 
+        - curl.exe 'localhost:9090/api/v1/query?query=up'          
+        - curl.exe 'localhost:9090/api/v1/labels'
+        - curl.exe 'localhost:9090/api/v1/query?query=node_cpu_seconds_total'
+      - Documentação para API: https://prometheus.io/docs/prometheus/latest/querying/api/ 
 
+      - Para Leitura Remota: curl.exe 'localhost:9090/api/v1/read'
 
-  </div>
-  </details>    
-
-  <details>
-  <summary> 1.4 Consultas | Querying </summary>
-  <div>
-
-    - PromQL 
+    - PromQL | Querying | Consultas
       - Linguagem de consultas funcional: Prometheus Query Language; 
       - Permite selecionar e agregar dados de séries temporais em tempo real; 
       - Tipos de Consulta:
         - Instantânea (Instant Query): único ponto no tempo;
         - Intervalo (Range Query): intervalos igualmente espaçados entre um horário inicial e final.
         - Na Interface Web do Prometheus, Table é para instantâneas e Graph para Intervalo.   
-      - Para Regras de Consulta do PromQL: https://prometheus.io/docs/prometheus/latest/querying/basics/  
+      - Para Regras de Consulta do PromQL: https://prometheus.io/docs/prometheus/latest/querying/basics/          
+
+  </div>
+  </details>    
+
+  <details>
+  <summary> 1.3 Armazenamento </summary>
+  <div>
+
+    - 
 
 
   </div>
