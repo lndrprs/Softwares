@@ -177,7 +177,33 @@
   <summary> 1.3 Armazenamento </summary>
   <div>
 
-    - 
+    - Prometheus possui um banco de dados local de séries temporais em disco;
+      - Opcionalmente, pode integrar-se a sistemas de armazenamento remoto. 
+
+    - Armazenamento Local 
+      - As amostras recebidas são agrupadas em blocos de duas horas. Cada bloco consiste em um diretório que possui:
+        - Diretório de Chunks: Todas as amostras das séries temporais daquele período (Segmentadas por até 512 MB por padrão);
+        - Arquivo de metadados;
+        - Arquivo de Índice: Mapeia nomes de métricas e labels para as séries temporais presentes no diretório Chunks;
+        - Arquivo Tombstones: Séries excluídas por meio da API. 
+
+      - O bloco atual que recebe novas amostras, fica mantido em memória e não é totalmente persistido; 
+        - Para proteção contra falhas, o Prometheus usa WAL (Write Ahead Log), que pode ser reproduzido quando o servidor Prometheus é reiniciado. 
+        - Os arquivos WAL ficam no diretório "wal", em segmentos de 128 MB;
+          - Possuem dados brutos que não foram compactados, e são significativamente maiores que os arquivos de blocos normais;
+          - Um servidor prometheus mantém no mínimo 3 arquivos WAL. Servidores com alto tráfego podem possuir mais. 
+
+      - O armazenamento local não é clusterizado, e nem replicado. Não oferecendo escalabilidade ou durabilidade em caso de falha de disco / nó;
+        - Deve ser administrado como qualquer outro banco de dados de nó único;
+        - Ainda sim, com uma arquitetura adequada, pode manter anos de dados no armazenamento local. 
+
+    - Backups 
+      - Os snapshots são recomendados para backups;
+        - Backups sem snapshots podem perder os dados registrados desde a criação do último bloco da TSDB, que ocorre a cada duas horas; 
+        - É possível utilizar armazenamento externo por meio das APIs de Remote Read / Remote Write. 
+
+    - Compactação 
+      - 
 
 
   </div>
