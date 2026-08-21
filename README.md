@@ -196,6 +196,10 @@
         3. Reload: /reload - Permite recarregar a configuração do Prometheus; 
         4. Quit: /quit - Desativa o Prometheus, graciosamente.     
 
+    - Linha de Comando 
+      - Para Flags relacionadas ao Prometheus: https://prometheus.io/docs/prometheus/latest/command-line/prometheus/
+      - Para Comandos Promtool: https://prometheus.io/docs/prometheus/latest/command-line/promtool/
+
   </div>
   </details>    
 
