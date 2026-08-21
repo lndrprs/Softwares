@@ -190,7 +190,11 @@
         - A lista de targets não é salva entre reinicializações. 
 
     - Management API 
-      -     
+      - Prometheus possui um conjunto de APIs de gerenciamento, que facilitam a automação e integração:
+        1. Health Check: /healthy - Retorna a saúde do Servidor;
+        2. Readiness Check: /ready - Retorna se consegue responder consultas / servir tráfego; 
+        3. Reload: /reload - Permite recarregar a configuração do Prometheus. 
+        4. Quit: /quit - Desativa o Prometheus, graciosamente.     
 
   </div>
   </details>    
