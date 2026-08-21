@@ -170,11 +170,14 @@
         - Na Interface Web do Prometheus, Table é para instantâneas e Graph para Intervalo.   
       - Para Regras de Consulta do PromQL: https://prometheus.io/docs/prometheus/latest/querying/basics/          
 
+    - Federação 
+      - Permite que um servidor Prometheus colete séries temporais selecionadas de outro servidor Prometheus;   
+
   </div>
   </details>    
 
   <details>
-  <summary> 1.3 Armazenamento </summary>
+  <summary> 1.4 Armazenamento </summary>
   <div>
 
     - Prometheus possui um banco de dados local de séries temporais em disco;
@@ -187,13 +190,25 @@
         - Arquivo de Índice: Mapeia nomes de métricas e labels para as séries temporais presentes no diretório Chunks;
         - Arquivo Tombstones: Séries excluídas por meio da API. 
 
-      - O bloco atual que recebe novas amostras, fica mantido em memória e não é totalmente persistido; 
+      - Flags mais importantes de configuração do armazenamento local:
+        --storage.tsdb.path: Onde o Prometheus grava o banco de dados (Padrão: data/)
+        --storage.tsdb.retention.time: Por quanto tempo deve reter amostras no armazenamento; 
+        --storage.tsdb.retention.size: Número máximo de bytes de blocos de armazenamento a reter;   
+        --storage.tsdb.wal-compression: Habilita compressão do WAL. 
+
+      - Fórmula aproximada para calcular a capacidade de um servidor Prometheus:
+        - Espaço em Disco Necessário = Tempo de retenção em segundos * Amostras por Segundo * Bytes por Amostra 
+
+        Obs.: Para reduzir a taxa de amostras ingeridas, pode reduzir o número de séries temporais coletadas (Menos targets / menos séries por target), ou aumentar o intervalo de coleta (Scrape Interval). Sendo o primeiro mais eficaz. 
+
+      - WAL - Write Ahead Log   
+        - O bloco atual que recebe novas amostras, fica mantido em memória e não é totalmente persistido; 
         - Para proteção contra falhas, o Prometheus usa WAL (Write Ahead Log), que pode ser reproduzido quando o servidor Prometheus é reiniciado. 
         - Os arquivos WAL ficam no diretório "wal", em segmentos de 128 MB;
           - Possuem dados brutos que não foram compactados, e são significativamente maiores que os arquivos de blocos normais;
           - Um servidor prometheus mantém no mínimo 3 arquivos WAL. Servidores com alto tráfego podem possuir mais. 
 
-      - O armazenamento local não é clusterizado, e nem replicado. Não oferecendo escalabilidade ou durabilidade em caso de falha de disco / nó;
+        - O armazenamento local não é clusterizado, e nem replicado. Não oferecendo escalabilidade ou durabilidade em caso de falha de disco / nó;
         - Deve ser administrado como qualquer outro banco de dados de nó único;
         - Ainda sim, com uma arquitetura adequada, pode manter anos de dados no armazenamento local. 
 
@@ -203,7 +218,27 @@
         - É possível utilizar armazenamento externo por meio das APIs de Remote Read / Remote Write. 
 
     - Compactação 
-      - 
+      - Em segundo plano, os blocos iniciais de duas horas são compactados em blocos maiores; 
+      - A compactação cria blocos maiores contendo dados que abrangem até 10% do tempo de retenção, ou 31 dias; 
+      - Tanto o bloco de origem quanto o bloco compactado devem coexistir no disco, o tamanho do disco pode exceder;
+      - O excesso é liberado quando a próxima limpeza de retenção remove os blocos de origem. 
+
+    - Integrações de Armazenamento Remoto 
+      - Há quatro maneiras de conexão com armmazenamentos remotos:
+        1. Ingestão de amostras através de uma URL Remota usando Remote Write; 
+        2. Recebimento de amostras de outros clientes em Remote Write; 
+        3. Ler dados de amostras de uma URL Remota com Remote Read; 
+        4. Retornar dados de amostras solicitos pelos clientes, em Remote Read. 
+      
+      - Remote Write: https://prometheus.io/docs/prometheus/latest/configuration/configuration/#remote_write
+      - Remote Read: https://prometheus.io/docs/prometheus/latest/configuration/configuration/#remote_read
+
+      - Integrações: https://prometheus.io/docs/operating/integrations/#remote-endpoints-and-storage
+
+    - Backfilling 
+      - Cria blocos no banco de dados de séries temporais (TSDB) do Prometheus a partir de dados que já existiam antes; 
+      - Preenche retroativamente o histórico do Prometheus com dados que não foram ingeridos no momento em que ocorreram;
+      - Pode ser usado para migrar métricas de outro sistema de monitoramento ou TSDBs ao Prometheus. 
 
 
   </div>
