@@ -172,6 +172,25 @@
 
     - Federação 
       - Permite que um servidor Prometheus colete séries temporais selecionadas de outro servidor Prometheus;   
+      - Usado para obter configurações de Prometheus escaláveis ou trazer métricas de um serviço para outro;
+      - Usa o endpoint: "/federate"
+
+      - Federação Hierárquica 
+        - Escala o prometheus para ambientes com dezenas de data centers e milhões de nós; 
+        - A topologia se assemelha a uma árvore;
+        - Exemplo:
+          - Uma configuração pode consistir em vários servidores Prometheus que coletam dados em alto nível de detalhe;
+          - E outro conjunto de servidores Prometheus globais que coletam e armazenam apenas dados agregados, dos servidores locais. 
+
+    - HTTP SD (Service Discovery)
+      - Configuração: https://prometheus.io/docs/prometheus/latest/configuration/configuration/#http_sd_config
+      - Integrações SD: https://prometheus.io/docs/operating/integrations/#http-service-discovery
+      - Permite descobrir alvos em um endpoint HTTP, é uma alternativa ao File-Based Service Discovery;       
+      - O Prometheus armazena em cache as listas de targets. Se ocorrer um erro ao buscar uma lista atualizada, continua usando a atual;
+        - A lista de targets não é salva entre reinicializações. 
+
+    - Management API 
+      -     
 
   </div>
   </details>    
