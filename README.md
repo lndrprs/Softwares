@@ -337,7 +337,12 @@
       - https://prometheus.io/docs/instrumenting/escaping_schemes/ 
 
     - Content Negotiation 
-      - 
+      - Negociação com os alvos / targets sobre qual formato / protocolo de exposição usar durante a raspagem;
+      - Tipos de Protocolos:
+        - PrometheusProto;
+        - PrometheusText (0.0.4 e 1.0.0);
+        - OpenMetricsText (0.0.1 e 1.0.0); 
+      - https://prometheus.io/docs/instrumenting/content_negotiation/
 
   </div>
   </details>      
