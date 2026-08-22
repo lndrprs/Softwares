@@ -275,6 +275,27 @@
   <summary> 1.5 Visualização </summary>
   <div>
 
+    - Navegador de Expressão 
+      - Disponível no endpoint /graph;
+      - Permite inserir qualquer expressão e ver seu resultado em uma tabela ou representado graficamente ao longo do tempo;
+      - Usado, primariamente, para consultas ad-hoc ou debug. Para gráficos, recomendado usar Grafana ou templates de Console. 
+
+    - Grafana
+      - Plataforma open-source de visualização e análise; usado para monitorar e analisar métricas de várias origens de dados;
+      - Suporta integrações com BDs como Prometheus, InfluxDB, Elasticsearch, e mais;
+      - O data source do Prometheus está incluso no Prometheus desde 2015 (Versão 2.5.0).
+        - Mais informações: https://prometheus.io/docs/visualization/grafana/ 
+
+    - Perses 
+      - Plataforma open-source de visualização e dashboards, projetado para observabilidade; 
+      - Suporte nativo para Prometheus como origem de dados; 
+      - Focado em facilidade de acesso, desenvolvimento focado em comunidade, GitOps e Dashboard as Code. 
+        - Mais informações: https://prometheus.io/docs/visualization/perses/
+
+    - Console Templates 
+      - Permite a criação de consoles arbitrários usando a linguagem Go, e são servidos do servidor Prometheus; 
+      - Possui curva de aprendizagem. Mais indicado começar pelo Grafana. 
+        - Mais informações: https://prometheus.io/docs/visualization/consoles/
 
 
   </div>
