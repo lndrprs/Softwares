@@ -316,6 +316,29 @@
       - Fácil para instrumentar scripts, sem uma biblioteca. 
         - Documentações de Linguagens: https://prometheus.io/docs/instrumenting/pushing/
 
+    - Exporters e Integrations 
+      - Há diversos exportadores terceiros para o Prometheus, alguns sendo mantidos oficialmente pelo GitHub do Prometheus: https://github.com/prometheus
+      - Outro catálogo de exportadores, que podem não estar listados na lista acima: https://github.com/prometheus/prometheus/wiki/Default-port-allocations
+        - Listagem da Documentação: https://prometheus.io/docs/instrumenting/exporters/#third-party-exporters
+
+    - Writing Exporters 
+      - Para Desenvolvimento de Exportadores: https://prometheus.io/docs/instrumenting/writing_exporters/
+    
+    - Exposition Formats 
+      - Documentação de formatos de exposição oficialmente suportados: https://prometheus.io/docs/instrumenting/exposition_formats/
+
+    - Escaping Schemes
+      - Especificações de como Prometheus lida com nomes de métricas e labels; 
+      - Existem quatro esquemas de "escaping" que são negociados via header HTTP durante a raspagem:
+        - allow-utf-8: Permite nomes UTF-8 diretamente;
+        - underscores: Substitui qualquer caractere fora do padrão por _ (Padrão);
+        - dots: Substitui pontos por _dot_ e underscores por __
+        - values: Codifica cada caractere não padrão como seu código Unicode em Hexadecimal, prefixado com U__ . 
+      - https://prometheus.io/docs/instrumenting/escaping_schemes/ 
+
+    - Content Negotiation 
+      - 
+
   </div>
   </details>      
 
