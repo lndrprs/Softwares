@@ -297,10 +297,27 @@
       - Possui curva de aprendizagem. Mais indicado começar pelo Grafana. 
         - Mais informações: https://prometheus.io/docs/visualization/consoles/
 
-
   </div>
   </details>    
+  
+  <details>
+  <summary> 1.6 Instrumentação </summary>
+  <div>
 
+    - Client Libraries 
+      - Antes de monitorar serviços, é necessário instrumentar o código via bibliotecas do Prometheus, que implementam tipos de métricas; 
+      - Escolha a biblioteca que combina com a linguagem da aplicação, assim permite definir e expor métricas internas via HTTP;
+        - Listagem de Bibliotecas: https://prometheus.io/docs/instrumenting/clientlibs/
+        - Para criar novas Bibliotecas: https://prometheus.io/docs/instrumenting/writing_clientlibs/
+
+    - Pushing Metrics 
+      - Ocasionalmente precisará monitor componentes que não podem ser raspados; 
+      - Pushgateway permite enviar séries temporais e batches curtos para um serviço intermediário, que o Prometheus consiga raspar;
+      - Fácil para instrumentar scripts, sem uma biblioteca. 
+        - Documentações de Linguagens: https://prometheus.io/docs/instrumenting/pushing/
+
+  </div>
+  </details>      
 
 
 ----
