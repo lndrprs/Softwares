@@ -363,11 +363,61 @@
   <summary> 1.7 Alertmanager </summary>
   <div>
 
-    - 
+    - Visão Geral de Alerta 
+      - Regras nos servidores Prometheus enviam alertas ao Alertmanager; 
+      - O Alertmanager gerencia esses alertas, incluindo o silenciamento, inibição, agregação e envio das notificações (Via e-mail, sistemas de notificação e plataformas de chat);
+      - Os passos principais de configuração e notificação:
+        - Instalar e Configurar o Alertmanager;
+        - Configurar o Prometheus para se comunicar com o Alertmanager;
+        - Criar regras de alerta no Prometheus. 
+
+    - Alertmanager 
+      - Lida com os alertas enviados por aplicações clientes, como o Prometheus; 
+      - Implementações principais do Alertmanager: 
+        - Agrupamento: Categoriza alertas de natureza similar em apenas uma notificação; 
+        - Inibição: Supressa notificações para certos alertas se outros alertas estão disparando; 
+        - Silenciamento: Mutar alertas por determinado período; 
+      - Integrações de Notificação, via arquivo de Configuração: https://prometheus.io/docs/alerting/latest/integrations/
+      - Configuração do Alertmanager: https://prometheus.io/docs/alerting/latest/configuration/
+
+      - API de Gerenciamento:
+        - get /-/healthy: Verificação de Saúde do Endpoint; 
+        - get /-/ready: Verificação de respostas de Queries:
+        - post /-/reload: Atualização do arquivo de configuração.
+      
+      - Alta Disponibilidade 
+        - O Alertmanager suporta configuração para criação de Cluster, usando flags --cluster-*;
+        - Flags de Alta Disponibilidade: https://github.com/prometheus/alertmanager#high-availability
+        - Para configurações e arquiteturas de Alta Disponibilidade: https://prometheus.io/docs/alerting/latest/high_availability/
+
+      - Limites de Alerta
+        - Suporte para configuração da quantidade de alertas ativos;
+        - Pode ser configurado usando a flag: --alerts.per-alertname-limit;
+        - alertmanager_alerts_limited_total é uma métrica que mostra o total de alertas que foram derrubados por limite;
+        - A flag alert-names-in-metrics adiciona o rótulo / label alertname à métrica. 
+
+      - Templates de Notificações
+        - As notificações enviadas aos receivers são construídas via templates; 
+        - O Alertmanager já possui templates padronizados, mas podem ser customizados; 
+          - Template padrão: https://github.com/prometheus/alertmanager/blob/main/template/default.tmpl
+        
+        - Para referências de dados usados nos Templates: https://prometheus.io/docs/alerting/latest/notifications/
+        - Exemplos: https://prometheus.io/docs/alerting/latest/notification_examples/
+
 
   </div>
   </details>      
 
+
+  <details>
+  <summary> 1.8 Melhores Práticas </summary>
+  <div>
+
+    - 
+
+
+  </div>
+  </details>      
 
 ----
 
