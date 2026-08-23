@@ -200,6 +200,18 @@
       - Para Flags relacionadas ao Prometheus: https://prometheus.io/docs/prometheus/latest/command-line/prometheus/
       - Para Comandos Promtool: https://prometheus.io/docs/prometheus/latest/command-line/promtool/
 
+    - Segurança 
+      - A flag --web.enable-admin-api controla acesso administrativo a API HTTP, que inclui funcinaonlidades como deleção de séries temporais. 
+        - É desativada por padrão, mas caso ativa, o endpoint é /api/*/admin/ (Também funciona para Pushgateway); 
+
+      - Outra flag: --web.enable-lifecycle controla recarregamentos e desligamentos do Prometheus via HTTP, que também é desativado por padrão; 
+        - Ao ser ativada, ficam acessíveis em /-/reload e /-/quit  
+
+      - Para configuração de API e UI usando criptografia: https://prometheus.io/docs/guides/tls-encryption/; 
+        - É possível usar Autenticação Básica HTTP sem TLS, mas expõe usuários e senhas em texto limpo através da rede;
+        - No lado do servidor, senhas da autenticação básica são armazenadas como hashes com algoritmo bcrypt;
+        - Há uma opção chamada insecure_skip_verify que pula a verificação SSL. 
+
   </div>
   </details>    
 
@@ -337,12 +349,21 @@
       - https://prometheus.io/docs/instrumenting/escaping_schemes/ 
 
     - Content Negotiation 
-      - Negociação com os alvos / targets sobre qual formato / protocolo de exposição usar durante a raspagem;
+      - Negociação com os alvos / targets sobre qual protocolo de exposição usar durante a raspagem;
       - Tipos de Protocolos:
         - PrometheusProto;
         - PrometheusText (0.0.4 e 1.0.0);
         - OpenMetricsText (0.0.1 e 1.0.0); 
       - https://prometheus.io/docs/instrumenting/content_negotiation/
+
+  </div>
+  </details>      
+
+  <details>
+  <summary> 1.7 Alertmanager </summary>
+  <div>
+
+    - 
 
   </div>
   </details>      
