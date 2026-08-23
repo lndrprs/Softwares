@@ -404,6 +404,8 @@
         - Para referências de dados usados nos Templates: https://prometheus.io/docs/alerting/latest/notifications/
         - Exemplos: https://prometheus.io/docs/alerting/latest/notification_examples/
 
+      - Para HTTPS e Gossip: https://prometheus.io/docs/alerting/latest/https/
+
 
   </div>
   </details>      
