@@ -406,7 +406,6 @@
 
       - Para HTTPS e Gossip: https://prometheus.io/docs/alerting/latest/https/
 
-
   </div>
   </details>      
 
@@ -415,8 +414,15 @@
   <summary> 1.8 Melhores Práticas </summary>
   <div>
 
-    - 
-
+    - Nomeamento de Métrica e Rótulo: https://prometheus.io/docs/practices/naming/
+    - Consoles e Dashboards: https://prometheus.io/docs/practices/consoles/
+    - Instrumentação: https://prometheus.io/docs/practices/instrumentation/
+    - Histogramas e Summaries: https://prometheus.io/docs/practices/histograms/
+    - Alertas: https://prometheus.io/docs/practices/alerting/
+    - Regras de Registros / Recording: https://prometheus.io/docs/practices/rules/
+    - Pushgateway: https://prometheus.io/docs/practices/pushing/
+    - Otimização de Escrita Remota: https://prometheus.io/docs/practices/remote_write/
+    - O Zen do Prometheus: https://prometheus.io/docs/practices/the_zen/
 
   </div>
   </details>      
