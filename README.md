@@ -431,8 +431,10 @@
   <summary> 1.9 Projetos </summary>
   <div align="Center">
 
+<br>
+
 | ID      | Título                               | Descrição  |
-| --------| ------------------------------------:|-----------:|
+| --------| ------------------------------------|-----------|
 | P1.9.1  | Exporter Customizado Simples         | Exportador Python Expondo Métricas ao Prometheus|
 
 
