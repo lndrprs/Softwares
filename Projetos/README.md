@@ -98,7 +98,6 @@ scrape_configs:
 <summary><code>docker-compose.yml</code></summary>
 
 ```yaml
-version: "3.8"
 services:
   exporter:
     build: .
