@@ -67,7 +67,7 @@
 
 | ID      | Título                               | Descrição  |
 | --------| ------------------------------------|-----------|
-| P1.9.1  | Exporter Customizado Simples         | Exportador Python Expondo Métricas ao Prometheus|
+| P1.2.1  | Exporter Customizado Simples         | Exportador Python Expondo Métricas ao Prometheus|
 
 
 
