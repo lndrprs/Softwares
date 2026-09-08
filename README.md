@@ -79,3 +79,39 @@
 </details>
 
 ----
+
+<details>
+  <summary><b> 2. Dynatrace - Referência: <a href="https://docs.dynatrace.com/docs"> Documentação Técnica</a></b></summary>
+  <div align="left">
+
+<br>
+    
+  <details>
+  <summary> 1.1 Glossário </summary>
+  <div align="Center">
+
+<br>  
+
+  </div>
+  </details>        
+
+  <details>
+  <summary> 1.2 Projetos </summary>
+  <div align="Center">
+
+<br>
+
+| ID      | Título                               | Descrição  |
+| --------| ------------------------------------|-----------|
+| P1.2.1  | Exporter Customizado Simples         | Exportador Python Expondo Métricas ao Prometheus|
+
+
+
+  </div>
+  </details>        
+
+
+</div>
+</details>
+
+----
