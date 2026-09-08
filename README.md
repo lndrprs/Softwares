@@ -74,7 +74,6 @@
   </div>
   </details>        
 
-----
 
 </div>
 </details>
