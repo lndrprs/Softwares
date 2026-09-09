@@ -87,7 +87,7 @@
 <br>
     
   <details>
-  <summary> 1.1 Glossário </summary>
+  <summary> 2.1 Glossário </summary>
   <div align="Center">
 
 <br>  
@@ -128,7 +128,7 @@
   </details>        
 
   <details>
-  <summary> 1.2 Projetos </summary>
+  <summary> 2.2 Projetos </summary>
   <div align="Center">
 
 <br>
