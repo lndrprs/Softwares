@@ -22,13 +22,13 @@
 ----
 
 <details>
-  <summary><b> 1.9 Prometheus </b></summary>
+  <summary><b> 1.2 Prometheus </b></summary>
   <div align="left">
 
 <br>
 
   <details>
-  <summary> 1.9.1 Exporter Customizado Simples </summary>
+  <summary> 1.2.1 Exporter Customizado Simples </summary>
   <div>
     
     - Projeto criado no Docker, usando Python como Exportador;  
