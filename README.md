@@ -60,14 +60,14 @@
   </details>        
 
   <details>
-  <summary> 1.2 Projetos </summary>
+  <summary> 1.2 Templates </summary>
   <div align="Center">
 
 <br>
 
 | ID      | Título                               | Descrição  |
-| --------| ------------------------------------|-----------|
-| P1.2.1  | Exporter Customizado Simples         | Exportador Python Expondo Métricas ao Prometheus|
+| --------| -------------------------------------|------------|
+| P1.2.1  | Exporter Customizado Simples         | Script Python Expondo Métricas ao Prometheus |
 
 
 
@@ -128,7 +128,7 @@
   </details>        
 
   <details>
-  <summary> 2.2 Projetos </summary>
+  <summary> 2.2 Templates </summary>
   <div align="Center">
 
 <br>
@@ -198,7 +198,7 @@
   </details>        
 
   <details>
-  <summary> 3.2 Projetos </summary>
+  <summary> 3.2 Templates </summary>
   <div align="Center">
 
 <br>
