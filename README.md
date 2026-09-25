@@ -65,15 +65,6 @@
 
 <br>
 
-| ID      | Título                               | Descrição  |
-| --------| -------------------------------------|------------|
-| P1.2.1  | Exporter Customizado Simples         | Script Python Expondo Métricas ao Prometheus |
-
-
-
-  </div>
-  </details>        
-
 
 </div>
 </details>
