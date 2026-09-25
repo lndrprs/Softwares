@@ -65,6 +65,8 @@
 
 <br>
 
+  </div>
+  </details>
 
 </div>
 </details>
