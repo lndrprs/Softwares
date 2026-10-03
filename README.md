@@ -59,15 +59,6 @@
   </div>
   </details>        
 
-  <details>
-  <summary> 1.2 Templates </summary>
-  <div align="Center">
-
-<br>
-
-  </div>
-  </details>
-
 </div>
 </details>
 
@@ -123,12 +114,6 @@
   <details>
   <summary> 2.2 Templates </summary>
   <div align="Center">
-
-<br>
-
-  </div>
-  </details>        
-
 
 </div>
 </details>
@@ -190,15 +175,29 @@
   </div>
   </details>        
 
-  <details>
-  <summary> 3.2 Templates </summary>
-  <div align="Center">
+</div>
+</details>
+
+----
+
+<details>
+  <summary><b> 4. OpenTelemetry - Referência: <a href="https://opentelemetry.io/docs/"> Documentação Técnica</a></b></summary>
+  <div align="left">
 
 <br>
+    
+  <details>
+  <summary> 4.1 Glossário </summary>
+  <div align="Center">
+
+<br>  
+
+| Termo | Descrição |
+|-------|-----------|
+
 
   </div>
   </details>        
-
 
 </div>
 </details>
