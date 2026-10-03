@@ -55,6 +55,7 @@
 | Time Series Data Base (TSDB) | Banco de dados de séries temporais embutido no Prometheus. |
 | Write Ahead Log (WAL) | Log usado pelo TSDB para garantir durabilidade dos dados antes de serem persistidos definitivamente. |
 
+<br>
 
   </div>
   </details>        
@@ -107,13 +108,10 @@
 | Synthetic Monitoring | Simulação de transações e jornadas de usuário a partir de locais predefinidos. |
 | Workflow | Automação configurável do Dynatrace que executa ações (notificações, remediações, integrações), em resposta a eventos ou problemas. |
 
+<br>
 
   </div>
   </details>        
-
-  <details>
-  <summary> 2.2 Templates </summary>
-  <div align="Center">
 
 </div>
 </details>
@@ -171,6 +169,8 @@
 | Transform | Operação de transformação de dados definida em transforms.conf, usada para extração de campos, mascaramento de dados ou roteamento. |
 | Universal Forwarder | Versão leve do Forwarder, usada apenas para coletar e encaminhar dados brutos, sem parsing avançado. |
 | KV Store | Armazenamento de dados em formato chave-valor (Baseado em MongoDB), usado por apps SPlunk para persistir dados estruturados. |
+
+<br>
 
   </div>
   </details>        
