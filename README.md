@@ -194,6 +194,16 @@
 
 | Termo | Descrição |
 |-------|-----------|
+| Agent | Componente que roda junto da aplicação ou host para coleta de telemetria localmente, enviando a um coletor ou backend. |
+| Sampling | Processo de decisão sobre quais traces serão mantidos, reduzindo volume e custo de armazenamento. |
+| Head-Based Sampling | Decisão tomada no início do trace, antes de saber o resultado completo da requisição. |
+| Tail-Based Sampling | Decisão tomada depois que o trace termina, permindo manter traces específicos. Normalmente feita no Coletor. |
+| API | Interface usada para instrumentar o código. Define como criar spans, métricas e logs, mas não implementa processamento e nem a exportação dos dados. |
+| Attribute | Par chave-valor que adiciona contexto a spans, métricas, logs ou recursos. | 
+| Backend | Sistema que armazena, consulta e visualiza telemetria (Jaeger, Prometheus, Tempo, Datadog etc.). |
+| Baggage | Conjunto de pares chave-valor propagado junto com contexto entre serviços, permmmitindo que informações estejam disponíveis em toda a cadeia de chamadas. |
+| Cardinalidade | Número de combinações únicas de valores de atributos em uma métrica. Se muito alta, aumenta custo e degrada o backend. |
+|
 
 
   </div>
