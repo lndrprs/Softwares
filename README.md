@@ -203,7 +203,10 @@
 | Backend | Sistema que armazena, consulta e visualiza telemetria (Jaeger, Prometheus, Tempo, Datadog etc.). |
 | Baggage | Conjunto de pares chave-valor propagado junto com contexto entre serviços, permmmitindo que informações estejam disponíveis em toda a cadeia de chamadas. |
 | Cardinalidade | Número de combinações únicas de valores de atributos em uma métrica. Se muito alta, aumenta custo e degrada o backend. |
-|
+| Collector | Processo independente que recebe, processa e exporta telemetria, desacoplando as aplicações dos backends. |
+| Connector | Componente do Collector que funciona como exporter de um pipeline e receiver de outro. |
+| Context | Carrega valores com escopo de execução, dentro de um processo. | 
+
 
 
   </div>
