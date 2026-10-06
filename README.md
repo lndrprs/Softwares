@@ -220,6 +220,13 @@
 | Meter | Objeto usado para criar instrumentos de métrica. |
 | Meter Provider | Ponto de entrada do SDK para métricas, responsável por criar meter e configurar a coleta e a exportação. |
 | Metric | Medição numérica agregada ao longo do tempo, como taxa de requisições, uso de CPU ou latência. | 
+| Observability | Capacidade de entender o estado interno de um sistema a partir dos dados que ele emite. |
+| OpenTelemetry | Projeto Open Source da CNCF que define APIs, SDKs, ferramentas e um protocolo padrão para gerar, coletar e exportar telemetria, sem depender do fornecedor. | 
+| OTLP (OpenTelemetry Protocol) | Protocolo nativo do OTel para transmissão de traces, métricas e logs, sobre gRPC ou HTTP. |
+| Pipeline | Sequência configurada no Collector que liga receiver, processors e exporters para um tipo de sinal. |
+| Processor | Componente que transforma, filtra, enriquece ou agrupa telemetria antes da exportação, no SDK ou no Collector. |
+| Profiles | Sinal mais recente, ainda em evolução, para dados de profiling contínuo (Como uso de CPU por função). |
+| 
 
 
 
