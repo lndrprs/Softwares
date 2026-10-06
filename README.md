@@ -195,17 +195,21 @@
 | Termo | Descrição |
 |-------|-----------|
 | Agent | Componente que roda junto da aplicação ou host para coleta de telemetria localmente, enviando a um coletor ou backend. |
-| Sampling | Processo de decisão sobre quais traces serão mantidos, reduzindo volume e custo de armazenamento. |
-| Head-Based Sampling | Decisão tomada no início do trace, antes de saber o resultado completo da requisição. |
-| Tail-Based Sampling | Decisão tomada depois que o trace termina, permindo manter traces específicos. Normalmente feita no Coletor. |
+| Aggregation Temporality | Define se os valores de uma métrica são acumulados desde o início (cumulativa) ou apenas desde a última coleta (Delta). |
 | API | Interface usada para instrumentar o código. Define como criar spans, métricas e logs, mas não implementa processamento e nem a exportação dos dados. |
 | Attribute | Par chave-valor que adiciona contexto a spans, métricas, logs ou recursos. | 
 | Backend | Sistema que armazena, consulta e visualiza telemetria (Jaeger, Prometheus, Tempo, Datadog etc.). |
 | Baggage | Conjunto de pares chave-valor propagado junto com contexto entre serviços, permmmitindo que informações estejam disponíveis em toda a cadeia de chamadas. |
-| Cardinalidade | Número de combinações únicas de valores de atributos em uma métrica. Se muito alta, aumenta custo e degrada o backend. |
+| Cardinality | Número de combinações únicas de valores de atributos em uma métrica. Se muito alta, aumenta custo e degrada o backend. |
 | Collector | Processo independente que recebe, processa e exporta telemetria, desacoplando as aplicações dos backends. |
 | Connector | Componente do Collector que funciona como exporter de um pipeline e receiver de outro. |
 | Context | Carrega valores com escopo de execução, dentro de um processo. | 
+| Contrib | Repositório e distribuição do Collector com componentes mantidos pela comunidade, além dos componentes do núcleo. |
+| Counter | Instrumento de métrica que acumula valores crescentes. |
+| Exemplar | Amostra de trace associada a um ponto de métrica, permitindo navegar de uma métrica para um trace específico. |
+| Exporter | Componente que envia telemetria à um destino, como um Collector ou Backend. |
+| Extension | Componente do Collector que oferece funcionalidades auxiliares fora do pipeline de dados, como health check, autenticação e profilling. |
+| Gateway | 
 
 
 
