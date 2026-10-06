@@ -209,7 +209,17 @@
 | Exemplar | Amostra de trace associada a um ponto de métrica, permitindo navegar de uma métrica para um trace específico. |
 | Exporter | Componente que envia telemetria à um destino, como um Collector ou Backend. |
 | Extension | Componente do Collector que oferece funcionalidades auxiliares fora do pipeline de dados, como health check, autenticação e profilling. |
-| Gateway | 
+| Gateway | Modo de implantação do Collector em que ele funciona como ponto central que recebe dados de vários serviços ou agentes. |
+| Gauge | Instrumento de métrica que registra um valor instantâneo que pode subir ou descer. Como memória ou temperatura. |
+| Head-Based Sampling | Amostragem em que a decisão é tomada no início do trace, antes de se saber o resultado completo da requisição. |
+| Histogram | Instrumento de métricas que registra a distribuiçao de valores em faixas (buckets), útil para latências e tamanhos de payload. |
+| Instrumentation | Adição de código ou bibliotecas para que uma aplicação emita telemetria. |
+| Link | Referência de um span a outro span, possivelmente de outro trace. |
+| Log Record | Registro de Log no modelo de dados do OpenTelemetry, com timestamp, severidade, corpo, atributos, e ID do traace e do span. |
+| Manual Instrumentation | Instrumentação feita diretamente no código com a API do OTel, para capturar lógica específica do negócio. |
+| Meter | Objeto usado para criar instrumentos de métrica. |
+| Meter Provider | Ponto de entrada do SDK para métricas, responsável por criar meter e configurar a coleta e a exportação. |
+| Metric | Medição numérica agregada ao longo do tempo, como taxa de requisições, uso de CPU ou latência. | 
 
 
 
