@@ -228,7 +228,14 @@
 | Profiles | Sinal mais recente, ainda em evolução, para dados de profiling contínuo (Como uso de CPU por função). |
 | Propagator | Componente que injeta e extrai o contexto em uma requisição ou mensagem, como propagador W3C Trace Context. |
 | Receiver | Componente do colecctor que recebe telemetria, seja por Push ou por Pull. | 
-| Resource | 
+| Resource | Conjunto de atributos que descreve a entidade que produz a telemetria, como nome do serviço, versão, host e ambiente. |
+| Root Span | Primeiro span de um trace, sem span pai. |
+| Sampling | Processo de decisão sobre traces que serão mantidos, para reduzir volume e custo de armazenamento. |
+| SDK | Implementação da API que cuida de amostragem, processamento, agregação e exportação dos dados. |
+| Semantic Coventions | Nomes e valores padronizados para atributos, spans e métricas, garantindo que dados de diferentes origens tenham o mesmo significado. |
+| Severity | Nível de importância de um log (Trace, Debug, Info, Warn, Error, Fatal). |
+| Signal | Categoria de telemetria. Os principais são traces, métricas, logs e baggage. |
+| 
 
 
 
