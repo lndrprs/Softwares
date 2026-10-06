@@ -235,9 +235,23 @@
 | Semantic Coventions | Nomes e valores padronizados para atributos, spans e métricas, garantindo que dados de diferentes origens tenham o mesmo significado. |
 | Severity | Nível de importância de um log (Trace, Debug, Info, Warn, Error, Fatal). |
 | Signal | Categoria de telemetria. Os principais são traces, métricas, logs e baggage. |
-| 
-
-
+| Span | Unidade de trabalho dentro de um trace (uma chamada HTTP, uma query ao banco, uma função), com nome, início, duração, atributos, eventos e status. |
+| Span Context | Dados imutáveis de um span propagados entre processos: Trace ID, Span ID, Trace Flags e Trace State. |
+| Span Event | Registro com data e hora dentro de um span, usado para marcar algo que aconteceu durante a operação, como uma exceção. |
+| Span Kind | Tipo do Span, que descreve seu papel na interação: Internal, Server, Client, Producer ou Consumer. |
+| Span Status: Resultado da operação: Unset, Ok, ou Error. |
+| Tail-Based Sampling | Amostragem em que a decisão é tomada depois que o trace termina, permitindo manter traces com alta latência, erros, etc. Normalmente feita no Collector. |
+| Telemetry | Dados emitidos por uma aplicação ou infraestrutura para descrever seu comportamento. | 
+| Trace | Registro do caminho completo de uma requisição ao passar por vários serviços, formado por um conjunto de spans. |
+| Trace Flags | Indicadores binários do trace, como o flag de "sampled". |
+| Trace ID | Identificador único (16 Bytes), compartilhado por todos os spans de um mesmo trace. | 
+| Trace State | Campo que carrega informações específicas de fornecedores junto com o contexto do trace, em pares chave-valor definidos pela especificação W3C. |
+| Tracer | Objeto usado para criar spans. | 
+| Tracer Provider | Ponto de entrada do SDK para traces, responsável por criar Tracers e configurar amostragem, processadores e exporters. |
+| Up Down Counter | Instrumento de métrica que acumula valores que podem aumentar ou diminuir, como itens em uma fila. |
+| Vendor-Neutral | Característica do OpenTelemetry de funcionar com diferentes backends sem a necessidade de reinstrumentar o código. |
+| View | Configuração do SDK que personaliza como uma métrica é agregada, renomeada ou filtrada antes de ser exportada. |
+| W3C Trace Context | Padrão do W3C que define os cabeçalhos HTTP traceparent e tracestate, para propagar o contexto de trace entre serviços. | 
 
   </div>
   </details>        
