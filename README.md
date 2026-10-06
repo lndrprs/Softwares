@@ -226,7 +226,9 @@
 | Pipeline | Sequência configurada no Collector que liga receiver, processors e exporters para um tipo de sinal. |
 | Processor | Componente que transforma, filtra, enriquece ou agrupa telemetria antes da exportação, no SDK ou no Collector. |
 | Profiles | Sinal mais recente, ainda em evolução, para dados de profiling contínuo (Como uso de CPU por função). |
-| 
+| Propagator | Componente que injeta e extrai o contexto em uma requisição ou mensagem, como propagador W3C Trace Context. |
+| Receiver | Componente do colecctor que recebe telemetria, seja por Push ou por Pull. | 
+| Resource | 
 
 
 
