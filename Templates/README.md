@@ -16,8 +16,15 @@
 ----
 
 <details>
-  <summary><b> 1.2 Prometheus </b></summary>
+  <summary><b> 1.1. Stack LGTM </b></summary>
   <div align="left">
+
+<br>
+
+  - Loki: 3.7.4
+  - Mimir: 3.1.3
+  - OpenTelemetry Collector Contrib: 0.145.0
+  - Grafana: 13.1.1 
 
 <br>
 
