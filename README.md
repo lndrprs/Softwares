@@ -239,7 +239,7 @@
 | Span Context | Dados imutáveis de um span propagados entre processos: Trace ID, Span ID, Trace Flags e Trace State. |
 | Span Event | Registro com data e hora dentro de um span, usado para marcar algo que aconteceu durante a operação, como uma exceção. |
 | Span Kind | Tipo do Span, que descreve seu papel na interação: Internal, Server, Client, Producer ou Consumer. |
-| Span Status: Resultado da operação: Unset, Ok, ou Error. |
+| Span Status | Resultado da operação: Unset, Ok, ou Error. |
 | Tail-Based Sampling | Amostragem em que a decisão é tomada depois que o trace termina, permitindo manter traces com alta latência, erros, etc. Normalmente feita no Collector. |
 | Telemetry | Dados emitidos por uma aplicação ou infraestrutura para descrever seu comportamento. | 
 | Trace | Registro do caminho completo de uma requisição ao passar por vários serviços, formado por um conjunto de spans. |
