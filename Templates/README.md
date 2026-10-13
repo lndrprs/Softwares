@@ -24,9 +24,7 @@
   - Loki: 3.7.4
   - Mimir: 3.1.3
   - OpenTelemetry Collector Contrib: 0.145.0
-  - Grafana: 13.1.1 
-
-<br>
+  - Grafana: 13.1.1  
 
 </div>
 </details>    
