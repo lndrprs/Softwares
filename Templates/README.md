@@ -31,3 +31,19 @@
 </details>    
 
 ----
+
+<details>
+  <summary><b> 1.2. Stack GM + OTel + InfluxDB [Docker Compose] </b></summary>
+  <div align="left">
+
+<br>
+
+  - Grafana: 13.2.4
+  - Mimir: 3.2.1
+  - OpenTelemetry Collector Contrib: 0.145.0
+  - InfluxDB: 2.8
+
+</div>
+</details>    
+
+----
