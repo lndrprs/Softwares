@@ -302,6 +302,38 @@
 | InfluxDB OSS (Open Source Software) | Versão de código aberto, instalada e gerenciada pelo próprio usuário. |
 | InfluxQL | Linguagem de consulta semelhante a SQL. | 
 | Kapacitor | Motor de processamento de dados, alertas, e ETL do TICK Stack, com a linguagem TICKscript. | 
+| Last Value Cache (LVC) | Cache que guarda os valores mais recentes de séries, acelerando consultas de "último valor". |
+| Line Protocol (LP) | Formato de Texto para Escrever Dados. |
+| Measurement | Nome que agrupa dados relacionados, análogo a uma tabela. |
+| Notebook | Documento interativo na UI que combina consultas, visualizações e anotações. |
+| Notification Endpoint / Rule | Destino (Slack, PagerDuty, HTTP), e regra que define quando enviar alertas. |
+| Organization (org) | Espaço de trabalho que agrupa usuários, buckets, dashboards e tasks. |
+| Pipe-Forward Operation | Operador do Flux que encadeia funções, passando a saída de uma como entrada da próxima. |
+| Point | Registro únivo de dados, composto por measurement, tag, set, field set e timestamp. |
+| Precision | Granularidade do timestamp: ns, us, ms, s | 
+| Processing Engine | Ambiente embutido para rodar plugins em Python. |
+| Querier | Component que executa consultas lendo dados do ingester e do object store. | 
+| Retention Period | Tempo pela qual os dados são mantidos antes de serem removidos automaticamente. |
+| Retention Policy (RP) | Regra que define duração, replicação e shard duration dos dados de um database. |
+| Router | Componente que recebe as requisições de escrita e as encaminha aos ingesters. |
+| Scraper | Coletor que busca métricas em endpoints Prometheus e as grava no InfluxDB. |
+| Series | Conjunto de Point com o mesmo Measurement e tag set. |
+| Series Cardinality | Número total de series únicas em um database ou bucket. |
+| Shard / Shard Group | Unidade física de armazenamento que contém dados de um intervalo de tempo. |
+| SQL | Linguagem padrão de consulta, suportada nativamente. |
+| Tag | Par chave-valor indexado, usado para filtrar e agrupar. Valores são sempre strings. |
+| Tag Key / Tag Value / Tag Set | Nome da Tag, seu valor e o conjunto de todas as tags de um point. |
+| Task | Script Flux agendado, usado para processar dados periodicamente. |
+| Telegraf | Agente de Coleta baseado em Plugins, que reune métricas de diversas fontes e as envia ao InfluxDB ou outros destinos. |
+| TICK Stack | Conjunto de ferramentas Telegraf, InfluxDB, Chronograf e Kapacitor. |
+| Time Series | Sequência de pontos de dados indexados por tempo. |
+| Timestamp | Data e hora associada a um point, armazenada em UTC. É a chave primária temporal. |
+| TSDB (Time Series Database) | Banco de dados otimizado para dados indexados por tempo. |
+| TSI (Time Series Index) | Índice em disco para séries, que permite lidar com alta cardinalidade, sem esgotar a memória. |
+| TSM (Time Structured Merge Tree) | Motor de armazenamento em disco otimizado para escrita e compressão séries temporais. |
+| Variable | Valor dinâmico usado em queries de dashboards para torná-las reutilizáveis. |
+| WAL (Write-Ahead Log) | Log de escritas gravado antes dos dados serem persistidos definitivamente, garantindo durabilidade em caso de falhas. |
+| Window | Agrupamento de dados por intervalos de tempo. |  
 
   </div>
   </details>        
