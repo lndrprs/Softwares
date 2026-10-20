@@ -260,3 +260,45 @@
 </details>
 
 ----
+
+<details>
+  <summary><b> 5. InfluxDB - Referência: <a href="https://docs.influxdata.com/"> Documentação Técnica</a></b></summary>
+  <div align="left">
+
+<br>
+    
+  <details>
+  <summary> 5.1 Glossário </summary>
+  <div align="Center">
+
+<br>  
+
+| Termo | Descrição |
+|-------|-----------|
+| Aggregate Function | Função que reduz um conjunto devalores a um só: mean(), sum(), count(), max() |
+| Apache Arrow | Formato de dados colunar em memória, usado para processamento rápido de consultas. |
+| Apache DataFusion | Motor de Consultas em Rust, baseado em Arrow. Executa as queries SQL e InfluxQL. |
+| Apache Parquet | Formato de arquivo colunar e compactado, usado para persistir os Dados. |
+| API Token | Credencial de autenticação com permissões de leitura e / ou escrita sobre recursos específicos. |
+| Bucket | Local nomeado onde os dados de séries temporais são armazenados, com um retention period associado. |
+| Cardinality | Número de valores únicos em um conjunto de dados. |
+| Check | Consulta agendada que avalia dados e atribui um status. |
+| Chronograf | Interface web de visualização e administração do TICK Stack. |
+| CLI | Ferramenta de linha de comando (influx, influxdb3), para gerenciar o banco, escrever e consultar dados. |
+| Compactor | Componente que reorganiza e otimiza arquivos parquet para melhor a performance de leitura. |
+| Continuous Query (CQ) | Consulta InfluxQL executada automaticamente em intervalos, geralmente para downsampling. |
+| Dashboard | Painel com visualizações - gráficos, medidores, tabelas -, de dados do InfluxDB. |
+| Database | Contêiner lógico de Dados. |
+| Downsampling | Redução da resolução dos dados para economizar armanzemanto e acelerar consultas históricas. |
+| Edge Data Replication (EDR) | Replicação de dados de uma instância OSS local para o InfluxDB Cloud. |
+| Field | Par chave-valor com os dados medidos. |
+| Field Key / Field Value | Nome e valor de um field. |
+| 
+
+  </div>
+  </details>        
+
+</div>
+</details>
+
+----
