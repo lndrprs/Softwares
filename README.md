@@ -293,7 +293,15 @@
 | Edge Data Replication (EDR) | Replicação de dados de uma instância OSS local para o InfluxDB Cloud. |
 | Field | Par chave-valor com os dados medidos. |
 | Field Key / Field Value | Nome e valor de um field. |
-| 
+| Flight SQL | Protocolo para consultar bancos via SQL sobre Arrow Flight, usado como interface de consulta. |
+| Flux | Linguagem Funcional de Script e Consulta de Dados. | 
+| Garbage Collector | Componenet que remove dados e metadados expirados ou excluídos. |
+| Group Key | Lista de Colunas que define quais registros pertencem à mesma tabela de saída em um resultado Flux. |
+| Ingester | Componenet que recebe, valida e persiste os dados escritos. |
+| InfluxDB IOx | Novo motor de armazenamento, escrito em Rust e baseado em Arrow, DataFusion e Parquet. |
+| InfluxDB OSS (Open Source Software) | Versão de código aberto, instalada e gerenciada pelo próprio usuário. |
+| InfluxQL | Linguagem de consulta semelhante a SQL. | 
+| Kapacitor | Motor de processamento de dados, alertas, e ETL do TICK Stack, com a linguagem TICKscript. | 
 
   </div>
   </details>        
