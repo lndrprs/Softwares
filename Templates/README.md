@@ -47,3 +47,19 @@
 </details>    
 
 ----
+
+<details>
+  <summary><b> 1.3. Stack TICK Clássica [Docker Compose] </b></summary>
+  <div align="left">
+
+<br>
+
+  - Telegraf: 1.32
+  - InfluxDB: 1.8
+  - Chronograf: 1.10
+  - Kapacitor: 1.7
+
+</div>
+</details>    
+
+----
