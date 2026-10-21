@@ -16,64 +16,19 @@
 ----
 
 <details>
-  <summary><b> 1.1. Stack LGTM + OTel [Docker Compose] </b></summary>
-  <div align="left">
+  <summary><b> 1. Docker Compose </b></summary>
+  <div align="center">
 
 <br>
 
-  - Loki: 3.7.4
-  - Grafana: 13.1.1
-  - Tempo: 3.1.0
-  - Mimir: 3.1.3
-  - OpenTelemetry Collector Contrib: 0.145.0
-
-</div>
-</details>    
-
-----
-
-<details>
-  <summary><b> 1.2. Stack GM + OTel + InfluxDB [Docker Compose] </b></summary>
-  <div align="left">
+| Nome | Softwares | 
+|------|---------------------|
+| 1.1. Stack LGTM | Loki, Grafana Tempo, Mimir, OTel Collector |
+| 1.2. Stack GMOI | Grafana, Mimir, OTel, InfluxDB |
+| 1.3. Stack TICK (Clássica) | Telegraf, InfluxDB, Chronograf, Kapacitor |
+| 1.4. Stack TIE (Moderna) | Telegraf, InfluxDB, Explorer | 
 
 <br>
-
-  - Grafana: 13.2.4
-  - Mimir: 3.2.1
-  - OpenTelemetry Collector Contrib: 0.145.0
-  - InfluxDB: 2.8
-
-</div>
-</details>    
-
-----
-
-<details>
-  <summary><b> 1.3. Stack TICK Clássica [Docker Compose] </b></summary>
-  <div align="left">
-
-<br>
-
-  - Telegraf: 1.32
-  - InfluxDB: 1.8
-  - Chronograf: 1.10
-  - Kapacitor: 1.7
-
-</div>
-</details>    
-
-----
-
-<details>
-  <summary><b> 1.4. Stack TIE Moderna [Docker Compose] </b></summary>
-  <div align="left">
-
-<br>
-
-  - Telegraf: 1.36
-  - InfluxDB: 3.12.1
-  - Explorer (Substituindo Chronograf): Latest  
-
 </div>
 </details>    
 
