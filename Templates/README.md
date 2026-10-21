@@ -63,3 +63,18 @@
 </details>    
 
 ----
+
+<details>
+  <summary><b> 1.4. Stack TIE Moderna [Docker Compose] </b></summary>
+  <div align="left">
+
+<br>
+
+  - Telegraf: 1.36
+  - InfluxDB: 3.12.1
+  - Explorer (Substituindo Chronograf): Latest  
+
+</div>
+</details>    
+
+----
