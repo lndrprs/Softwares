@@ -342,3 +342,25 @@
 </details>
 
 ----
+
+<details>
+  <summary><b> 6. ArgoCD - Referência: <a href="https://argo-cd.readthedocs.io/en/stable/"> Documentação Técnica</a></b></summary>
+  <div align="left">
+
+<br>
+    
+  <details>
+  <summary> 5.1 Glossário </summary>
+  <div align="Center">
+
+<br>  
+
+| Termo | Descrição |
+|-------|-----------|
+| | |
+
+  </div>
+  </details>        
+
+</div>
+</details>
