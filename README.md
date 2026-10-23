@@ -392,8 +392,17 @@
 | Dex | Provedor de Identidade OIDC embutido, usado para integrar Single Sign On com provedores externos (GitHub, LDAP, SAML etc.). |
 | Diff | Comparação entre Desired State e o Live State, que determina se a aplicação está OutOfSync. |
 | Drift | Divergência do Cluster em relação ao Git, geralmente causada por alterações manuais. |
-
-
+| Finalizer | Marcador (resources-finalizer.argocd.argoproj.io) que faz o ArgoCD remover os recursos gerenciados ao excluir a Application (Cascading Delete). |
+| Generator | Componente do ApplicationSet que produz os parâmetros usados no template. Tipos comuns: List, Cluster, Git, Matrix, Merge, Pull Request e SCM Provider. |
+| Git Repository | Fonte da verdade do GitOps, onde ficam os manifestos (ou charts), que descrevem o estado desejado. |
+| GitOps | Prática em que o Git é a fonte única da verdade da infraestrutura e das aplicações, e um agente mantém o cluster sincronizado com ele. |
+| Health Status | Estado de saúde de um recurso ou aplicação: PreSync, Sync, PostSync, SyncFail e PostDelete. |
+| Helm | Gerenciador de pacotes (charts) do Kubernetes, suportado nativamente como ferramenta de renderização de manifestos. |
+| Hook (Resource Hook) | Recurso executado em fases específicas do Sync: PreSync, Sync, PostSync, SyncFail e PostDelete. |
+| ignoreDifferences | Configuração que faz o ArgoCD ignorar campos específicos na comparação. |
+| In-cluster | Destino que representa o mesmo cluster em que o ArgoCD está instalado. |
+| Jsonnet | Linguagem de Templates de Dados, Suportada para Gerar Manifestos. |
+ 
   </div>
   </details>        
 
