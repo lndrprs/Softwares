@@ -402,6 +402,20 @@
 | ignoreDifferences | Configuração que faz o ArgoCD ignorar campos específicos na comparação. |
 | In-cluster | Destino que representa o mesmo cluster em que o ArgoCD está instalado. |
 | Jsonnet | Linguagem de Templates de Dados, Suportada para Gerar Manifestos. |
+| Kustomize | Ferramenta de cusomização de manifestos por camadas (bases e overlays), suportada nativamente. |
+| Live State | Estado real dos recursos no cluster naquele momento. |
+| Multi-Source Application | Application que combina mais de uma origem (chart helm de um repositório e values de outro). |
+| Notification Controller | Componente que envia notificações com base em eventos das aplicações. |
+| Orphaned Resources | Recursos existentes no namespace de destino que não são gerenciador por nenhuma Applicaation; o ArgoCD pode monitorá-los e alertar. |
+| OutOfSync | Status de Sync indicando que o live state difere do Desire State. |
+| Progressive Syncs | Recurso do ApplicationSet para implantar as aplicações geradas de forma escalonada, em etapas. |
+| Prune | Remoção de recursos do cluster que deixaram de existir no Git. | 
+| RBAC | Controle de acesso baseado em papéis ArgoCD, que define quem pode ver, sincronizar ou alterar recursos. |
+| Redis | Cache usado internamente para armazenar estado e acelerar as operações. |
+| Refresh | Nova comparação entre Git e Cluster. Um hard refresh ignora o Cache de Manifestos. |
+| Repo Server | Componente que clona os repositórios e renderiza os manifestos (Helm, Kustomize, Jsonnet, CMP). |
+| Resource Tracking | Método usado para identificar quais recursos pertencem a qual aplicação (por label, annotation ou ambos). |
+
  
   </div>
   </details>        
