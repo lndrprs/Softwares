@@ -415,7 +415,20 @@
 | Refresh | Nova comparação entre Git e Cluster. Um hard refresh ignora o Cache de Manifestos. |
 | Repo Server | Componente que clona os repositórios e renderiza os manifestos (Helm, Kustomize, Jsonnet, CMP). |
 | Resource Tracking | Método usado para identificar quais recursos pertencem a qual aplicação (por label, annotation ou ambos). |
-
+| Retry | Política de novas tentativas de sync em caso de falha, com backoff configurável. |
+| Rollback | Retorno da aplicação a uma revisão anterior do histórico de Sync. |
+| Self-Heal | Opção da política automática que reverte alterações manuais feitas no cluster, restaurando o estado do Git. |
+| Server (API Server) | Componente que expõe a API, a interface web e o acesso pela CLI, além de tratar autenticação e autorização. | 
+| Sharding | Distribuição das aplicações entre várias réplicas do Application Controller para escalar o gerenciamento de muitos clusters. | 
+| SSO | Login Único, configurado via Dex ou diretamente com um provedor OIDC. | 
+| Sync | Processo de Aplicar no Cluster o estado desejado definido no Git. | 
+| Sync Options | Opções que ajustam o comportamento do syc. |
+| Sync Policy | Define se o Sync é manual ou automático, com mais opções. |
+| Sync Status | Indica se a aplicação está Synced, OutOfSync ou Unknown. |
+| Sync Wave | Ordem de aplicação dos recursos, definida pela annotation. | 
+| Sync Window | Janela de tempo que permite ou bloqueia a execução de syncs. |
+| targetRevision | Branch, tag ou commit do Git (ou versão do chart), que a aplicação deve acompanhar. |
+| Webhook | Notificação enviada pelo provedor Git ao ArgoCD a cada push, para acionar o refresh sem esperar o polling. | 
  
   </div>
   </details>        
