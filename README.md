@@ -373,7 +373,26 @@
 
 | Termo | Descrição |
 |-------|-----------|
-| | |
+| App of Apps | Padrão onde uma Application aponta para um repositório que contém outras Applications, permitindo gerenciamento e provisionamento a partir de um único ponto de entrada. |
+| Application | CRD que representa uma instância implantada: Liga uma origem a um destino - Source -> Cluster / Namespace. | 
+| Application Controller | Componente que monitora aplicações, compara o "Live State" com o "Desired State", executando o Sync. |
+| ApplicationSet | CRD e Controller que geram várias Applications a partir de um Template e de Generatores (App por Cluster ou por pasta do Git.) |
+| AppProject / Project | Agrupamento lógico de aplicações com restrições: repositórios de origem permitidos, destinos, tipos de recursos e papéis de acesso. |
+| Argo CD Image Updater | Ferramenta complementar que detecta novas versões de imagens de contêiner e atualiza as aplicações automaticamente. |
+| Argo Rollouts | Projeto irmão para Progressive Delivery (Canary, Blue / Green), que se integra ao ArgoCD. |
+| Auto-Sync (Automated Sync) | Política que aplica automaticamente no cluster as mudanças detectadas no Git, sem ação manual. |
+| CLI (argocd) | Ferramenta de linha de comando para gerenciamento de aplicações, projeetos, clusters, repositórios e contas. | 
+| Cluster | Cluster Kubernetes registrado no ArgoCD como destino de Deploy. |
+| ConfigMap (argocd-cm, argocd-rbac-cm) | Objetos de configuração do ArgoCD: argocd-cm guarda ajustes gerais e o argocd-rbac-cm define as políticas de RBAC. |
+| Config Management Plugin (CMP) | Mecanismo para gerar manifestos com ferramentas personalizadas, além de Helm, Kustomize e Jsonnet. |
+| CRD (Custom Resource Definition) | Recurso do Kubernetes que estende a API com novos tipos de objeto. Os principais são: Application, ApplicationSet e AppProject. |
+| Declarative Setup | Configuração do Próprio ArgoCD definida como manifestos YAML versionados. |
+| Degraded | Status de Saúde que indica falha em um recurso. |
+| Desired State / Target State | Estado Desejado, definido pelos manifestos no Git. |
+| Dex | Provedor de Identidade OIDC embutido, usado para integrar Single Sign On com provedores externos (GitHub, LDAP, SAML etc.). |
+| Diff | Comparação entre Desired State e o Live State, que determina se a aplicação está OutOfSync. |
+| Drift | Divergência do Cluster em relação ao Git, geralmente causada por alterações manuais. |
+
 
   </div>
   </details>        
