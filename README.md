@@ -13,15 +13,20 @@
 
 ----
 
+<details>
+  <summary><b> 1. Observabilidade </b></summary>
+  <div align="left">
+
+<br>
 
 <details>
-  <summary><b> 1. Prometheus - Referência: <a href="https://prometheus.io/docs/introduction/overview/"> Documentação Técnica</a></b></summary>
+  <summary><b> 1.1. Prometheus - Referência: <a href="https://prometheus.io/docs/introduction/overview/"> Documentação Técnica</a></b></summary>
   <div align="left">
     
 <br>
     
   <details>
-  <summary> 1.1 Glossário </summary>
+  <summary> 1.1.1. Glossário </summary>
   <div align="Center">
 
 <br>
@@ -66,13 +71,13 @@
 ----
 
 <details>
-  <summary><b> 2. Dynatrace - Referência: <a href="https://docs.dynatrace.com/docs"> Documentação Técnica</a></b></summary>
+  <summary><b> 1.2. Dynatrace - Referência: <a href="https://docs.dynatrace.com/docs"> Documentação Técnica</a></b></summary>
   <div align="left">
 
 <br>
     
   <details>
-  <summary> 2.1 Glossário </summary>
+  <summary> 1.2.1. Glossário </summary>
   <div align="Center">
 
 <br>  
@@ -119,13 +124,13 @@
 ----
 
 <details>
-  <summary><b> 3. Splunk - Referência: <a href="https://docs.splunk.com/Documentation"> Documentação Técnica</a></b></summary>
+  <summary><b> 1.3. Splunk - Referência: <a href="https://docs.splunk.com/Documentation"> Documentação Técnica</a></b></summary>
   <div align="left">
 
 <br>
     
   <details>
-  <summary> 3.1 Glossário </summary>
+  <summary> 1.3.1. Glossário </summary>
   <div align="Center">
 
 <br>  
@@ -181,13 +186,13 @@
 ----
 
 <details>
-  <summary><b> 4. OpenTelemetry - Referência: <a href="https://opentelemetry.io/docs/"> Documentação Técnica</a></b></summary>
+  <summary><b> 1.4. OpenTelemetry - Referência: <a href="https://opentelemetry.io/docs/"> Documentação Técnica</a></b></summary>
   <div align="left">
 
 <br>
     
   <details>
-  <summary> 4.1 Glossário </summary>
+  <summary> 1.4.1. Glossário </summary>
   <div align="Center">
 
 <br>  
@@ -262,13 +267,13 @@
 ----
 
 <details>
-  <summary><b> 5. InfluxDB - Referência: <a href="https://docs.influxdata.com/"> Documentação Técnica</a></b></summary>
+  <summary><b> 1.5. InfluxDB - Referência: <a href="https://docs.influxdata.com/"> Documentação Técnica</a></b></summary>
   <div align="left">
 
 <br>
     
   <details>
-  <summary> 5.1 Glossário </summary>
+  <summary> 1.5.1. Glossário </summary>
   <div align="Center">
 
 <br>  
@@ -343,14 +348,25 @@
 
 ----
 
+</div>
+</details>
+
+----
+
 <details>
-  <summary><b> 6. ArgoCD - Referência: <a href="https://argo-cd.readthedocs.io/en/stable/"> Documentação Técnica</a></b></summary>
+  <summary><b> 2. CI / CD </b></summary>
+  <div align="left">
+
+<br>
+
+<details>
+  <summary><b> 2.1. ArgoCD - Referência: <a href="https://argo-cd.readthedocs.io/en/stable/"> Documentação Técnica</a></b></summary>
   <div align="left">
 
 <br>
     
   <details>
-  <summary> 5.1 Glossário </summary>
+  <summary> 2.1.1. Glossário </summary>
   <div align="Center">
 
 <br>  
@@ -364,3 +380,8 @@
 
 </div>
 </details>
+
+</div>
+</details>
+
+----
