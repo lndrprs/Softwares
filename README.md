@@ -359,65 +359,36 @@
 
 | Termo | Descrição |
 |-------|-----------|
-| Aggregate Function | Função que reduz um conjunto devalores a um só: mean(), sum(), count(), max() |
-| Apache Arrow | Formato de dados colunar em memória, usado para processamento rápido de consultas. |
-| Apache DataFusion | Motor de Consultas em Rust, baseado em Arrow. Executa as queries SQL e InfluxQL. |
-| Apache Parquet | Formato de arquivo colunar e compactado, usado para persistir os Dados. |
-| API Token | Credencial de autenticação com permissões de leitura e / ou escrita sobre recursos específicos. |
-| Bucket | Local nomeado onde os dados de séries temporais são armazenados, com um retention period associado. |
-| Cardinality | Número de valores únicos em um conjunto de dados. |
-| Check | Consulta agendada que avalia dados e atribui um status. |
-| Chronograf | Interface web de visualização e administração do TICK Stack. |
-| CLI | Ferramenta de linha de comando (influx, influxdb3), para gerenciar o banco, escrever e consultar dados. |
-| Compactor | Componente que reorganiza e otimiza arquivos parquet para melhor a performance de leitura. |
-| Continuous Query (CQ) | Consulta InfluxQL executada automaticamente em intervalos, geralmente para downsampling. |
-| Dashboard | Painel com visualizações - gráficos, medidores, tabelas -, de dados do InfluxDB. |
-| Database | Contêiner lógico de Dados. |
-| Downsampling | Redução da resolução dos dados para economizar armanzemanto e acelerar consultas históricas. |
-| Edge Data Replication (EDR) | Replicação de dados de uma instância OSS local para o InfluxDB Cloud. |
-| Field | Par chave-valor com os dados medidos. |
-| Field Key / Field Value | Nome e valor de um field. |
-| Flight SQL | Protocolo para consultar bancos via SQL sobre Arrow Flight, usado como interface de consulta. |
-| Flux | Linguagem Funcional de Script e Consulta de Dados. | 
-| Garbage Collector | Componenet que remove dados e metadados expirados ou excluídos. |
-| Group Key | Lista de Colunas que define quais registros pertencem à mesma tabela de saída em um resultado Flux. |
-| Ingester | Componenet que recebe, valida e persiste os dados escritos. |
-| InfluxDB IOx | Novo motor de armazenamento, escrito em Rust e baseado em Arrow, DataFusion e Parquet. |
-| InfluxDB OSS (Open Source Software) | Versão de código aberto, instalada e gerenciada pelo próprio usuário. |
-| InfluxQL | Linguagem de consulta semelhante a SQL. | 
-| Kapacitor | Motor de processamento de dados, alertas, e ETL do TICK Stack, com a linguagem TICKscript. | 
-| Last Value Cache (LVC) | Cache que guarda os valores mais recentes de séries, acelerando consultas de "último valor". |
-| Line Protocol (LP) | Formato de Texto para Escrever Dados. |
-| Measurement | Nome que agrupa dados relacionados, análogo a uma tabela. |
-| Notebook | Documento interativo na UI que combina consultas, visualizações e anotações. |
-| Notification Endpoint / Rule | Destino (Slack, PagerDuty, HTTP), e regra que define quando enviar alertas. |
-| Organization (org) | Espaço de trabalho que agrupa usuários, buckets, dashboards e tasks. |
-| Pipe-Forward Operation | Operador do Flux que encadeia funções, passando a saída de uma como entrada da próxima. |
-| Point | Registro únivo de dados, composto por measurement, tag, set, field set e timestamp. |
-| Precision | Granularidade do timestamp: ns, us, ms, s | 
-| Processing Engine | Ambiente embutido para rodar plugins em Python. |
-| Querier | Component que executa consultas lendo dados do ingester e do object store. | 
-| Retention Period | Tempo pela qual os dados são mantidos antes de serem removidos automaticamente. |
-| Retention Policy (RP) | Regra que define duração, replicação e shard duration dos dados de um database. |
-| Router | Componente que recebe as requisições de escrita e as encaminha aos ingesters. |
-| Scraper | Coletor que busca métricas em endpoints Prometheus e as grava no InfluxDB. |
-| Series | Conjunto de Point com o mesmo Measurement e tag set. |
-| Series Cardinality | Número total de series únicas em um database ou bucket. |
-| Shard / Shard Group | Unidade física de armazenamento que contém dados de um intervalo de tempo. |
-| SQL | Linguagem padrão de consulta, suportada nativamente. |
-| Tag | Par chave-valor indexado, usado para filtrar e agrupar. Valores são sempre strings. |
-| Tag Key / Tag Value / Tag Set | Nome da Tag, seu valor e o conjunto de todas as tags de um point. |
-| Task | Script Flux agendado, usado para processar dados periodicamente. |
-| Telegraf | Agente de Coleta baseado em Plugins, que reune métricas de diversas fontes e as envia ao InfluxDB ou outros destinos. |
-| TICK Stack | Conjunto de ferramentas Telegraf, InfluxDB, Chronograf e Kapacitor. |
-| Time Series | Sequência de pontos de dados indexados por tempo. |
-| Timestamp | Data e hora associada a um point, armazenada em UTC. É a chave primária temporal. |
-| TSDB (Time Series Database) | Banco de dados otimizado para dados indexados por tempo. |
-| TSI (Time Series Index) | Índice em disco para séries, que permite lidar com alta cardinalidade, sem esgotar a memória. |
-| TSM (Time Structured Merge Tree) | Motor de armazenamento em disco otimizado para escrita e compressão séries temporais. |
-| Variable | Valor dinâmico usado em queries de dashboards para torná-las reutilizáveis. |
-| WAL (Write-Ahead Log) | Log de escritas gravado antes dos dados serem persistidos definitivamente, garantindo durabilidade em caso de falhas. |
-| Window | Agrupamento de dados por intervalos de tempo. |  
+| Agent | Software instalado em hosts, contêineres ou nós K8s, que coleta métricas, logs e traces e os envia ao Datadog. |
+| Anomaly Monitor | Monitor que usa algoritmos estatísticos para detectar comportamento fora do padrão histórico. |
+| API Key | Identifica a organização e autoriza o envio de dados pelo Agent. |
+| App Key | Autoriza chamadas à API para ler e gerenciar recursos, associada a um usuário. |
+| APM (Application Performance Monitoring) | Monitoramento de desempenho de aplicações, com traces distribuídos, mapa de serviços, latência e taxa de erros. |
+| Archive | Destino de armazenamento externo (S3, GCS, Azure Blob) para onde logs são enviados, em geral para retenção a longo prazo e baixo custo. |
+| Audit Trail | Registro de ações realizadas na conta Datadog, para auditoria e conformidade. |
+| Autodiscovery | Mecanismo do Agent que detecta contêineres e serviços em execução e configura automaticamente integrações correspondentes. |
+| Cardinality | Número de combinações únicas de tags de uma métrica. |
+| CI Visibility | Produto que monitora pipelines de CI/CD, mostrando duração, falhas e testes instáveis (Flaky Tests). |
+| Cloud SIEM | Produto de segurança que analisa logs e eventos em tempo real, para detecção de ameaças. |
+| Cluster Agent | Versão do Agent para K8s. Coleta metadados e métricas do cluster e atua como proxy entre API do K8s e os Agents dos nós. |
+| Composite Monitor | Monitor que combinado outros monitores com operadores lógicos (&&, ||, !). |
+| Container Monitoring | Monitoramento de contêineres e orquestradores. Com métricas, logs e visualização em tempo real. |
+| Continuous Profiler | Profiler de código em produção que mostra consumo de CPU, memória, e outros recursos por função ou linha. |
+| Count | Tipo de métrica que soma o número de ocorrências de um evento, em determinado intervalo de tempo. |
+| CSPM (Cloud Security Posture Management) | Produto que verifica configurações de infraestrutura em nuvem, boas práticas e padrões de conformidade. |
+| Custom Metric | Métrica enviada pelo usuário, que não faz parte das métricas padrão de uma integração. |
+| Dashboard | Painel com widgets que exibem métricas, logs, traces e outros dados em tempo real. |
+| DBM (Database Monitoring) | Produto que monitora bancos de dados, com análise de queries, planos de execução e métricas de desempenho. |
+| Distribution | Tipo de métrica que agrega valores de vários hosts no servidor do Datadog, permitindo calcular percentis globais (p50, p95, p99). | 
+| DogStatsD | Servidor de métricas, compatível com StatsD e com extensões do Datadog, incluído no Agent para receber métricas customizadas por UDP ou Socket Unix. |
+| Downtime | Silenciamento programado de notificações de monitores, usado em manutenções e janelas planejadas. |
+| Error Tracking | Produto que agrupa erros semelhantes (de APM, logs e RUM), em issues, facilitando priorização e investigação. |
+| Event | Registro de algo relevante ocorrido no ambiente (Deploy, alerta, mudança de configuração), que pode ser sobreposto aos gráficos. |
+| Exclusion Filter | Regra de um index de logs que descarta uma parte dos logs da indexação, reduzindo custo sem impedir seu uso em métricas ou arquivamento. |
+| Facet | Atributo ou tag de logs, spans, ou eventos indexado para filtrar, agrupar e buscar. |
+| Flame Graph | Visualização de um trace que mostra spans empilhados, com largura proporcional à duração, para identificar gargalos. |
+
+
 
   </div>
   </details>    
