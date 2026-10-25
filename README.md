@@ -341,7 +341,87 @@
 | Window | Agrupamento de dados por intervalos de tempo. |  
 
   </div>
-  </details>        
+  </details>   
+
+----
+
+<details>
+  <summary><b> 1.6 Datadog - Referência: <a href="https://docs.datadoghq.com/"> Documentação Técnica</a></b></summary>
+  <div align="left">
+
+<br>
+    
+  <details>
+  <summary> 1.6.1. Glossário </summary>
+  <div align="Center">
+
+<br>  
+
+| Termo | Descrição |
+|-------|-----------|
+| Aggregate Function | Função que reduz um conjunto devalores a um só: mean(), sum(), count(), max() |
+| Apache Arrow | Formato de dados colunar em memória, usado para processamento rápido de consultas. |
+| Apache DataFusion | Motor de Consultas em Rust, baseado em Arrow. Executa as queries SQL e InfluxQL. |
+| Apache Parquet | Formato de arquivo colunar e compactado, usado para persistir os Dados. |
+| API Token | Credencial de autenticação com permissões de leitura e / ou escrita sobre recursos específicos. |
+| Bucket | Local nomeado onde os dados de séries temporais são armazenados, com um retention period associado. |
+| Cardinality | Número de valores únicos em um conjunto de dados. |
+| Check | Consulta agendada que avalia dados e atribui um status. |
+| Chronograf | Interface web de visualização e administração do TICK Stack. |
+| CLI | Ferramenta de linha de comando (influx, influxdb3), para gerenciar o banco, escrever e consultar dados. |
+| Compactor | Componente que reorganiza e otimiza arquivos parquet para melhor a performance de leitura. |
+| Continuous Query (CQ) | Consulta InfluxQL executada automaticamente em intervalos, geralmente para downsampling. |
+| Dashboard | Painel com visualizações - gráficos, medidores, tabelas -, de dados do InfluxDB. |
+| Database | Contêiner lógico de Dados. |
+| Downsampling | Redução da resolução dos dados para economizar armanzemanto e acelerar consultas históricas. |
+| Edge Data Replication (EDR) | Replicação de dados de uma instância OSS local para o InfluxDB Cloud. |
+| Field | Par chave-valor com os dados medidos. |
+| Field Key / Field Value | Nome e valor de um field. |
+| Flight SQL | Protocolo para consultar bancos via SQL sobre Arrow Flight, usado como interface de consulta. |
+| Flux | Linguagem Funcional de Script e Consulta de Dados. | 
+| Garbage Collector | Componenet que remove dados e metadados expirados ou excluídos. |
+| Group Key | Lista de Colunas que define quais registros pertencem à mesma tabela de saída em um resultado Flux. |
+| Ingester | Componenet que recebe, valida e persiste os dados escritos. |
+| InfluxDB IOx | Novo motor de armazenamento, escrito em Rust e baseado em Arrow, DataFusion e Parquet. |
+| InfluxDB OSS (Open Source Software) | Versão de código aberto, instalada e gerenciada pelo próprio usuário. |
+| InfluxQL | Linguagem de consulta semelhante a SQL. | 
+| Kapacitor | Motor de processamento de dados, alertas, e ETL do TICK Stack, com a linguagem TICKscript. | 
+| Last Value Cache (LVC) | Cache que guarda os valores mais recentes de séries, acelerando consultas de "último valor". |
+| Line Protocol (LP) | Formato de Texto para Escrever Dados. |
+| Measurement | Nome que agrupa dados relacionados, análogo a uma tabela. |
+| Notebook | Documento interativo na UI que combina consultas, visualizações e anotações. |
+| Notification Endpoint / Rule | Destino (Slack, PagerDuty, HTTP), e regra que define quando enviar alertas. |
+| Organization (org) | Espaço de trabalho que agrupa usuários, buckets, dashboards e tasks. |
+| Pipe-Forward Operation | Operador do Flux que encadeia funções, passando a saída de uma como entrada da próxima. |
+| Point | Registro únivo de dados, composto por measurement, tag, set, field set e timestamp. |
+| Precision | Granularidade do timestamp: ns, us, ms, s | 
+| Processing Engine | Ambiente embutido para rodar plugins em Python. |
+| Querier | Component que executa consultas lendo dados do ingester e do object store. | 
+| Retention Period | Tempo pela qual os dados são mantidos antes de serem removidos automaticamente. |
+| Retention Policy (RP) | Regra que define duração, replicação e shard duration dos dados de um database. |
+| Router | Componente que recebe as requisições de escrita e as encaminha aos ingesters. |
+| Scraper | Coletor que busca métricas em endpoints Prometheus e as grava no InfluxDB. |
+| Series | Conjunto de Point com o mesmo Measurement e tag set. |
+| Series Cardinality | Número total de series únicas em um database ou bucket. |
+| Shard / Shard Group | Unidade física de armazenamento que contém dados de um intervalo de tempo. |
+| SQL | Linguagem padrão de consulta, suportada nativamente. |
+| Tag | Par chave-valor indexado, usado para filtrar e agrupar. Valores são sempre strings. |
+| Tag Key / Tag Value / Tag Set | Nome da Tag, seu valor e o conjunto de todas as tags de um point. |
+| Task | Script Flux agendado, usado para processar dados periodicamente. |
+| Telegraf | Agente de Coleta baseado em Plugins, que reune métricas de diversas fontes e as envia ao InfluxDB ou outros destinos. |
+| TICK Stack | Conjunto de ferramentas Telegraf, InfluxDB, Chronograf e Kapacitor. |
+| Time Series | Sequência de pontos de dados indexados por tempo. |
+| Timestamp | Data e hora associada a um point, armazenada em UTC. É a chave primária temporal. |
+| TSDB (Time Series Database) | Banco de dados otimizado para dados indexados por tempo. |
+| TSI (Time Series Index) | Índice em disco para séries, que permite lidar com alta cardinalidade, sem esgotar a memória. |
+| TSM (Time Structured Merge Tree) | Motor de armazenamento em disco otimizado para escrita e compressão séries temporais. |
+| Variable | Valor dinâmico usado em queries de dashboards para torná-las reutilizáveis. |
+| WAL (Write-Ahead Log) | Log de escritas gravado antes dos dados serem persistidos definitivamente, garantindo durabilidade em caso de falhas. |
+| Window | Agrupamento de dados por intervalos de tempo. |  
+
+  </div>
+  </details>    
+
 
 </div>
 </details>
