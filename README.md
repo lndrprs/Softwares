@@ -387,8 +387,43 @@
 | Exclusion Filter | Regra de um index de logs que descarta uma parte dos logs da indexação, reduzindo custo sem impedir seu uso em métricas ou arquivamento. |
 | Facet | Atributo ou tag de logs, spans, ou eventos indexado para filtrar, agrupar e buscar. |
 | Flame Graph | Visualização de um trace que mostra spans empilhados, com largura proporcional à duração, para identificar gargalos. |
-
-
+| Forwarder | Função Lambda do Datadog que envia logs, métricas e trances de serviços AWS, ao Datadog. |
+| Gauge | Tipo de métrica que representa o valor de algo em um instante. |
+| Host | Máquina física ou virtual monitorada pelo Datadog. 
+| Incident Management | Produto para declarar, coordenar e documentar incidentes, com linha de tempo, responsáveis e pós-mortem. |
+| Index | Conjunto de logs armazenados e pesquisáveis por um período de retenção definido, com filtros e cota diária configuráveis. |
+| Infrastructure Monitoring | Produto que monitora hosts, contêineres, serviços em nuvem e processos, com métricas e mapas de infraestrutura. |
+| Integration | Conector pré-configurado paracoletar dados de uma tecnologa ou serviço. |
+| Live Tail | Visualização de logs em tempo real, no momento em que chegam ao Datadog. |
+| Log Management | Produto para coletar, processar, pesquisar, analisar e arquivar logs. |
+| Log Pipeline | Sequência de processors aplicada aos logs que chegam, para extrair atributos, emapear campos e enriquecer dados. |
+| Logging without Limits | Abordagem que separa ingestão de indexação: todos os logs podem ser ingeridos e processados, e apenas parte deles é indexada. |
+| Measure | Atributo numérico de um log ou span usado em cálculos e agregações, como duração ou tamanho. |
+| Metric | Valor numérico medido ao longo do tempo, identificado por nome e tags. |
+| Metrics without Limits | Recurso que permite escolher quais tags e agregações de uma métrica serão indexadas e consultáveis, controlando custo e cardinalidade. |
+| Monitor | Verificação contínua de métricas, logs, traces e outros dados que gera alertas ao ultrapassar limites ou detectar condições definidas. |
+| Network Performance Monitoring (NPM) | Produto que mostra tráfego, latência e falhas de conexão entre hosts, contêineres, serviços e zonas de disponibilidade. |
+| Notebook | Documento colaborativo que mistura gráficos, texto e consultas, usado em investigações, pós-mortems e análises. |
+| Observability Pipelines | Produto para coletar, transformar, filtrar e rotear logs e métricas entre origens e destinos antes de chegarem ao Datadog ou a outras ferramentas. |
+| OpenTelemetry (OTel) | Padrão aberto de instrumentação para gerar traces, métricas e logs, com suporte no Datadog. |
+| Rehydration | Reindexação de logs arquivados para torná-los pesquisáveis novamente no Datadog. |
+| Retention Filter | Regra que define quais spans são mantidos pelo período de retenção de traces, além do padrão. |
+| RUM (Real User Monitoring) | Produto que mede a experiência de usuários reais em aplicações web e mobile, com sessões, carregamento de páginas e erros no cliente. |
+| Sampling | Seleção de uma fração dos traces ou logs para reduzir volume e custo. No APM, é controlada pelas regras de ingestão. |
+| Sensitive Data Scanner | Recurso que detecta e mascara dados sensíveis em logs, spans e eventos. |
+| Serverless Monitoring | Monitoramento de funções serverless, com métricas, traces e logs. |
+| Service | Unidade lógica de uma aplicação, que gera traces e métricas, identificada pela tag Service. |
+| Software Catalog | Catálogo de serviços e dependências, com responsáveis, documentação e saúde. Antes era chamado de Service Catalog. |
+| Span | Unidade de trabalho dentro de um trace, com início, duração e metadados. |
+| Synthetic Monitoring | Produto que simula acessos de usuários e chamadas de API a partir de várias localidades, para testar disponibilidade e desempenho. |
+| Tag | Par chave:valor associado a métricas, logs e traces, usado para filtrar, agrupar e correlacionar dados. |
+| Template Variable | Variáavel de Dashboard que permite filtrar todos os widgets ao mesmo tempo. |
+| Trace | Conjunto de spans que descreve o caminho de uma requisição por vários serviços. | 
+| Universal Service Tagging | Padrão que usa as tags env, service e version em todos os tipos de dado, para correlacionar métricas, logs e traces. |
+| Universal Service Monitoring (USM) | Produto que fornece visibilidade de serviços sem instrumentar código, usando o Agent e eBPF. |
+| Watchdog | Recurso de detecção automática de anomalias e problemas de desempenho, sem necessidade de configuração de monitores. |
+| Widget | Bloco individual de um dashboard. |
+| Workflow Automation | Reecurso para criar fluxos automatizados que reagem a alertas e eventos, executando ações no Datadog e em ferramentas externas. | 
 
   </div>
   </details>    
