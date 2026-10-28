@@ -525,8 +525,6 @@
 </div>
 </details>
 
-----
-
 </div>
 </details>
 
