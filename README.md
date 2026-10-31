@@ -453,7 +453,8 @@
 | Attribute | Par chave-valor associado a um evento, métrica, log ou span, usado para filtrar e agrupar em consultas NRQL. |
 | Baseline Condition | Condição de alerta que compara o valor atual com o comportamento histórico da métrica, considerando sazonalidade. |
 | Browser Monitoring | Produto que mede o desempenho de páginas web no navegador do usuário (RUM), incluindo carregamento, erros de javascript e chamadas AJAX. |
-
+| Change Tracking | Registro de mudanças exibidos sobre os gráficos, para correlacionar mudanças com problemas. |
+| Cloud Integration | Integração que coleta métricas e metadados de provedores de nuvem sem instalar agente. |
 
   </div>
   </details>    
