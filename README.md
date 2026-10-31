@@ -462,7 +462,7 @@
 
 | Termo | Descrição |
 |-------|-----------|
-| App of Apps | Padrão onde uma Application aponta para um repositório que contém outras Applications, permitindo gerenciamento e provisionamento a partir de um único ponto de entrada. |
+| App of Apps | Padrão onde uma Application aponta para um repositório que contém outras Applications, permitindo gerenciamento e provisionamento a partir de um único ponto de entrada.
 | Application | CRD que representa uma instância implantada: Liga uma origem a um destino - Source -> Cluster / Namespace. | 
 | Application Controller | Componente que monitora aplicações, compara o "Live State" com o "Desired State", executando o Sync. |
 | ApplicationSet | CRD e Controller que geram várias Applications a partir de um Template e de Generatores (App por Cluster ou por pasta do Git.) |
