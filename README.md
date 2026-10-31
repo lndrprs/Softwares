@@ -444,7 +444,16 @@
 
 | Termo | Descrição |
 |-------|-----------|
-| 
+| Account | Unidade onde os dados de telemetria são armazenados e cobrados. Pode estar agrupada em uma organization, com várias contas e usuários. |
+| Alert Condition | Regra que define quando um alerta deve estar aberto. Pode ser limite estático, baseline ou anomaly detection. |
+| Alert Policy | Agrupamento de alert conditions, usado para organizar alertas por equipe ou serviço. |
+| Anomaly Detection | Tipo de condição que usa algoritmos para detectar desvios do comportamento esperado de uma métrica, sem limite fixo. |
+| Apdex | Índice (0 a 1), que mede a satisfalção do usuário com o tempo de resposta, com base em um tempo limite T definido: satisfied, tolerating ou frustrated. |
+| Applied Intelligence (AI) | Conjunto de recursos de IA para correlacionar, priorizar e reduzir o ruído de alertas, incluindo detecção de anomalias e agrupamento de incidentes. |
+| Attribute | Par chave-valor associado a um evento, métrica, log ou span, usado para filtrar e agrupar em consultas NRQL. |
+| Baseline Condition | Condição de alerta que compara o valor atual com o comportamento histórico da métrica, considerando sazonalidade. |
+| Browser Monitoring | Produto que mede o desempenho de páginas web no navegador do usuário (RUM), incluindo carregamento, erros de javascript e chamadas AJAX. |
+
 
   </div>
   </details>    
