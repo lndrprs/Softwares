@@ -428,6 +428,26 @@
   </div>
   </details>    
 
+----
+
+<details>
+  <summary><b> 1.7. New Relic - Referência: <a href="https://docs.newrelic.com/"> Documentação Técnica</a></b></summary>
+  <div align="left">
+
+<br>
+    
+  <details>
+  <summary> 1.7.1. Glossário </summary>
+  <div align="Center">
+
+<br>  
+
+| Termo | Descrição |
+|-------|-----------|
+| 
+
+  </div>
+  </details>    
 
 </div>
 </details>
