@@ -477,6 +477,12 @@
 | Ingest | Dados enviados ao New Relic, por agentes, integrações ou APIs. A cobrança costuma ser baseada no volume ingerido. (GB). |
 | Instrumentation | Adição de código ou agente  a uma aplicação para gerar telemetria, de forma automática ou manual. |
 | Key Transaction | Transação de negócio importante, monitorada separadamente, com métricas e alertas próprios. |
+| Kubernetes Cluster Explorer | Visualização interativa de clusters Kubernetes, com nós, pods, contêineres e saúde de cada elemento. | 
+| License Key | Chave que autentica os agentes e associa os dados enviados a uma conta. | Também chamada de ingest key - license. |
+| Log Management | Produto para coletar, pesquisar, analisar e correlacionar logs com os demais dados de telemetria. |
+| Logs in Context | Recurso que associa logs a traces, erros e entidades, permitindo ir de um erro direto aos logs relacionados. |
+| Loss of Signal | Configuração que dispara um alerta quando uma entidade para de enviar dados por um período definido. |
+
 
 
   </div>
