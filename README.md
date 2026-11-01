@@ -472,6 +472,11 @@
 | Flex | Integração flexível da insfrastructure agent, que coleta métricas de qualquer fonte de comandos, arquivos ou APIs, sem código. |
 | Golden Signals | Quatro sinais-chave de saúde de um serviço: latêncioa, tráfego, erros e saturação. |
 | Incident / Issue | Incident é uma ocorrência individual de violação de uma condição. Issue é o agrupamento de incidentes relacionados, que dispara as notificações. |
+| Infinite Tracing | Amostragem de traces feita no servidor, que analisa 100% dos spans e retém os mais relevantes (erros e lentos). |
+| Infrastructure Agent | Agente que coleta métricas e eventos de hosts e contêineres (CPU, memória, disco, rede, processos). | 
+| Ingest | Dados enviados ao New Relic, por agentes, integrações ou APIs. A cobrança costuma ser baseada no volume ingerido. (GB). |
+| Instrumentation | Adição de código ou agente  a uma aplicação para gerar telemetria, de forma automática ou manual. |
+| Key Transaction | Transação de negócio importante, monitorada separadamente, com métricas e alertas próprios. |
 
 
   </div>
