@@ -455,6 +455,16 @@
 | Browser Monitoring | Produto que mede o desempenho de páginas web no navegador do usuário (RUM), incluindo carregamento, erros de javascript e chamadas AJAX. |
 | Change Tracking | Registro de mudanças exibidos sobre os gráficos, para correlacionar mudanças com problemas. |
 | Cloud Integration | Integração que coleta métricas e metadados de provedores de nuvem sem instalar agente. |
+| Core Web Vitals | Métricas do Google de experiência de página (LCP, INP,CLS) coletadas pelo browser monitoring. | 
+| Custom Event / Custom Attribute | Evento ou atributo definido pelo usuário, enviado por agente ou API para registrar dados específicos do negócio. |
+| Dashboard | Painel de gráficos, tabela e métricas, alimentado por consultas NRQL. |
+| Data Retention | Período em que os dados ficam armazenados e consultáveis, variando por tipo de dado e contrato. |
+| Deployment Marker | Marcador de um deploy, exibido nos gráficos para relacionar mudanças de desempenho a versões publicadas. |
+| Destination | Configuração de destino das notificações em um workflow (e-mail, Slack, PagerDuty, Webhook.). |
+| Dimensional Metrics | Métricas com nome, valor e atributos (dimensões), enviadas via MetricAPI, OpenTelemetry ou Prometheus. | 
+| Distributed Tracing | Rastreamento de uma requisição através de vários serviços, mostrando o caminho completo e onde está a latência. |
+| Drop Rule | Regra que descarta dados antes do armazenamento, para reduzir volume e custo de ingestão. |
+| Entity | Qualquer elemento monitorado. |
 
   </div>
   </details>    
