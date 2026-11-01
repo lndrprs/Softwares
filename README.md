@@ -465,6 +465,14 @@
 | Distributed Tracing | Rastreamento de uma requisição através de vários serviços, mostrando o caminho completo e onde está a latência. |
 | Drop Rule | Regra que descarta dados antes do armazenamento, para reduzir volume e custo de ingestão. |
 | Entity | Qualquer elemento monitorado. |
+| Entity GUID | Identificador único global de um entity, usado em APIs e no NerdGraph. |
+| Errors Inbox | Caixa de entrada que agrupa erros semelhantes para triagem e atribuição. |
+| Event | Registro de algo ocorrido em um instante, com atributos. | Um dos tipos de dado do New Relic, junto de métricas, logs e traces (MELT). |
+| Facet | Cláusula do NRQL que agrupa os resultados por um atributo. |
+| Flex | Integração flexível da insfrastructure agent, que coleta métricas de qualquer fonte de comandos, arquivos ou APIs, sem código. |
+| Golden Signals | Quatro sinais-chave de saúde de um serviço: latêncioa, tráfego, erros e saturação. |
+| Incident / Issue | Incident é uma ocorrência individual de violação de uma condição. Issue é o agrupamento de incidentes relacionados, que dispara as notificações. |
+
 
   </div>
   </details>    
