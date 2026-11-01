@@ -482,7 +482,9 @@
 | Log Management | Produto para coletar, pesquisar, analisar e correlacionar logs com os demais dados de telemetria. |
 | Logs in Context | Recurso que associa logs a traces, erros e entidades, permitindo ir de um erro direto aos logs relacionados. |
 | Loss of Signal | Configuração que dispara um alerta quando uma entidade para de enviar dados por um período definido. |
-
+| Metric | Valor nuimérico medido ao longo do tempo, identificado por nome e atributos. |
+| Mobile Monitoring | Produto que monitora apps iOS e Android, com crashes, desempenho de requisições e sessões. |
+| Muting Rule | Regra que suprime notificações de alerta em condições definidas, como janelas de manutenção. | 
 
 
   </div>
