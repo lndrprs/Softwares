@@ -485,6 +485,16 @@
 | Metric | Valor nuimérico medido ao longo do tempo, identificado por nome e atributos. |
 | Mobile Monitoring | Produto que monitora apps iOS e Android, com crashes, desempenho de requisições e sessões. |
 | Muting Rule | Regra que suprime notificações de alerta em condições definidas, como janelas de manutenção. | 
+| NerdGraph | API GraphQL do New Relic, usada para consultar dados e gerenciar contas, alertas, dashboards e entidades. |
+| Nerdlet / Netdpack | Nerdlet é um componente de interface construído com React. Nerdpack é o pacote que reúne nerdlets e origina aplicações customizadas. |
+| NerdStorage | Armazenamento chave-valor que permite às aplicações customizadas guardar dados de usuário, entidade ou conta. |
+| Network Performance Monitoring (NPM) | Produto que monitora dispositivos e tráfego de rede (via SNMP e Fluxos), com latência e utilização. |
+| New Relic One (NR1) | Nome da Platforma e da interface unificada do New Relic, que reúne todos os produtos. |
+| NRDB (Mew Reçoc Database) | Banco de dados de telemetria do New Relic, onde ficam armazenados e são consultados métricas, eventos, logs e traces. |
+| NRQL (New Relic Query Language) | Linguagem de consulta semelhante a SQL, usada em dashboards, alertas e APIs. |
+| On-Host Integration | Integração instalada junto ao agente de infraestrutura para coletar métricas de serviços, como MySQL, NGINX, Redis e Kafka. |
+
+
 
 
   </div>
