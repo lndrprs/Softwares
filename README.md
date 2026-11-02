@@ -493,6 +493,11 @@
 | NRDB (Mew Reçoc Database) | Banco de dados de telemetria do New Relic, onde ficam armazenados e são consultados métricas, eventos, logs e traces. |
 | NRQL (New Relic Query Language) | Linguagem de consulta semelhante a SQL, usada em dashboards, alertas e APIs. |
 | On-Host Integration | Integração instalada junto ao agente de infraestrutura para coletar métricas de serviços, como MySQL, NGINX, Redis e Kafka. |
+| OpenTelemetry | Padrão aberto de instrumentação e protocolo (OTLP), para enviar traces, métricas e logs ao New Relic. |
+| Pipeline Control | Conjunto de recursos para filtrar, transformar e reduzir dados antes ou durante a ingestão, como as drop rules. |
+| Pixie | Tecnologia de observabilidade para Kubernetes que usa eBPF, para coletar telemetria sem alterar o código das aplicações. |
+| Private Location | Local privado, hospedado pelo cliente, de onde monitores sintéticos testam recursos internos e não acessíveis pela internet. |
+| Query 
 
 
 
