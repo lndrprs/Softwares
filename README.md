@@ -498,7 +498,8 @@
 | Pixie | Tecnologia de observabilidade para Kubernetes que usa eBPF, para coletar telemetria sem alterar o código das aplicações. |
 | Private Location | Local privado, hospedado pelo cliente, de onde monitores sintéticos testam recursos internos e não acessíveis pela internet. |
 | Query Builder | Editor de consultas NRQL na interface, com sugestão de sintaxe, visualização e criação de gráficos. |
-| 
+| Scorecard | Painel que mede a aderência de serviços a regras de boas práticas. |
+| Service Levels | Recurso para definir e acompanhar SLIs e SLOs de serviços, como error budget. | 
 
 
 
