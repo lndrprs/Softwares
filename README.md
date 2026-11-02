@@ -497,7 +497,8 @@
 | Pipeline Control | Conjunto de recursos para filtrar, transformar e reduzir dados antes ou durante a ingestão, como as drop rules. |
 | Pixie | Tecnologia de observabilidade para Kubernetes que usa eBPF, para coletar telemetria sem alterar o código das aplicações. |
 | Private Location | Local privado, hospedado pelo cliente, de onde monitores sintéticos testam recursos internos e não acessíveis pela internet. |
-| Query 
+| Query Builder | Editor de consultas NRQL na interface, com sugestão de sintaxe, visualização e criação de gráficos. |
+| 
 
 
 
