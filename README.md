@@ -510,7 +510,9 @@
 | Trace | Conjunto de spans que descreve o caminho de uma requisição por vários serviços. |
 | Transaction | Unidade de trabalho de uma aplicação, normalmente uma requisição web ou tarefa em segundo plano. |
 | User Key | Chave pessoal usada para autenticar chamadas ao NerdGraph e a APIs de Gerenciamento, associada a um usuário. |
-| 
+| Vulnerability Management | Produto que identifica vulnerabilidades em dependências e bibliotecas de aplicações em execução. |
+| Workflow | Cofiguração que define quais issues geram notificações, para quais destinations e com qual conteúdo. |
+| Workload | Agrupamento lógico de entidades, com visão consolidade de saúde e desempenho. | 
 
 
 
