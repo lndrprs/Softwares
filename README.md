@@ -509,6 +509,7 @@
 | Throughput | Quantidade de requisições ou transações processadas por unidade de tempo. |
 | Trace | Conjunto de spans que descreve o caminho de uma requisição por vários serviços. |
 | Transaction | Unidade de trabalho de uma aplicação, normalmente uma requisição web ou tarefa em segundo plano. |
+| User Key | Chave pessoal usada para autenticar chamadas ao NerdGraph e a APIs de Gerenciamento, associada a um usuário. |
 | 
 
 
