@@ -346,7 +346,7 @@
 ----
 
 <details>
-  <summary><b> 1.6 Datadog - Referência: <a href="https://docs.datadoghq.com/"> Documentação Técnica</a></b></summary>
+  <summary><b> 1.6. Datadog - Referência: <a href="https://docs.datadoghq.com/"> Documentação Técnica</a></b></summary>
   <div align="left">
 
 <br>
