@@ -515,6 +515,28 @@
 | Workload | Agrupamento lógico de entidades, com visão consolidade de saúde e desempenho. | 
 
 
+  </div>
+  </details>    
+
+</div>
+</details>
+
+----
+
+<details>
+  <summary><b> 1.8. Elasticsearch - Referência: <a href="https://docs.newrelic.com/"> Documentação Técnica</a></b></summary>
+  <div align="left">
+
+<br>
+    
+  <details>
+  <summary> 1.8.1. Glossário </summary>
+  <div align="Center">
+
+<br>  
+
+| Termo | Descrição |
+|-------|-----------|
 
   </div>
   </details>    
