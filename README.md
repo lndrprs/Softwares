@@ -529,7 +529,7 @@
 ----
 
 <details>
-  <summary><b> 1.8. Elasticsearch - Referência: <a href="https://docs.newrelic.com/"> Documentação Técnica</a></b></summary>
+  <summary><b> 1.8. Elasticsearch - Referência: <a href="https://www.elastic.co/docs"> Documentação Técnica</a></b></summary>
   <div align="left">
 
 <br>
