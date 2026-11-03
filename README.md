@@ -500,7 +500,16 @@
 | Query Builder | Editor de consultas NRQL na interface, com sugestão de sintaxe, visualização e criação de gráficos. |
 | Scorecard | Painel que mede a aderência de serviços a regras de boas práticas. |
 | Service Levels | Recurso para definir e acompanhar SLIs e SLOs de serviços, como error budget. | 
-
+| Service Map | Mapa visual de dependências entre aplicações, serviços e banco de dados. |
+| Session Replay | Reprodução gravada da sessão do usuário no navegador, para entender o contexto de erros e problemas de usabilidade. |
+| Span | Unidade de trabalho dentro de um trace, com início, duração e atributos. |
+| Synthtetic Monitoring | Produto que simula acessos e chamadas de API de várias localidades, usando monitores de tipo ping, navegador, script e API. |
+| Tag | Par chave-valor associado a uma entidade, usado para organizar, filtrar e buscar. |
+| Telemetry Data Platform | Parte da plataforma que armazena e consulta métricas, eventos, logs e traces. |
+| Throughput | Quantidade de requisições ou transações processadas por unidade de tempo. |
+| Trace | Conjunto de spans que descreve o caminho de uma requisição por vários serviços. |
+| Transaction | Unidade de trabalho de uma aplicação, normalmente uma requisição web ou tarefa em segundo plano. |
+| 
 
 
 
