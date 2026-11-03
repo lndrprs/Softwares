@@ -341,7 +341,10 @@
 | Window | Agrupamento de dados por intervalos de tempo. |  
 
   </div>
-  </details>   
+  </details>
+  
+</div>
+</details>    
 
 ----
 
@@ -426,8 +429,11 @@
 | Workflow Automation | Reecurso para criar fluxos automatizados que reagem a alertas e eventos, executando ações no Datadog e em ferramentas externas. | 
 
   </div>
-  </details>    
-
+  </details>
+  
+</div>
+</details>  
+  
 ----
 
 <details>
@@ -514,7 +520,6 @@
 | Workflow | Cofiguração que define quais issues geram notificações, para quais destinations e com qual conteúdo. |
 | Workload | Agrupamento lógico de entidades, com visão consolidade de saúde e desempenho. | 
 
-
   </div>
   </details>    
 
@@ -544,7 +549,6 @@
 </div>
 </details>
 
-----
 
 </div>
 </details>
