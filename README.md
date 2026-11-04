@@ -542,6 +542,11 @@
 
 | Termo | Descrição |
 |-------|-----------|
+| Aggregation | Operação que calcula métricas, estatísticas ou agrupamentos sobre os documentos de uma busca. |
+| Alias | Nome alternativo que aponta para um ou mais índices. |
+| Analyzer | Conjunto de character filters, um tokenizer e token filters, que processa o texto na indexação e na busca. |
+| Beats | Família de agentes leves de coleta, que enviam dados ao Elasticsearch ou ao Logstash. |
+| 
 
   </div>
   </details>    
