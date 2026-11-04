@@ -546,7 +546,16 @@
 | Alias | Nome alternativo que aponta para um ou mais índices. |
 | Analyzer | Conjunto de character filters, um tokenizer e token filters, que processa o texto na indexação e na busca. |
 | Beats | Família de agentes leves de coleta, que enviam dados ao Elasticsearch ou ao Logstash. |
-| 
+| BM25 | Algoritmo de relevância usado por padrão para calcular o score de documentos em buscas de texto. |
+| Bool Query | Consulta que combina outras com as cláusulas must, should, must_not e filter. |
+| Bucket Aggregation | Agregação que agrupa documentos em "baldes". |
+| Bulk API | API que executa várias operações de indexação, atualização ou exclusão em uma única requisição, melhorando a performance. |
+| Cluster | Conjunto de um ou mais nodes que armazena os dados e oferece indexação e busca. |
+| Cluster State | Metadados do Cluster, mantidos pelo nó mestre e replicados entre os nós. |
+| Coordinating Node | Nó que recebe a requisição do cliente, distribui para os shards relevantes e consolida os resultados. |
+| Cross Cluster Replication (CCR) | Replicação de índices de um cluster para outro, usada em recuperação de desastres e proximidade geográfica. |
+| Cross-Cluster Search (CCS) | Busca que consulta índices de vários clusters em uma única requisição. |
+| Dashboard | s
 
   </div>
   </details>    
