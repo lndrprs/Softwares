@@ -555,7 +555,8 @@
 | Coordinating Node | Nó que recebe a requisição do cliente, distribui para os shards relevantes e consolida os resultados. |
 | Cross Cluster Replication (CCR) | Replicação de índices de um cluster para outro, usada em recuperação de desastres e proximidade geográfica. |
 | Cross-Cluster Search (CCS) | Busca que consulta índices de vários clusters em uma única requisição. |
-| Dashboard | s
+| Dashboard | Painel de visualizações no Kibana, alimentado por consultas ao Elasticsearch. |
+| Data Stream | Abstração para dados de séries temporais append-only, composta por vários backing indices gerenciados automaticamente. | 
 
   </div>
   </details>    
