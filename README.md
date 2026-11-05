@@ -557,6 +557,17 @@
 | Cross-Cluster Search (CCS) | Busca que consulta índices de vários clusters em uma única requisição. |
 | Dashboard | Painel de visualizações no Kibana, alimentado por consultas ao Elasticsearch. |
 | Data Stream | Abstração para dados de séries temporais append-only, composta por vários backing indices gerenciados automaticamente. | 
+| Data Tier | Camada de armazenamento por temperatura do dado: hot, warm, cold e frozen. |
+| Dense Vector | Tipo de campo que armazena vetores numéricos, usado em busca vetorial e semântica. |
+| Discovery | Processo pelo qual os nós se encontram e formam um cluster. |
+| Document | Unidade básica de dados do Elasticsearch, representada em JSON e armazenada em um índice. |
+| DSL (Query DSL) | Linguagem de consulta baseada em JSON, usada para definir buscas e filtros. |
+| EQL (Event Query Language) | Linguagem para consultar eventos e detectar sequências, muito usada em segurança. |
+| ECS (Elastic Common Schema) | Especificação de nomes e tipos de campos para padronizar logs, métricas e eventos. |
+| Elastic Agent | Agente único que coleta logs, métricas e dados de segurança, gerenciado de forma centralizada pelo Fleet. |
+| Elastic Cloud | Serviço gerenciado do Elasticsearch, hospedado pela Elastic. |
+| ELK Stack | Conjunto de Elasticsearch, Logstash e Kibana. Com os Beats, passou a ser chamado de Elastic Stack. | 
+| Enrich Processor | Processador de ingest pipeline que acrescenta dados de outro índice aos documentos durante a indexação. |
 
   </div>
   </details>    
