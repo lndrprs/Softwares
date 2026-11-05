@@ -578,6 +578,13 @@
 | Highlighting | Recurso que destaca os trechos do texto que correspondem à busca. |
 | Hot-Warm-Cold Architecture | Arquitetura que distribui os dados em camadas de acordo com idade e frequência de acesso, equilibrando custo e desempenho. |
 | ILM (Index Lifecycle Management) | Política que automatiza o ciclo de vida de índices por fases (hot, warm, cold, frozen e delete), com ações como rollover e shrink. |
+| Index | Coleção de documentos com características semelhantes, análoga a uma tabela ou banco de dados lógico. |
+| Index Template | Modelo que aplica automaticamente settings, mappings e aliases a novos índices, cujo nome corresponda a um padrão. |
+| Indexing | Processo de armazenar um documento e torná-lo pesquisável. |
+| Ingest Node | Nó que executa ingest pipelines antes da indexação. |
+| Ingest Pipeline | Sequência de processors (grok, rename, geopip, date etc.), que transforma documentos antes de indexá-los. |
+| Inverted Index | Estrutura que mapeia cada termo aos documentos em que ele aparece, base da busca de texto completo. | 
+
 
 
   </div>
