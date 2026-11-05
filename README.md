@@ -568,6 +568,17 @@
 | Elastic Cloud | Serviço gerenciado do Elasticsearch, hospedado pela Elastic. |
 | ELK Stack | Conjunto de Elasticsearch, Logstash e Kibana. Com os Beats, passou a ser chamado de Elastic Stack. | 
 | Enrich Processor | Processador de ingest pipeline que acrescenta dados de outro índice aos documentos durante a indexação. |
+| Field | Par chave-valor dentro de um documento, com tipo definido no mapping. |
+| Field Data | Estrutura em memória usada para ordenar e agregar em campos text. Costuma ser evitada em favor de doc values. |
+| Filter Context | Contexto de consulta que apenas inclui ou exclui documentos, sem calcular score, e permite cache. |
+| Fleet | Interface do Kibana para gerenciar Elastic Agents e suas políticas de forma central. |
+| Force Merge | Operação que reduz o número de segments de um  índice, normalmente aplicada a índices que não recebem mais escrita. |
+| Frozen Tier | Camada de menor custo, que usa searchable snapshots para manter grandes volumes de dados pesquisáveis. |
+| Fuzzy Query | Consulta que tolera erros de digitação, com base na distância de edição. |
+| Highlighting | Recurso que destaca os trechos do texto que correspondem à busca. |
+| Hot-Warm-Cold Architecture | Arquitetura que distribui os dados em camadas de acordo com idade e frequência de acesso, equilibrando custo e desempenho. |
+| ILM (Index Lifecycle Management) | Política que automatiza o ciclo de vida de índices por fases (hot, warm, cold, frozen e delete), com ações como rollover e shrink. |
+
 
   </div>
   </details>    
