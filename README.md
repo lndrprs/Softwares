@@ -584,7 +584,14 @@
 | Ingest Node | Nó que executa ingest pipelines antes da indexação. |
 | Ingest Pipeline | Sequência de processors (grok, rename, geopip, date etc.), que transforma documentos antes de indexá-los. |
 | Inverted Index | Estrutura que mapeia cada termo aos documentos em que ele aparece, base da busca de texto completo. | 
-
+| Kibana | Interface web para explorar dados, criar visualizações, dashboards e administrar o cluster. |
+| KNN (k-nearest neighbors) | Busca dos k vetores mais próximos de um vetor de consulta, usada em busca semântica. |
+| Lucene (Apache Lucene) | Biblioteca de busca em Java sobre a qual o Elasticsearch é construído. Cada shard é um índice Lucene. |
+| Mapping | Definição de como os campos de um índice são armazenados e indexados (tipos, analyzers etc.). |
+| Master Node | Nó eleito responsável por gerenciar o cluster state (Criar e excluir índices, alocar shards). Em versões recentes, aparece como master eligible. |
+| Match Query | Consulta de texto completo que analisa o termo buscado e procura correspondências no campo. |
+| Metric Aggregation | Agregação que calcula valores numéricos sobre um campo (ex.: avg, sum, min, max, cardinality). |
+| ML (Machine Learning) | Recursos do Elastic Stack para detecção de anomalias, classificação e regressão sobre os dados. | 
 
 
   </div>
