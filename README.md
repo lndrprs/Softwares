@@ -597,7 +597,9 @@
 | Painless | Linguagem de script segura e rápida do Elasticsearch, usada em scripts de consulta, atualização e ingestão. |
 | Pipeline Aggregation | Agregação que opera sobre o resultado de outras agregações. |
 | Primary Shard | Shard principal que recebe primeiro as operações de escrita. O número é definido na criação do índice. |
-| Query Context |
+| Query Context | Contexto em que a consulta calcula o quão bem cada documento corresponde, gerando um score. |
+| Query String Query | Consulta que interpreta uma sintaxe de texto livre, com operadores AND, OR e Curingas. |
+| 
 
 
   </div>
