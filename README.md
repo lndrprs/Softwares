@@ -599,6 +599,12 @@
 | Primary Shard | Shard principal que recebe primeiro as operações de escrita. O número é definido na criação do índice. |
 | Query Context | Contexto em que a consulta calcula o quão bem cada documento corresponde, gerando um score. |
 | Query String Query | Consulta que interpreta uma sintaxe de texto livre, com operadores AND, OR e Curingas. |
+| Reindex | Cópia de documentos de um índice para outro, usada para mudar mappings ou migrar dados. |
+| Relevance (Score) | Pontuação que indica o quão bem um documento corresponde à consult (_score). |
+| Replica Shard | Cópia de um primary shard, que oferece tolerância a falhas e escala leituras. |
+| Rollover | Criação de um novo índice quando o atual atinge uma condição (tamanho, idade ou quantidade de documentos). |
+| Rollup / Downsampling | Redução da resolução de dados antigos de séries temporais, economizando espaço. |
+| Runtime Field | Campo calculado em tempo de consulta, sem ser indexado, por meio de scripts. |
 | 
 
 
