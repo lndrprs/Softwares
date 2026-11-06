@@ -605,8 +605,7 @@
 | Rollover | Criação de um novo índice quando o atual atinge uma condição (tamanho, idade ou quantidade de documentos). |
 | Rollup / Downsampling | Redução da resolução de dados antigos de séries temporais, economizando espaço. |
 | Runtime Field | Campo calculado em tempo de consulta, sem ser indexado, por meio de scripts. |
-| 
-
+| Scroll / Search After | Mecanismos de paginação profunda: scroll para exportar grandes volumes e search_after para paginar com custo menor. |
 
   </div>
   </details>    
