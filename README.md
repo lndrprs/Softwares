@@ -592,6 +592,12 @@
 | Match Query | Consulta de texto completo que analisa o termo buscado e procura correspondências no campo. |
 | Metric Aggregation | Agregação que calcula valores numéricos sobre um campo (ex.: avg, sum, min, max, cardinality). |
 | ML (Machine Learning) | Recursos do Elastic Stack para detecção de anomalias, classificação e regressão sobre os dados. | 
+| Node | Instância do Elastisearch em execução, que faz parte de um cluster. |
+| Node Roles | Funções de um nó: master, data, ingest, ml, remote_cluster_client, entre outras. |
+| Painless | Linguagem de script segura e rápida do Elasticsearch, usada em scripts de consulta, atualização e ingestão. |
+| Pipeline Aggregation | Agregação que opera sobre o resultado de outras agregações. |
+| Primary Shard | Shard principal que recebe primeiro as operações de escrita. O número é definido na criação do índice. |
+| Query Context |
 
 
   </div>
