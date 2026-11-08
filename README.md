@@ -615,6 +615,10 @@
 | Snapshot | Backup de índices ou do cluster, salvo em um repositório (S3, GCS, Azure, Sistema de Arquivos). |
 | SLM (Snapshot Lifecycle Management) | Política que agenda a criação e a retenção de snapshots. |
 | Term Query | Consulta de correspondência exata, sem análise do termo, adequada para campos keyword. | 
+| Text vs Keyword | Text é analisado para busca de texto completo. Keyword é guardado inteiro, para filtros, odernação e agregações. |
+| Token / Tokenizer | Token é cada termo gerado pela análise do texto. O tokenizer é o componente que divide o texto em tokens. |
+| Transform | Recurso que converte índices em formatos resumidos (pivot) ou mantém o dado mais recente por entidade. | 
+| 
 
   </div>
   </details>    
