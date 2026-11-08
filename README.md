@@ -606,6 +606,15 @@
 | Rollup / Downsampling | Redução da resolução de dados antigos de séries temporais, economizando espaço. |
 | Runtime Field | Campo calculado em tempo de consulta, sem ser indexado, por meio de scripts. |
 | Scroll / Search After | Mecanismos de paginação profunda: scroll para exportar grandes volumes e search_after para paginar com custo menor. |
+| Searchable Snapshot | Snapshot montado como índice pesquisável, sem precisar de cópias completas nos nós. |
+| Seacurity (RBAC) | Recursos de autenticação, autorização por papéis, TLS e auditoria. |
+| Segment | Arquivo imutável de um índice Lucene dentro de um shard, que é combinado em segmentos maiores por merge. |
+| Semantic Search | Busca baseada em significado, que usa embeddings e vetores, em vez de apenas correspondência de palavras. |
+| Shard | Fração de um índice, que permite distribuir dados e processamento entre os nós. Cada shard é um índice Lucene independente. |
+| Shrink / Split | Operações que reduzem ou aumentam o número de primary shards de um índice. |
+| Snapshot | Backup de índices ou do cluster, salvo em um repositório (S3, GCS, Azure, Sistema de Arquivos). |
+| SLM (Snapshot Lifecycle Management) | Política que agenda a criação e a retenção de snapshots. |
+| Term Query | Consulta de correspondência exata, sem análise do termo, adequada para campos keyword. | 
 
   </div>
   </details>    
