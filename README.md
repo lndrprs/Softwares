@@ -586,6 +586,7 @@
 | Inverted Index | Estrutura que mapeia cada termo aos documentos em que ele aparece, base da busca de texto completo. | 
 | Kibana | Interface web para explorar dados, criar visualizações, dashboards e administrar o cluster. |
 | KNN (k-nearest neighbors) | Busca dos k vetores mais próximos de um vetor de consulta, usada em busca semântica. |
+| Logstash | Pipeline de processamento de dados que ingere, transforma e envia dados para o Elasticsearch e outros destinos. |
 | Lucene (Apache Lucene) | Biblioteca de busca em Java sobre a qual o Elasticsearch é construído. Cada shard é um índice Lucene. |
 | Mapping | Definição de como os campos de um índice são armazenados e indexados (tipos, analyzers etc.). |
 | Master Node | Nó eleito responsável por gerenciar o cluster state (Criar e excluir índices, alocar shards). Em versões recentes, aparece como master eligible. |
@@ -618,7 +619,8 @@
 | Text vs Keyword | Text é analisado para busca de texto completo. Keyword é guardado inteiro, para filtros, odernação e agregações. |
 | Token / Tokenizer | Token é cada termo gerado pela análise do texto. O tokenizer é o componente que divide o texto em tokens. |
 | Transform | Recurso que converte índices em formatos resumidos (pivot) ou mantém o dado mais recente por entidade. | 
-| 
+| Watcher | Recurso de alertas e automação, que executa ações quando uma condição, avaliada por consulta, é atendida. |
+| Write-Ahead log (WAL - translog) | Log de transações que registra operações ainda não persistidas em segmentos, protegendo contra perda de dados em falhas. | 
 
   </div>
   </details>    
