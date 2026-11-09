@@ -116,7 +116,22 @@
 <br>
 
   </div>
-  </details>        
+  </details>       
+    
+  <details>
+  <summary> 1.2.2. Boas Práticas </summary>
+  <div align="Center">
+
+<br>  
+
+| Diretriz | Objetivo |
+|----------|----------|
+|||
+
+<br>
+
+  </div>
+  </details>          
 
 </div>
 </details>
