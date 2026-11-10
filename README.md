@@ -124,9 +124,14 @@
 
 <br>  
 
-| Diretriz | Objetivo |
-|----------|----------|
-|||
+| Objetivo  | Diretriz | Explicação |
+|-----------|----------|------------|
+| Implantação Eficiente | OneAgent Full-Stack nos hosts críticos e Infrastructure Monitoring onde basta métrica de host. | Equilibra visibilidade e consumo de licença. |
+| Segurança de Rede | Usar ActiveGate para isolar tráfego, proxy e redes segmentadas. | Reduz portas abertas e centraliza a saída para a internet. |
+| Instrumentação em K8s | Dynatrace Operator com DynaKube | Instrumentação automática e atualizações gerenciadas. |
+| Estabilidade do Agente | Atualização controlada do OneAgent (Janelas e Grupos de Host) | Evita regressões e mantém recursos de segurança em dia. |
+| Controle de Acesso e Visões | Definir estratégia de Management Zones, Segmentos e Políticas de Acesso | Cada equipe visualiza apenas o que é relevante / adequado. |
+
 
 <br>
 
