@@ -137,6 +137,9 @@
 | Visibilidade ponta a ponta | Cobrir RUM, serviços, processos, infraestrutura e logs. | Permite rastrear a jornada completa do usuário. |
 | Experiência do Usuário | RUM e Session Replay com mascaramento de dados sensíveis | Visão da Experiência Real e Conformidade com a LGPD. |
 | Detecção Proativa | Synthetic Monitoring (Browser e HTTP), em jornadas críticas, de várias localidades | Detecta falhas antes dos usuários. | 
+| Eliminação de Pontos Cegos | OpenTelemetry para Linguagens / Serviços em OneAgent. | Amplia a cobertura e reduz dependência de instrumentação proprietária. |
+| Visão de Negócio | Business Events (Pedidos, Pagamentos etc.) | Correlaciona performance técnica com Impacto no Negócio. | 
+| Logs com Contexto | Ingestão via OneAgent / ActiveGate / Otel com regras do OpenPipeline | Controla volume e enriquece com contexto. |
 
 
 <br>
