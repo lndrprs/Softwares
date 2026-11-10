@@ -105,7 +105,7 @@
 | Metric Expiration | Regras de retenção que definem por quanto tempo os dados de métricas ficam disponíveis para consulta. | 
 | OneAgent | Agente de software instalado em hosts que coleta dados automaticamente, sem precisar de insturmentação. |
 | PurePath | Tecnologia de Rastreamento Distribuído. Caputra o caminho completo de uma transação - do clique ao banco de dados. |
-| Real User Monitoring | Monitoramento de Usuários Reais, capturando dados de experiência real de navegação. |
+| Real User Monitoring (RUM) | Monitoramento de Usuários Reais, capturando dados de experiência real de navegação. |
 | Root Cause Analysis (RCA) | Processo automatizado de identificação de causa raiz de um problema, feito pela Davis AI. |
 | Runtime Vulnerability Analytics | Análise contínua de vulnerabilidades em aplicações rodando em produção. |
 | Session Replay | Reprodução visual da sessão de um usuário real para diagnóstico de problemas de UX. | 
@@ -129,8 +129,14 @@
 | Implantação Eficiente | OneAgent Full-Stack nos hosts críticos e Infrastructure Monitoring onde basta métrica de host. | Equilibra visibilidade e consumo de licença. |
 | Segurança de Rede | Usar ActiveGate para isolar tráfego, proxy e redes segmentadas. | Reduz portas abertas e centraliza a saída para a internet. |
 | Instrumentação em K8s | Dynatrace Operator com DynaKube | Instrumentação automática e atualizações gerenciadas. |
-| Estabilidade do Agente | Atualização controlada do OneAgent (Janelas e Grupos de Host) | Evita regressões e mantém recursos de segurança em dia. |
-| Controle de Acesso e Visões | Definir estratégia de Management Zones, Segmentos e Políticas de Acesso | Cada equipe visualiza apenas o que é relevante / adequado. |
+| Estabilidade do Agente | Atualização controlada do OneAgent (Janelas e Grupos de Host). | Evita regressões e mantém recursos de segurança em dia. |
+| Controle de Acesso e Visões | Definir estratégia de Management Zones, Segmentos e Políticas de Acesso. | Cada equipe visualiza apenas o que é relevante / adequado. |
+| Padronização | Tags e atributos padronizados (Env, team, app, owner, criticality). | Base para alertas, dashboards, SLOs e Custos. |
+| Configuração por Grupo | Hosts groups coerentes com ambiente e aplicação | Permite configurações e atualizações por grupo. |
+| Redução de Ruído | Separar Prod e Não-Prod (Tags, Host Groups ou Ambientes Distintos). | Evita alertas falsos de ambientes de teste. |
+| Visibilidade ponta a ponta | Cobrir RUM, serviços, processos, infraestrutura e logs. | Permite rastrear a jornada completa do usuário. |
+| Experiência do Usuário | RUM e Session Replay com mascaramento de dados sensíveis | Visão da Experiência Real e Conformidade com a LGPD. |
+| Detecção Proativa | Synthetic Monitoring (Browser e HTTP), em jornadas críticas, de várias localidades | Detecta falhas antes dos usuários. | 
 
 
 <br>
