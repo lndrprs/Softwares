@@ -140,6 +140,13 @@
 | Eliminação de Pontos Cegos | OpenTelemetry para Linguagens / Serviços em OneAgent. | Amplia a cobertura e reduz dependência de instrumentação proprietária. |
 | Visão de Negócio | Business Events (Pedidos, Pagamentos etc.) | Correlaciona performance técnica com Impacto no Negócio. | 
 | Logs com Contexto | Ingestão via OneAgent / ActiveGate / Otel com regras do OpenPipeline | Controla volume e enriquece com contexto. |
+| Custo de Logs | Filtrar logs de baixo valor (debug, health, checks), antes da ingestão | Reduz custo e ruído. |
+| Correlação Logs e Traces | Logs estruturados (JSON) com trace_id e span_id | Correlação direta com traces. |
+| Retenção e Compliance | Buckets e retenção definidos por tipo de log | Otimiza custo e atende requisitos regulatórios. |
+| Proteção de Dados | Mascar PII, Tokens e Cartões nos Logs e no RUM | Segurança e conformidade com a LGPD. |
+| Alertas Inteligentes | Confiar na Detecção automática do Davis AI e criar alertas customizados só quando necessário | Menos ruído e menos manutenção. |
+| Evitar fadiga de alertas | Perfis de alertas por severidade e por equipe. | Cada equipe recebe só o que é da sua responsabilidade. |
+| Foco no Impacto | Alertas baseados em SLO e burn rate, não só em limites estáticos. | Prioriza o que afeta o usuário. | 
 
 
 <br>
