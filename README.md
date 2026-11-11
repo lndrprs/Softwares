@@ -147,7 +147,10 @@
 | Alertas Inteligentes | Confiar na Detecção automática do Davis AI e criar alertas customizados só quando necessário | Menos ruído e menos manutenção. |
 | Evitar fadiga de alertas | Perfis de alertas por severidade e por equipe. | Cada equipe recebe só o que é da sua responsabilidade. |
 | Foco no Impacto | Alertas baseados em SLO e burn rate, não só em limites estáticos. | Prioriza o que afeta o usuário. | 
-
+| Evitar Falsos Positivos | Janelas de manutenção em deploys e manutenções planejadas | Evita problemas falsos durante mudanças programadas. |
+| Resposta a incidentes | Integrar com Slack, Teams, PagerDuty, ServiceNow, Jira e OpsGenie | Automatiza o fluxo de resposta. |
+| Confiabilidade | Definir SLIs / SLOs (Disponibilidade, latência, erros) para serviços críticos | Cultura SRE e metas objetivas. |
+| Metas Realistas | Revisar SLOs periodicamente com as áreas de negócio. | Mantém as metas alinhadas à realidade. | 
 
 <br>
 
