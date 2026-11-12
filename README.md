@@ -157,6 +157,13 @@
 | Desempenho da Plataforma | Evitar dashboards com excesso de tiles e consultas pesadas. | Melhor desempenho e legibilidade. |
 | Redução de MTTR | Workflows (AutomationEngine) para remediação e notificações. | Automatiza respostas e reduz o tempo de resolução. |
 | Configuração como código | Monaco ou Terraform provider. | Versionamento, revisão e reprodutibilidade. |
+| Integração com CI/CD | APIs, Eventos de Deploy, Tags de Versão e Quality Gates. | Detecta Regressões de performance antes de produção. |
+| Segurança de Aplicações | Application Security (Vulnerabilidades em Runtime). | Priorização por exposição real. |
+| Menor privilégio | Tokens de API com escopo mínimo, validade e rotação periódica. | Reduz o risco em caso de vazamento. | 
+| Governança de Acessos | SSO / SAML, grupos e políticas IAM | Controle centralizado de identidades. |
+| Privacidade | Revisar regras de mascaramento (IPs, Cookies, URLs) | Conformidade com LGPD / GDPR. |
+| Controle de Custos | Monitorar consumo (Account Management / Usage), e definir orçamentos e alertas de custo. | Evita surpresas na fatura. |
+|
 
 
 <br>
