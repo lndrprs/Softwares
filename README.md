@@ -163,8 +163,14 @@
 | Governança de Acessos | SSO / SAML, grupos e políticas IAM | Controle centralizado de identidades. |
 | Privacidade | Revisar regras de mascaramento (IPs, Cookies, URLs) | Conformidade com LGPD / GDPR. |
 | Controle de Custos | Monitorar consumo (Account Management / Usage), e definir orçamentos e alertas de custo. | Evita surpresas na fatura. |
-|
-
+| Otimização Contínua | Revisar hosts sem uso, logs excessivos, sessões RUM e monitores sintéticos. | Elimina desperdício de licença. |
+| Controle de Volume | Ajustar taxa de captura de sessões e traces quando fizer sentido. | Reduz volume sem perder visibilidade relevante. | 
+| Responsabilização | Definir owners para serviços, alertas e dashboards. | Responsabilidade clara. |
+| Consistência | Documentar convenções de nomes, tags e processos. | Padrão entre equipes. | 
+| Higiene do Ambiente | Revisões periódicas (alertas obsoletos, regras duplicadas, configurações antigas). | Evita acúmulo de dívida técnica. |
+| Adoção | Treinamentos e Comunidade Interna. | Gera valor contínuo e autonomia das equipes. |
+| Aprendizado | Usar Dynatrace nos post-mortems e na análise de causas-raiz (Davis RCA). | Melhoria contínua. |
+| Valor para o Negócio | Conectar Observabilidade a metas de negócio (Conversão, receita, NPS). | Demonstra valor para a liderança. | 
 
 <br>
 
