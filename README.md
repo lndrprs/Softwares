@@ -151,6 +151,13 @@
 | Resposta a incidentes | Integrar com Slack, Teams, PagerDuty, ServiceNow, Jira e OpsGenie | Automatiza o fluxo de resposta. |
 | Confiabilidade | Definir SLIs / SLOs (Disponibilidade, latência, erros) para serviços críticos | Cultura SRE e metas objetivas. |
 | Metas Realistas | Revisar SLOs periodicamente com as áreas de negócio. | Mantém as metas alinhadas à realidade. | 
+| Visões por Público | Dashboards separados para executivo, SRE, Desenvolvedor e Negócio. | Cada público vê o que importa. | 
+| Análise Flexível | Dominar DQL sobre o Grail e salvar consultas reutilizáveis. | Análise de logs, métricas, spans e eventos. | 
+| Investigação | Notebooks para troubleshooting e post-mortem. | Documentação reproduzível da análise. | 
+| Desempenho da Plataforma | Evitar dashboards com excesso de tiles e consultas pesadas. | Melhor desempenho e legibilidade. |
+| Redução de MTTR | Workflows (AutomationEngine) para remediação e notificações. | Automatiza respostas e reduz o tempo de resolução. |
+| Configuração como código | Monaco ou Terraform provider. | Versionamento, revisão e reprodutibilidade. |
+
 
 <br>
 
