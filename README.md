@@ -126,51 +126,51 @@
 
 | Objetivo  | Diretriz | Explicação |
 |-----------|----------|------------|
-| Implantação Eficiente | OneAgent Full-Stack nos hosts críticos e Infrastructure Monitoring onde basta métrica de host. | Equilibra visibilidade e consumo de licença. |
-| Segurança de Rede | Usar ActiveGate para isolar tráfego, proxy e redes segmentadas. | Reduz portas abertas e centraliza a saída para a internet. |
-| Instrumentação em K8s | Dynatrace Operator com DynaKube | Instrumentação automática e atualizações gerenciadas. |
-| Estabilidade do Agente | Atualização controlada do OneAgent (Janelas e Grupos de Host). | Evita regressões e mantém recursos de segurança em dia. |
-| Controle de Acesso e Visões | Definir estratégia de Management Zones, Segmentos e Políticas de Acesso. | Cada equipe visualiza apenas o que é relevante / adequado. |
-| Padronização | Tags e atributos padronizados (Env, team, app, owner, criticality). | Base para alertas, dashboards, SLOs e Custos. |
+| Adoção | Treinamentos e Comunidade Interna. | Gera valor contínuo e autonomia das equipes. |
+| Alertas Inteligentes | Confiar na Detecção automática do Davis AI e criar alertas customizados só quando necessário | Menos ruído e menos manutenção. |
+| Análise Flexível | Dominar DQL sobre o Grail e salvar consultas reutilizáveis. | Análise de logs, métricas, spans e eventos. | 
+| Aprendizado | Usar Dynatrace nos post-mortems e na análise de causas-raiz (Davis RCA). | Melhoria contínua. |
+| Confiabilidade | Definir SLIs / SLOs (Disponibilidade, latência, erros) para serviços críticos | Cultura SRE e metas objetivas. |
+| Configuração como código | Monaco ou Terraform provider. | Versionamento, revisão e reprodutibilidade. |
 | Configuração por Grupo | Hosts groups coerentes com ambiente e aplicação | Permite configurações e atualizações por grupo. |
-| Redução de Ruído | Separar Prod e Não-Prod (Tags, Host Groups ou Ambientes Distintos). | Evita alertas falsos de ambientes de teste. |
-| Visibilidade ponta a ponta | Cobrir RUM, serviços, processos, infraestrutura e logs. | Permite rastrear a jornada completa do usuário. |
-| Experiência do Usuário | RUM e Session Replay com mascaramento de dados sensíveis | Visão da Experiência Real e Conformidade com a LGPD. |
+| Consistência | Documentar convenções de nomes, tags e processos. | Padrão entre equipes. | 
+| Controle de Acesso e Visões | Definir estratégia de Management Zones, Segmentos e Políticas de Acesso. | Cada equipe visualiza apenas o que é relevante / adequado. |
+| Controle de Custos | Monitorar consumo (Account Management / Usage), e definir orçamentos e alertas de custo. | Evita surpresas na fatura. |
+| Controle de Volume | Ajustar taxa de captura de sessões e traces quando fizer sentido. | Reduz volume sem perder visibilidade relevante. | 
+| Correlação Logs e Traces | Logs estruturados (JSON) com trace_id e span_id | Correlação direta com traces. |
+| Custo de Logs | Filtrar logs de baixo valor (debug, health, checks), antes da ingestão | Reduz custo e ruído. |
+| Desempenho da Plataforma | Evitar dashboards com excesso de tiles e consultas pesadas. | Melhor desempenho e legibilidade. |
 | Detecção Proativa | Synthetic Monitoring (Browser e HTTP), em jornadas críticas, de várias localidades | Detecta falhas antes dos usuários. | 
 | Eliminação de Pontos Cegos | OpenTelemetry para Linguagens / Serviços em OneAgent. | Amplia a cobertura e reduz dependência de instrumentação proprietária. |
-| Visão de Negócio | Business Events (Pedidos, Pagamentos etc.) | Correlaciona performance técnica com Impacto no Negócio. | 
-| Logs com Contexto | Ingestão via OneAgent / ActiveGate / Otel com regras do OpenPipeline | Controla volume e enriquece com contexto. |
-| Custo de Logs | Filtrar logs de baixo valor (debug, health, checks), antes da ingestão | Reduz custo e ruído. |
-| Correlação Logs e Traces | Logs estruturados (JSON) com trace_id e span_id | Correlação direta com traces. |
-| Retenção e Compliance | Buckets e retenção definidos por tipo de log | Otimiza custo e atende requisitos regulatórios. |
-| Proteção de Dados | Mascar PII, Tokens e Cartões nos Logs e no RUM | Segurança e conformidade com a LGPD. |
-| Alertas Inteligentes | Confiar na Detecção automática do Davis AI e criar alertas customizados só quando necessário | Menos ruído e menos manutenção. |
+| Estabilidade do Agente | Atualização controlada do OneAgent (Janelas e Grupos de Host). | Evita regressões e mantém recursos de segurança em dia. |
 | Evitar fadiga de alertas | Perfis de alertas por severidade e por equipe. | Cada equipe recebe só o que é da sua responsabilidade. |
-| Foco no Impacto | Alertas baseados em SLO e burn rate, não só em limites estáticos. | Prioriza o que afeta o usuário. | 
 | Evitar Falsos Positivos | Janelas de manutenção em deploys e manutenções planejadas | Evita problemas falsos durante mudanças programadas. |
-| Resposta a incidentes | Integrar com Slack, Teams, PagerDuty, ServiceNow, Jira e OpsGenie | Automatiza o fluxo de resposta. |
-| Confiabilidade | Definir SLIs / SLOs (Disponibilidade, latência, erros) para serviços críticos | Cultura SRE e metas objetivas. |
-| Metas Realistas | Revisar SLOs periodicamente com as áreas de negócio. | Mantém as metas alinhadas à realidade. | 
-| Visões por Público | Dashboards separados para executivo, SRE, Desenvolvedor e Negócio. | Cada público vê o que importa. | 
-| Análise Flexível | Dominar DQL sobre o Grail e salvar consultas reutilizáveis. | Análise de logs, métricas, spans e eventos. | 
-| Investigação | Notebooks para troubleshooting e post-mortem. | Documentação reproduzível da análise. | 
-| Desempenho da Plataforma | Evitar dashboards com excesso de tiles e consultas pesadas. | Melhor desempenho e legibilidade. |
-| Redução de MTTR | Workflows (AutomationEngine) para remediação e notificações. | Automatiza respostas e reduz o tempo de resolução. |
-| Configuração como código | Monaco ou Terraform provider. | Versionamento, revisão e reprodutibilidade. |
-| Integração com CI/CD | APIs, Eventos de Deploy, Tags de Versão e Quality Gates. | Detecta Regressões de performance antes de produção. |
-| Segurança de Aplicações | Application Security (Vulnerabilidades em Runtime). | Priorização por exposição real. |
-| Menor privilégio | Tokens de API com escopo mínimo, validade e rotação periódica. | Reduz o risco em caso de vazamento. | 
+| Experiência do Usuário | RUM e Session Replay com mascaramento de dados sensíveis | Visão da Experiência Real e Conformidade com a LGPD. |
+| Foco no Impacto | Alertas baseados em SLO e burn rate, não só em limites estáticos. | Prioriza o que afeta o usuário. | 
 | Governança de Acessos | SSO / SAML, grupos e políticas IAM | Controle centralizado de identidades. |
-| Privacidade | Revisar regras de mascaramento (IPs, Cookies, URLs) | Conformidade com LGPD / GDPR. |
-| Controle de Custos | Monitorar consumo (Account Management / Usage), e definir orçamentos e alertas de custo. | Evita surpresas na fatura. |
-| Otimização Contínua | Revisar hosts sem uso, logs excessivos, sessões RUM e monitores sintéticos. | Elimina desperdício de licença. |
-| Controle de Volume | Ajustar taxa de captura de sessões e traces quando fizer sentido. | Reduz volume sem perder visibilidade relevante. | 
-| Responsabilização | Definir owners para serviços, alertas e dashboards. | Responsabilidade clara. |
-| Consistência | Documentar convenções de nomes, tags e processos. | Padrão entre equipes. | 
 | Higiene do Ambiente | Revisões periódicas (alertas obsoletos, regras duplicadas, configurações antigas). | Evita acúmulo de dívida técnica. |
-| Adoção | Treinamentos e Comunidade Interna. | Gera valor contínuo e autonomia das equipes. |
-| Aprendizado | Usar Dynatrace nos post-mortems e na análise de causas-raiz (Davis RCA). | Melhoria contínua. |
+| Implantação Eficiente | OneAgent Full-Stack nos hosts críticos e Infrastructure Monitoring onde basta métrica de host. | Equilibra visibilidade e consumo de licença. |
+| Instrumentação em K8s | Dynatrace Operator com DynaKube | Instrumentação automática e atualizações gerenciadas. |
+| Integração com CI/CD | APIs, Eventos de Deploy, Tags de Versão e Quality Gates. | Detecta Regressões de performance antes de produção. |
+| Investigação | Notebooks para troubleshooting e post-mortem. | Documentação reproduzível da análise. | 
+| Logs com Contexto | Ingestão via OneAgent / ActiveGate / Otel com regras do OpenPipeline | Controla volume e enriquece com contexto. |
+| Menor privilégio | Tokens de API com escopo mínimo, validade e rotação periódica. | Reduz o risco em caso de vazamento. | 
+| Metas Realistas | Revisar SLOs periodicamente com as áreas de negócio. | Mantém as metas alinhadas à realidade. | 
+| Otimização Contínua | Revisar hosts sem uso, logs excessivos, sessões RUM e monitores sintéticos. | Elimina desperdício de licença. |
+| Padronização | Tags e atributos padronizados (Env, team, app, owner, criticality). | Base para alertas, dashboards, SLOs e Custos. |
+| Privacidade | Revisar regras de mascaramento (IPs, Cookies, URLs) | Conformidade com LGPD / GDPR. |
+| Proteção de Dados | Mascar PII, Tokens e Cartões nos Logs e no RUM | Segurança e conformidade com a LGPD. |
+| Redução de MTTR | Workflows (AutomationEngine) para remediação e notificações. | Automatiza respostas e reduz o tempo de resolução. |
+| Redução de Ruído | Separar Prod e Não-Prod (Tags, Host Groups ou Ambientes Distintos). | Evita alertas falsos de ambientes de teste. |
+| Responsabilização | Definir owners para serviços, alertas e dashboards. | Responsabilidade clara. |
+| Resposta a incidentes | Integrar com Slack, Teams, PagerDuty, ServiceNow, Jira e OpsGenie | Automatiza o fluxo de resposta. |
+| Retenção e Compliance | Buckets e retenção definidos por tipo de log | Otimiza custo e atende requisitos regulatórios. |
+| Segurança de Aplicações | Application Security (Vulnerabilidades em Runtime). | Priorização por exposição real. |
+| Segurança de Rede | Usar ActiveGate para isolar tráfego, proxy e redes segmentadas. | Reduz portas abertas e centraliza a saída para a internet. |
 | Valor para o Negócio | Conectar Observabilidade a metas de negócio (Conversão, receita, NPS). | Demonstra valor para a liderança. | 
+| Visão de Negócio | Business Events (Pedidos, Pagamentos etc.) | Correlaciona performance técnica com Impacto no Negócio. | 
+| Visibilidade ponta a ponta | Cobrir RUM, serviços, processos, infraestrutura e logs. | Permite rastrear a jornada completa do usuário. |
+| Visões por Público | Dashboards separados para executivo, SRE, Desenvolvedor e Negócio. | Cada público vê o que importa. | 
 
 <br>
 
