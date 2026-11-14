@@ -177,6 +177,25 @@
   </div>
   </details>          
 
+  <details>
+  <summary> 1.2.3. FinOps </summary>
+  <div align="Center">
+
+<br>  
+
+| Objetivo  | Diretriz | Explicação |
+|-----------|----------|------------|
+| Entender Modelo de Custo | Mapear as métricas de consumo de licenciamento (DPS - Dynatrace Platform Subscription) | O custo é baseado em consumo. |
+| Ter Visibilidade de Consumo | Usar o Account Management > Subscription > Cost and Usage e o app Account Management Usage Overview | Permite acompanhar consumo por capability, período e comparar com commit contratado. Fonte oficial para reconciliação com fatura. |
+| Alocar Custos (Showback / Chargeback) | Definir estratégia de tags e Cost Allocation por produto, equipe, centro de custo ou ambiente. | Dynatrace permite alocação de uso a centros decusto e produtos via atributos. |
+| Padronizar governança de tags | Criar convenção obrigatória de tags / atributos, aplicada via automação. | Tags consistentes são a base de qualquer alocação e análise. Aplicar via OneAgent, Kubernetes labels / annotations e regras de enriquecimento de atributos. |
+| Prever e controlar consumo | Configurar Budgets e Alertas de Consumo (Forecast vs Commit). | Notificações ao atingir percentuais do commit, evitam estouro e permitem renegociação antecipada. | 
+
+<br>
+
+  </div>
+  </details>            
+
 </div>
 </details>
 
