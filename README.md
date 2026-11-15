@@ -190,6 +190,12 @@
 | Alocar Custos (Showback / Chargeback) | Definir estratégia de tags e Cost Allocation por produto, equipe, centro de custo ou ambiente. | Dynatrace permite alocação de uso a centros decusto e produtos via atributos. |
 | Padronizar governança de tags | Criar convenção obrigatória de tags / atributos, aplicada via automação. | Tags consistentes são a base de qualquer alocação e análise. Aplicar via OneAgent, Kubernetes labels / annotations e regras de enriquecimento de atributos. |
 | Prever e controlar consumo | Configurar Budgets e Alertas de Consumo (Forecast vs Commit). | Notificações ao atingir percentuais do commit, evitam estouro e permitem renegociação antecipada. | 
+| Reduzir custo de Logs | Filtrar, descartar e rotear logs na ingestão (OpenPipeline); Evitar ingerir logs de debug e ruído. | Logs costumam ser o maior vetor de crescimento. Descarte de logs sem valor, mascaramento e redução de volume cortam custo de ingest, retain e query. |
+| Otimizar Retenção de Dados | Definir buckets com retenção diferente por criticidade e compliance. | Reter por menos tempo dados de baixo valor (Ex.: 10 Dias), e por mais tempo apenas o necessário, como auditoria e segurança. Retenção é cobrada, então cada dia a mais tem impacto. |
+| Controlar custo de consultas | Otimizar DQL: Limitando janela de tempo, usar filtros cedo, evitar scans amplos e dashboards pesados. | Query de Logs / Events é cobrada por Gib escaneado. Dashboards com auto-refresh e consultas sem filtro geram consumo recorrente invisível. |
+| Dimensionar o Full-Stack Corretamente | Usar Full-Stack apenas onde se precisa de profundidade (APM / Tracing); Usar Infrastructure Monitoring nos demais. | Full-Stack custa mais por GiB de memória do Host. Hosts de banco, middleware simples ou legados podem usar monitoramento de infraestrutura, reduzindo custo. |
+| Reduzir desperdício de Hosts | Identificar hosts ociosos, efêmeros ou descomissionados e eliminar OneAgents desnecessários. | Hosts fantasmas, ambientes de teste ligados 24x7, e agentes em máquinas desativadas continuam consumindo. Automatizar Desinstalação no descomissionamento. |
+| Otimizar Kubernetes | Monitorar namespaces por necessidade; usar Application-Only / Cloud Native Full-Stack com critério e excluir namespaces irrelevantes. | O consumo em K8s escala com memória de pods / nós. Limitar a injeção a workloads relevantes evita custo em ambientes de baixo valor. | 
 
 <br>
 
