@@ -196,6 +196,8 @@
 | Dimensionar o Full-Stack Corretamente | Usar Full-Stack apenas onde se precisa de profundidade (APM / Tracing); Usar Infrastructure Monitoring nos demais. | Full-Stack custa mais por GiB de memória do Host. Hosts de banco, middleware simples ou legados podem usar monitoramento de infraestrutura, reduzindo custo. |
 | Reduzir desperdício de Hosts | Identificar hosts ociosos, efêmeros ou descomissionados e eliminar OneAgents desnecessários. | Hosts fantasmas, ambientes de teste ligados 24x7, e agentes em máquinas desativadas continuam consumindo. Automatizar Desinstalação no descomissionamento. |
 | Otimizar Kubernetes | Monitorar namespaces por necessidade; usar Application-Only / Cloud Native Full-Stack com critério e excluir namespaces irrelevantes. | O consumo em K8s escala com memória de pods / nós. Limitar a injeção a workloads relevantes evita custo em ambientes de baixo valor. | 
+| Controlar Traces e Spans | Ajustar Sampling, regras de ingestão e retenção de traces (Grail). | Volume de spans pode crescer muito em microsserviços. Sampling adaptativo e filtros de serviços de baixo valor reduzem Traces Ingest e Retain. |
+| 
 
 <br>
 
