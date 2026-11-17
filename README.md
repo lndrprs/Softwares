@@ -201,7 +201,7 @@
 | Otimizar Synthetic e RUM | Ajustar frequência, locais e escopo de monitores sintéticos; configurar taxa de capura de sessões RUM | Monitores a cada minuto em muitas localidades custam caro. Calibrar frequência por criticidade e usar session sampling quando aplicável. |
 | Otimizar Contrato e Commit | Revisar o histórico de consumo antes da renovação para dimensionar o commit (DPS). | Commit subdimensionado gera overage a taxas on-demand; superdimensionado gera desperdício. Usar consumo real e projeção de crescimento. |
 | Negociar com base em Dados | Consolidar relatórios de consumo por capability e apresentar na negociação de taxas e flexibilidade. | Dados sólidos fortalecem a negociação de descontos por volume, rollover e flexibilidade entre capabilities. |
-| 
+| Estabelecer Unit Economics | Definir métricas como custo de observabilidade por transação, por aplicação ou % de custo de cloud. | Mostra se o gasto cresce de forma proporcional ao negócio. Referência comum: observabilidade entre 5% e 15% do custo de infraestrutura, variando por maturidade. |
 
 <br>
 
