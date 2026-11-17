@@ -197,6 +197,7 @@
 | Reduzir desperdício de Hosts | Identificar hosts ociosos, efêmeros ou descomissionados e eliminar OneAgents desnecessários. | Hosts fantasmas, ambientes de teste ligados 24x7, e agentes em máquinas desativadas continuam consumindo. Automatizar Desinstalação no descomissionamento. |
 | Otimizar Kubernetes | Monitorar namespaces por necessidade; usar Application-Only / Cloud Native Full-Stack com critério e excluir namespaces irrelevantes. | O consumo em K8s escala com memória de pods / nós. Limitar a injeção a workloads relevantes evita custo em ambientes de baixo valor. | 
 | Controlar Traces e Spans | Ajustar Sampling, regras de ingestão e retenção de traces (Grail). | Volume de spans pode crescer muito em microsserviços. Sampling adaptativo e filtros de serviços de baixo valor reduzem Traces Ingest e Retain. |
+| Governar Métricas Customizadas | Revisar métricas de alta cardinalidade e dimensões desnecessárias. | Métricas customizadas e de alta cardinalidade elevam consumo. Remover dimensões inúteis e métricas sem uso em dashboards ou alertas. |
 | 
 
 <br>
