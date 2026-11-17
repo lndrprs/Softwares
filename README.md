@@ -199,6 +199,7 @@
 | Controlar Traces e Spans | Ajustar Sampling, regras de ingestão e retenção de traces (Grail). | Volume de spans pode crescer muito em microsserviços. Sampling adaptativo e filtros de serviços de baixo valor reduzem Traces Ingest e Retain. |
 | Governar Métricas Customizadas | Revisar métricas de alta cardinalidade e dimensões desnecessárias. | Métricas customizadas e de alta cardinalidade elevam consumo. Remover dimensões inúteis e métricas sem uso em dashboards ou alertas. |
 | Otimizar Synthetic e RUM | Ajustar frequência, locais e escopo de monitores sintéticos; configurar taxa de capura de sessões RUM | Monitores a cada minuto em muitas localidades custam caro. Calibrar frequência por criticidade e usar session sampling quando aplicável. |
+| Otimizar Contrato e Commit | Revisar o histórico de consumo antes da renovação para dimensionar o commit (DPS). | Commit subdimensionado gera overage a taxas on-demand; superdimensionado gera desperdício. Usar consumo real e projeção de crescimento. |
 | 
 
 <br>
