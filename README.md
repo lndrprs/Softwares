@@ -202,6 +202,8 @@
 | Otimizar Contrato e Commit | Revisar o histórico de consumo antes da renovação para dimensionar o commit (DPS). | Commit subdimensionado gera overage a taxas on-demand; superdimensionado gera desperdício. Usar consumo real e projeção de crescimento. |
 | Negociar com base em Dados | Consolidar relatórios de consumo por capability e apresentar na negociação de taxas e flexibilidade. | Dados sólidos fortalecem a negociação de descontos por volume, rollover e flexibilidade entre capabilities. |
 | Estabelecer Unit Economics | Definir métricas como custo de observabilidade por transação, por aplicação ou % de custo de cloud. | Mostra se o gasto cresce de forma proporcional ao negócio. Referência comum: observabilidade entre 5% e 15% do custo de infraestrutura, variando por maturidade. |
+| Criar Rotina FinOps | Instituir revisão mensal de Consumo com stakeholders (Engenharia, FinOps, Finanças, SRE). | Cadência regular permite agir sobre anomalias, validar economias e priorizar otimizações. |
+| 
 
 <br>
 
