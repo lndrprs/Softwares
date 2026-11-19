@@ -206,6 +206,7 @@
 | Detectar Anomalias de Custo | Criar dashboards e alertas no próprio Dynatrace sobre consumo de ingestão e uso (via métricas de billing / usage). | Picos súbitos: Como deploy que ativa log verbose, podem ser detectados em horas, não no fim do mês. |
 | Gerar Responsabilização | Implementar showback mensal por equipe e, quando maduro, chargeback. | Quando times enxergam seu próprio custo, passam a otimizar. Começar com showback (informativo) antes de cobrar. |
 | Promover cultura de custo | Incluir custo de observabilidade em práticas de engenharia (Code Review, Onboarding de Serviços, Definição de SLO). | Evita que cada novo serviço entre com instrumentação e logs sem avaliar custo-benefício. |
+| Automatizar Otimização | Usar Dynatrace Workflows / Automation e APIs para aplicar políticass (ex.: desligar monitores fora do horário). | Automação reduz esforço manual e garante consistência das políticas de custo. |
 
 
 <br>
