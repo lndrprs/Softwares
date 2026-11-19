@@ -207,7 +207,7 @@
 | Gerar Responsabilização | Implementar showback mensal por equipe e, quando maduro, chargeback. | Quando times enxergam seu próprio custo, passam a otimizar. Começar com showback (informativo) antes de cobrar. |
 | Promover cultura de custo | Incluir custo de observabilidade em práticas de engenharia (Code Review, Onboarding de Serviços, Definição de SLO). | Evita que cada novo serviço entre com instrumentação e logs sem avaliar custo-benefício. |
 | Automatizar Otimização | Usar Dynatrace Workflows / Automation e APIs para aplicar políticass (ex.: desligar monitores fora do horário). | Automação reduz esforço manual e garante consistência das políticas de custo. |
-
+| Avaliar Valor Entregue | Medir ROI: Redução de MTTR, Incidentes Evitados, Consolidação de Ferramentas. | Custo precisa ser comparado ao valor. Consolidar ferramentas legadas pode compensar parte do investimento. | 
 
 <br>
 
