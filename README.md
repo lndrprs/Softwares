@@ -178,8 +178,17 @@
   </details>          
 
   <details>
-  <summary> 1.2.3. FinOps </summary>
+  <summary> 1.2.3. FinOps - Ferramentas e Diretrizes </summary>
   <div align="Center">
+
+| Ferramenta | Acesso |
+|------------|--------|
+| Overview / Cost and Usage Analysis | Account Management -> Subscription -> Overview |
+| Billing Report | Account Management -> Subscription -> Billing Report |
+| Cost Allocation | Account Management -> Subscription -> Cost Management -> Cost Allocation |
+| Budget Alertas | Account Management -> Subscription -> Cost Management -> Budget Alerts |
+| Cost Monitors | Account Management -> Subscription -> Cost Management -> Cost Monitors |
+| Smart Forecast | Account Management (Budget Summary) | 
 
 <br>  
 
