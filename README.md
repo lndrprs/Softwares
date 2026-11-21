@@ -188,7 +188,7 @@
 | Overview / Cost and Usage Analysis | Account Management -> Subscription -> Overview |
 | Billing Report | Account Management -> Subscription -> Billing Report |
 | Cost Allocation | Account Management -> Subscription -> Cost Management -> Cost Allocation |
-| Budget Alertas | Account Management -> Subscription -> Cost Management -> Budget Alerts |
+| Budget Alerts | Account Management -> Subscription -> Cost Management -> Budget Alerts |
 | Cost Monitors | Account Management -> Subscription -> Cost Management -> Cost Monitors |
 | Smart Forecast | Account Management (Budget Summary) | 
 
