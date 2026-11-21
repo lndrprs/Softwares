@@ -181,6 +181,8 @@
   <summary> 1.2.3. FinOps - Ferramentas e Diretrizes </summary>
   <div align="Center">
 
+<br>
+
 | Ferramenta | Acesso |
 |------------|--------|
 | Overview / Cost and Usage Analysis | Account Management -> Subscription -> Overview |
