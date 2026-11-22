@@ -79,7 +79,10 @@
 | Nomenclatura | Incluir a unidade no nome, em unidades base | Use _seconds, _bytes, _meters, nunca milissegundos ou kilobytes para que as métricas sejam consistentes e comparáveis. |
 | Nomenclatura | Terminar counters com _total e razões com _ratio | O sufixo indica o tipo e o significado da métrica, sem precisar consultar a documentação. |
 | Nomenclatura | Representar uma única grandeza por nome | Misturar grandezas (Como tempo e bytes) sob o mesmo nome torna agregações e interpretações incorretas. |
-| 
+| Cardinalidade | Evitar labels com valores ilimitados | user_id, email, request_id, IP de Cliente e URLs completas criam séries demais e esgotam memória e desempenho. |
+| Cardinalidade | Normalizar caminhos de rotas | Use "/users/:id" em vez de "/users/12345", para manter poucas combinações de labels. |
+| Cardinalidade | Manter poucas dimensões, com valores previsíveis | Cada combinação única de labels gera uma nova série temporal, e a cardinalidade é a principal causa de problemas. |
+| Cardinalidade | Não pré-calcular na métrica o que o PromQL agrega | Guarde o valor bruto (ex.: total) e deixe a consulta somar ou calcular, evitando séries redundantes. |  
 
 <br>
 
