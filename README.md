@@ -64,8 +64,6 @@
 
   </div>
   </details>        
-
-<br>
     
   <details>
   <summary> 1.1.2. Boas Práticas </summary>
