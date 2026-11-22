@@ -65,6 +65,28 @@
   </div>
   </details>        
 
+<br>
+    
+  <details>
+  <summary> 1.1.2. Boas Práticas </summary>
+  <div align="Center">
+
+<br>
+
+| Objetivo | Diretriz | Explicação |
+|----------|----------|------------|
+| Nomenclatura | Usar snake_Case com prefixo da aplicação ou domínio | Facilita a descoberta e evita colisões entre aplicações. |
+| Nomenclatura | Incluir a unidade no nome, em unidades base | Use _seconds, _bytes, _meters, nunca milissegundos ou kilobytes para que as métricas sejam consistentes e comparáveis. |
+| Nomenclatura | Terminar counters com _total e razões com _ratio | O sufixo indica o tipo e o significado da métrica, sem precisar consultar a documentação. |
+| Nomenclatura | Representar uma única grandeza por nome | Misturar grandezas (Como tempo e bytes) sob o mesmo nome torna agregações e interpretações incorretas. |
+| 
+
+<br>
+
+  </div>
+  </details>    
+
+
 </div>
 </details>
 
