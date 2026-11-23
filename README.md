@@ -81,6 +81,12 @@
 | Cardinalidade | Normalizar caminhos de rotas | Use "/users/:id" em vez de "/users/12345", para manter poucas combinações de labels. |
 | Cardinalidade | Manter poucas dimensões, com valores previsíveis | Cada combinação única de labels gera uma nova série temporal, e a cardinalidade é a principal causa de problemas. |
 | Cardinalidade | Não pré-calcular na métrica o que o PromQL agrega | Guarde o valor bruto (ex.: total) e deixe a consulta somar ou calcular, evitando séries redundantes. |  
+| Tipos de Métrica | Usar Counter para valores que só crescem | Exemplo: http_requests_total. O valor zera em reinícios, o que é tratado por rate() e increase(). |
+| Tipos de Métrica | Usar Gauge para valores que sobem e descem | Exemplo: memory_usage_bytes, número de conexões ou tamanho de fila. |
+| Tipos de Métrica | Preferir Histogram a Summary, para percentis | Histogramas são agregáveis entre instâncias (pods, hosts). Quantis de summary são calculados no cliente e não podem ser agregados. |
+| Tipos de Métrica | Alinha os buckets do Histograma aos SLOs | Coloque um bucket exatamente no limite do SLO (ex.: 300 ms), para medir o cumprimento com precisão. |
+| Tipos de Métrica | Nunca exibir counters em valor bruto | Usar sempre rate() ou increase(), pois o valor absoluto é pouco informativo. |
+
 
 <br>
 
