@@ -96,6 +96,9 @@
 | Coleta (Scraping) | Filtrar com relabel_configs e metric_relabel_configs | Descarte alvos, métricas e labels desnecessários antes do armazenamento, reduzindo volume e custo. |
 | Coleta (Scraping) | Definir sample_limit e label_limit por job | Protege o servidor contra explosões de cardinalidade causadas por uma aplicação mal instrumentada. |
 | Coleta (Scraping) | Monitorar a métrica up de cada alvo | Indica se o alvo está respondendo e permite alertar sobre falhas de coleta. |
+| Desempenho de Consultas | Usar recording rules para consultas caras ou frequentes | Pré-Calculam resultados usados em dashboards e alertas, reduzindo a carga na hora da consulta. |
+| Desempenho de Consultas | Seguir a convenção nível:metrica:operacoes | Ex.: job:http_requests:rate5m. Deixa claro o que a regra calcula e em qual nível de agregação. |
+| Desempenho de Consultas | Agregar removendo labels irrelevantes | sum without (instance) reduz a cardinalidade do resultado e simplifica o uso. |
 
 
 <br>
