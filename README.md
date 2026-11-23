@@ -99,6 +99,7 @@
 | Desempenho de Consultas | Usar recording rules para consultas caras ou frequentes | Pré-Calculam resultados usados em dashboards e alertas, reduzindo a carga na hora da consulta. |
 | Desempenho de Consultas | Seguir a convenção nível:metrica:operacoes | Ex.: job:http_requests:rate5m. Deixa claro o que a regra calcula e em qual nível de agregação. |
 | Desempenho de Consultas | Agregar removendo labels irrelevantes | sum without (instance) reduz a cardinalidade do resultado e simplifica o uso. |
+| PromQL | 
 
 
 <br>
