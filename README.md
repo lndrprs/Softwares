@@ -90,7 +90,13 @@
 | Instrumentação | Instrumentar as fronteiras da aplicação | Requisições recebidas, chamadas a bancos e APIs externas e filas são os pontos onde os problemas costumam aparecer. |
 | Instrumentação | Expor métrica de versão e build | O padrão app_build_info{version"1.2.3"} 1 perfime correlacionar problemas com deploys. |
 | Instrumentação | Inicializar counters com zero | A série passa a existir desde o início, evitando lacunas em rate() e alertas que nunca disparam. |
-| Colet
+| Coleta (Scraping) | Manter scrape_interval consistente (15s a 60s) | Intervalos muito curtos aumentam o custo de armazenamento e carga sem ganho real de informação. |
+| Coleta (Scraping) | Preferir Pull e Usar o Pushgateway só para jobs Batch | O modelo pull facilita detectar alvos fora do ar. O pushgateway é indicado apenas para tarefas de curta duração. |
+| Coleta (Scraping) | Usar o service discovery em vez de listas estáticas | Kubernetes, Consul, EC2 etc. mantêm a lista de alvos atualizada automaticamente. |
+| Coleta (Scraping) | Filtrar com relabel_configs e metric_relabel_configs | Descarte alvos, métricas e labels desnecessários antes do armazenamento, reduzindo volume e custo. |
+| Coleta (Scraping) | Definir sample_limit e label_limit por job | Protege o servidor contra explosões de cardinalidade causadas por uma aplicação mal instrumentada. |
+| Coleta (Scraping) | Monitorar a métrica up de cada alvo | Indica se o alvo está respondendo e permite alertar sobre falhas de coleta. |
+
 
 <br>
 
