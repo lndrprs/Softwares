@@ -86,7 +86,11 @@
 | Tipos de Métrica | Preferir Histogram a Summary, para percentis | Histogramas são agregáveis entre instâncias (pods, hosts). Quantis de summary são calculados no cliente e não podem ser agregados. |
 | Tipos de Métrica | Alinha os buckets do Histograma aos SLOs | Coloque um bucket exatamente no limite do SLO (ex.: 300 ms), para medir o cumprimento com precisão. |
 | Tipos de Métrica | Nunca exibir counters em valor bruto | Usar sempre rate() ou increase(), pois o valor absoluto é pouco informativo. |
-
+| Instrumentação | Seguir RED para serviços e USE para recursos | RED: Rate, Erros, Duration. USE: Utilization, Saturation, Errors. Garantem cobertura dos sinais essenciais. |
+| Instrumentação | Instrumentar as fronteiras da aplicação | Requisições recebidas, chamadas a bancos e APIs externas e filas são os pontos onde os problemas costumam aparecer. |
+| Instrumentação | Expor métrica de versão e build | O padrão app_build_info{version"1.2.3"} 1 perfime correlacionar problemas com deploys. |
+| Instrumentação | Inicializar counters com zero | A série passa a existir desde o início, evitando lacunas em rate() e alertas que nunca disparam. |
+| Colet
 
 <br>
 
