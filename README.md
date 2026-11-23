@@ -99,7 +99,10 @@
 | Desempenho de Consultas | Usar recording rules para consultas caras ou frequentes | Pré-Calculam resultados usados em dashboards e alertas, reduzindo a carga na hora da consulta. |
 | Desempenho de Consultas | Seguir a convenção nível:metrica:operacoes | Ex.: job:http_requests:rate5m. Deixa claro o que a regra calcula e em qual nível de agregação. |
 | Desempenho de Consultas | Agregar removendo labels irrelevantes | sum without (instance) reduz a cardinalidade do resultado e simplifica o uso. |
-| PromQL | 
+| PromQL | Janela de rate() com no mínimo 4x o scrape_interval | Ex;: [1m] com scrape de 15s. Garante amostras suficientes para um cálculo estável. |
+| PromQL | Usar histogram_quantile() sobre rate() dos buckets | Ex.: histogram_quantile(0.95, sum by (le,job) (rate(http_request_duration_seconds_bucket[5m]))). |
+| PromQL | Declarar by ou without de forma explícita | Controla quais labels permanecem e evita resultados inesperados. |
+| PromQL | Evitar Regex amplas e janelas muito longas em dashboards | Consultas pesadas deixam o servidor lento. Para períodos longos, use recording rules. |
 
 
 <br>
