@@ -113,7 +113,12 @@
 | Armazenamento | Usar SSD e dimensionar recursos pelo número de séries ativas | Memória e disco crescem com a quantidade de séries, e o desempenho de I/O afeta consultas e compactação. |
 | Armazenamento | Usar remote write para retenção longa | Envie os dados para Thanos, Mimir, Cortex, VictoriaMetricas etc. em vez de estender o armazenamento local. |
 | Armazenamento | Fazer snapshots do TSDB quando precisar de backup | Permite restaurar dados em caso de falha ou migração. |
-| 
+| HA e Escala | Rodar duas réplicas idênticas coletando os mesmos alvos | As réplicas não compartilham estado, então uma assume se a outra falhar. |
+| HA e Escala | Usar federação hierárquica ou remote write para consolidar | Reúne dados de vários servidores em uma visão global. |
+| HA e Escala | Dividir por sharding funcional | Um prometheus por equipe ou domínio costuma ser mais simples do que escalar um único servidor. |
+| HA e Escala | Considerar o Prometheus Operator em Kubernetes | Gerencia a configuração por meio de CRDs (ServiceMonitor, PodMonitor, PrometheusRule). | 
+| Segurança | Habilitar TLS e autenticação | Usar web.config.file ou um proxy reverso à frente do Prometheus. |
+| Segurança | Não expor Prometheus nem exporters diretamento à internet | Reduz superfície de ataque e evita vazamento de informações do ambiente. | 
 
 
 <br>
