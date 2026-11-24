@@ -109,7 +109,11 @@
 | Alertas | Incluir labels e annotations completos | Use severity e team nos labels, e summary, description e runbook_url nas annotations, para acelerar a resposta. |
 | Alertas | Basear alertas em SLOs e Burn Rate | Mede o consumo do error budget, o que é mais significativo do que limites fixos arbitrários. |
 | Alertas | Usar o Alertmanager para agrupar, deduplicar, silenciar e rotear | Configurar inhibition rules para evitar tempestades de alertas quando uma causa raiz dispara vários. |
-|
+| Armazenamento | Definir retenção por tempo e/ou tamanho | Use --storage.tsdb.retention.time e --storage.tsdb.retention.size. O TSDB local é indicado para curto e médio prazo. |
+| Armazenamento | Usar SSD e dimensionar recursos pelo número de séries ativas | Memória e disco crescem com a quantidade de séries, e o desempenho de I/O afeta consultas e compactação. |
+| Armazenamento | Usar remote write para retenção longa | Envie os dados para Thanos, Mimir, Cortex, VictoriaMetricas etc. em vez de estender o armazenamento local. |
+| Armazenamento | Fazer snapshots do TSDB quando precisar de backup | Permite restaurar dados em caso de falha ou migração. |
+| 
 
 
 <br>
