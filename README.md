@@ -103,6 +103,13 @@
 | PromQL | Usar histogram_quantile() sobre rate() dos buckets | Ex.: histogram_quantile(0.95, sum by (le,job) (rate(http_request_duration_seconds_bucket[5m]))). |
 | PromQL | Declarar by ou without de forma explícita | Controla quais labels permanecem e evita resultados inesperados. |
 | PromQL | Evitar Regex amplas e janelas muito longas em dashboards | Consultas pesadas deixam o servidor lento. Para períodos longos, use recording rules. |
+| Alertas | Alertar sobre sintomas, não sobre cada causa | Erros, latência e indisponibilidade impactam o usuário. Alertar sobre causas gera ruído e falsos positivos. |
+| Alertas | Garantir que todo alerta seja acionável | Se ninguém precisar agir, não deve ser alerta. Evitando fadiga de alertas. | 
+| Alertas | Usar for: para evitar disparos por picos momentâneos | A condição precisa persistir por um tempo mínimo antes de notificar. |
+| Alertas | Incluir labels e annotations completos | Use severity e team nos labels, e summary, description e runbook_url nas annotations, para acelerar a resposta. |
+| Alertas | Basear alertas em SLOs e Burn Rate | Mede o consumo do error budget, o que é mais significativo do que limites fixos arbitrários. |
+| Alertas | Usar o Alertmanager para agrupar, deduplicar, silenciar e rotear | Configurar inhibition rules para evitar tempestades de alertas quando uma causa raiz dispara vários. |
+|
 
 
 <br>
