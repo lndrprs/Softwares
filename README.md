@@ -73,61 +73,60 @@
 
 | Objetivo | Diretriz | Explicação |
 |----------|----------|------------|
-| Nomenclatura | Usar snake_Case com prefixo da aplicação ou domínio | Facilita a descoberta e evita colisões entre aplicações. |
-| Nomenclatura | Incluir a unidade no nome, em unidades base | Use _seconds, _bytes, _meters, nunca milissegundos ou kilobytes para que as métricas sejam consistentes e comparáveis. |
-| Nomenclatura | Terminar counters com _total e razões com _ratio | O sufixo indica o tipo e o significado da métrica, sem precisar consultar a documentação. |
-| Nomenclatura | Representar uma única grandeza por nome | Misturar grandezas (Como tempo e bytes) sob o mesmo nome torna agregações e interpretações incorretas. |
-| Cardinalidade | Evitar labels com valores ilimitados | user_id, email, request_id, IP de Cliente e URLs completas criam séries demais e esgotam memória e desempenho. |
-| Cardinalidade | Normalizar caminhos de rotas | Use "/users/:id" em vez de "/users/12345", para manter poucas combinações de labels. |
-| Cardinalidade | Manter poucas dimensões, com valores previsíveis | Cada combinação única de labels gera uma nova série temporal, e a cardinalidade é a principal causa de problemas. |
-| Cardinalidade | Não pré-calcular na métrica o que o PromQL agrega | Guarde o valor bruto (ex.: total) e deixe a consulta somar ou calcular, evitando séries redundantes. |  
-| Tipos de Métrica | Usar Counter para valores que só crescem | Exemplo: http_requests_total. O valor zera em reinícios, o que é tratado por rate() e increase(). |
-| Tipos de Métrica | Usar Gauge para valores que sobem e descem | Exemplo: memory_usage_bytes, número de conexões ou tamanho de fila. |
-| Tipos de Métrica | Preferir Histogram a Summary, para percentis | Histogramas são agregáveis entre instâncias (pods, hosts). Quantis de summary são calculados no cliente e não podem ser agregados. |
-| Tipos de Métrica | Alinha os buckets do Histograma aos SLOs | Coloque um bucket exatamente no limite do SLO (ex.: 300 ms), para medir o cumprimento com precisão. |
-| Tipos de Métrica | Nunca exibir counters em valor bruto | Usar sempre rate() ou increase(), pois o valor absoluto é pouco informativo. |
-| Instrumentação | Seguir RED para serviços e USE para recursos | RED: Rate, Erros, Duration. USE: Utilization, Saturation, Errors. Garantem cobertura dos sinais essenciais. |
-| Instrumentação | Instrumentar as fronteiras da aplicação | Requisições recebidas, chamadas a bancos e APIs externas e filas são os pontos onde os problemas costumam aparecer. |
-| Instrumentação | Expor métrica de versão e build | O padrão app_build_info{version"1.2.3"} 1 perfime correlacionar problemas com deploys. |
-| Instrumentação | Inicializar counters com zero | A série passa a existir desde o início, evitando lacunas em rate() e alertas que nunca disparam. |
-| Coleta (Scraping) | Manter scrape_interval consistente (15s a 60s) | Intervalos muito curtos aumentam o custo de armazenamento e carga sem ganho real de informação. |
-| Coleta (Scraping) | Preferir Pull e Usar o Pushgateway só para jobs Batch | O modelo pull facilita detectar alvos fora do ar. O pushgateway é indicado apenas para tarefas de curta duração. |
-| Coleta (Scraping) | Usar o service discovery em vez de listas estáticas | Kubernetes, Consul, EC2 etc. mantêm a lista de alvos atualizada automaticamente. |
-| Coleta (Scraping) | Filtrar com relabel_configs e metric_relabel_configs | Descarte alvos, métricas e labels desnecessários antes do armazenamento, reduzindo volume e custo. |
-| Coleta (Scraping) | Definir sample_limit e label_limit por job | Protege o servidor contra explosões de cardinalidade causadas por uma aplicação mal instrumentada. |
-| Coleta (Scraping) | Monitorar a métrica up de cada alvo | Indica se o alvo está respondendo e permite alertar sobre falhas de coleta. |
-| Desempenho de Consultas | Usar recording rules para consultas caras ou frequentes | Pré-Calculam resultados usados em dashboards e alertas, reduzindo a carga na hora da consulta. |
-| Desempenho de Consultas | Seguir a convenção nível:metrica:operacoes | Ex.: job:http_requests:rate5m. Deixa claro o que a regra calcula e em qual nível de agregação. |
-| Desempenho de Consultas | Agregar removendo labels irrelevantes | sum without (instance) reduz a cardinalidade do resultado e simplifica o uso. |
-| PromQL | Janela de rate() com no mínimo 4x o scrape_interval | Ex;: [1m] com scrape de 15s. Garante amostras suficientes para um cálculo estável. |
-| PromQL | Usar histogram_quantile() sobre rate() dos buckets | Ex.: histogram_quantile(0.95, sum by (le,job) (rate(http_request_duration_seconds_bucket[5m]))). |
-| PromQL | Declarar by ou without de forma explícita | Controla quais labels permanecem e evita resultados inesperados. |
-| PromQL | Evitar Regex amplas e janelas muito longas em dashboards | Consultas pesadas deixam o servidor lento. Para períodos longos, use recording rules. |
 | Alertas | Alertar sobre sintomas, não sobre cada causa | Erros, latência e indisponibilidade impactam o usuário. Alertar sobre causas gera ruído e falsos positivos. |
-| Alertas | Garantir que todo alerta seja acionável | Se ninguém precisar agir, não deve ser alerta. Evitando fadiga de alertas. | 
-| Alertas | Usar for: para evitar disparos por picos momentâneos | A condição precisa persistir por um tempo mínimo antes de notificar. |
-| Alertas | Incluir labels e annotations completos | Use severity e team nos labels, e summary, description e runbook_url nas annotations, para acelerar a resposta. |
 | Alertas | Basear alertas em SLOs e Burn Rate | Mede o consumo do error budget, o que é mais significativo do que limites fixos arbitrários. |
+| Alertas | Garantir que todo alerta seja acionável | Se ninguém precisar agir, não deve ser alerta. Evitando fadiga de alertas. | 
+| Alertas | Incluir labels e annotations completos | Use severity e team nos labels, e summary, description e runbook_url nas annotations, para acelerar a resposta. |
+| Alertas | Usar for: para evitar disparos por picos momentâneos | A condição precisa persistir por um tempo mínimo antes de notificar. |
 | Alertas | Usar o Alertmanager para agrupar, deduplicar, silenciar e rotear | Configurar inhibition rules para evitar tempestades de alertas quando uma causa raiz dispara vários. |
 | Armazenamento | Definir retenção por tempo e/ou tamanho | Use --storage.tsdb.retention.time e --storage.tsdb.retention.size. O TSDB local é indicado para curto e médio prazo. |
-| Armazenamento | Usar SSD e dimensionar recursos pelo número de séries ativas | Memória e disco crescem com a quantidade de séries, e o desempenho de I/O afeta consultas e compactação. |
-| Armazenamento | Usar remote write para retenção longa | Envie os dados para Thanos, Mimir, Cortex, VictoriaMetricas etc. em vez de estender o armazenamento local. |
 | Armazenamento | Fazer snapshots do TSDB quando precisar de backup | Permite restaurar dados em caso de falha ou migração. |
+| Armazenamento | Usar remote write para retenção longa | Envie os dados para Thanos, Mimir, Cortex, VictoriaMetricas etc. em vez de estender o armazenamento local. |
+| Armazenamento | Usar SSD e dimensionar recursos pelo número de séries ativas | Memória e disco crescem com a quantidade de séries, e o desempenho de I/O afeta consultas e compactação. |
+| Cardinalidade | Evitar labels com valores ilimitados | user_id, email, request_id, IP de Cliente e URLs completas criam séries demais e esgotam memória e desempenho. |
+| Cardinalidade | Manter poucas dimensões, com valores previsíveis | Cada combinação única de labels gera uma nova série temporal, e a cardinalidade é a principal causa de problemas. |
+| Cardinalidade | Não pré-calcular na métrica o que o PromQL agrega | Guarde o valor bruto (ex.: total) e deixe a consulta somar ou calcular, evitando séries redundantes. |  
+| Cardinalidade | Normalizar caminhos de rotas | Use "/users/:id" em vez de "/users/12345", para manter poucas combinações de labels. |
+| Coleta (Scraping) | Definir sample_limit e label_limit por job | Protege o servidor contra explosões de cardinalidade causadas por uma aplicação mal instrumentada. |
+| Coleta (Scraping) | Filtrar com relabel_configs e metric_relabel_configs | Descarte alvos, métricas e labels desnecessários antes do armazenamento, reduzindo volume e custo. |
+| Coleta (Scraping) | Manter scrape_interval consistente (15s a 60s) | Intervalos muito curtos aumentam o custo de armazenamento e carga sem ganho real de informação. |
+| Coleta (Scraping) | Monitorar a métrica up de cada alvo | Indica se o alvo está respondendo e permite alertar sobre falhas de coleta. |
+| Coleta (Scraping) | Preferir Pull e Usar o Pushgateway só para jobs Batch | O modelo pull facilita detectar alvos fora do ar. O pushgateway é indicado apenas para tarefas de curta duração. |
+| Coleta (Scraping) | Usar o service discovery em vez de listas estáticas | Kubernetes, Consul, EC2 etc. mantêm a lista de alvos atualizada automaticamente. |
+| Desempenho de Consultas | Agregar removendo labels irrelevantes | sum without (instance) reduz a cardinalidade do resultado e simplifica o uso. |
+| Desempenho de Consultas | Seguir a convenção nível:metrica:operacoes | Ex.: job:http_requests:rate5m. Deixa claro o que a regra calcula e em qual nível de agregação. |
+| Desempenho de Consultas | Usar recording rules para consultas caras ou frequentes | Pré-Calculam resultados usados em dashboards e alertas, reduzindo a carga na hora da consulta. |
+| HA e Escala | Considerar o Prometheus Operator em Kubernetes | Gerencia a configuração por meio de CRDs (ServiceMonitor, PodMonitor, PrometheusRule). | 
+| HA e Escala | Dividir por sharding funcional | Um prometheus por equipe ou domínio costuma ser mais simples do que escalar um único servidor. |
 | HA e Escala | Rodar duas réplicas idênticas coletando os mesmos alvos | As réplicas não compartilham estado, então uma assume se a outra falhar. |
 | HA e Escala | Usar federação hierárquica ou remote write para consolidar | Reúne dados de vários servidores em uma visão global. |
-| HA e Escala | Dividir por sharding funcional | Um prometheus por equipe ou domínio costuma ser mais simples do que escalar um único servidor. |
-| HA e Escala | Considerar o Prometheus Operator em Kubernetes | Gerencia a configuração por meio de CRDs (ServiceMonitor, PodMonitor, PrometheusRule). | 
+| Instrumentação | Expor métrica de versão e build | O padrão app_build_info{version"1.2.3"} 1 perfime correlacionar problemas com deploys. |
+| Instrumentação | Inicializar counters com zero | A série passa a existir desde o início, evitando lacunas em rate() e alertas que nunca disparam. |
+| Instrumentação | Instrumentar as fronteiras da aplicação | Requisições recebidas, chamadas a bancos e APIs externas e filas são os pontos onde os problemas costumam aparecer. |
+| Instrumentação | Seguir RED para serviços e USE para recursos | RED: Rate, Erros, Duration. USE: Utilization, Saturation, Errors. Garantem cobertura dos sinais essenciais. |
+| Nomenclatura | Incluir a unidade no nome, em unidades base | Use _seconds, _bytes, _meters, nunca milissegundos ou kilobytes para que as métricas sejam consistentes e comparáveis. |
+| Nomenclatura | Representar uma única grandeza por nome | Misturar grandezas (Como tempo e bytes) sob o mesmo nome torna agregações e interpretações incorretas. |
+| Nomenclatura | Terminar counters com _total e razões com _ratio | O sufixo indica o tipo e o significado da métrica, sem precisar consultar a documentação. |
+| Nomenclatura | Usar snake_Case com prefixo da aplicação ou domínio | Facilita a descoberta e evita colisões entre aplicações. |
+| Operação | Manter Prometheus e Exporters atualizados | Traz correções de segurança, melhorias de desempenho e novos recursos. |
+| Operação | Monitorar o próprio Prometheus | Acompanhar métricas prometheus_tsdb_head_series, scrape_duration_seconds, prometheus_rule_evaluation_failures_total, memória e disco. |
+| Operação | Padronizar Dashboards no Grafana com Variáveis | Variáveis como $job e $instance permitem reutilizar o mesmo painel em vários serviços. | 
+| Operação | Testar regras de alerta com promtool test rules | Garante que os alertas disparem nas condições esperadas. |
+| Operação | Validar com promtool no CI | Usar promtool check config e promtool check rules para detectar erros antes do deploy. |
+| Operação | Versionar configuração e regras em Git | Permite rastreabilidade, revisão por pares e facilidade de rollback. |
+| PromQL | Declarar by ou without de forma explícita | Controla quais labels permanecem e evita resultados inesperados. |
+| PromQL | Evitar Regex amplas e janelas muito longas em dashboards | Consultas pesadas deixam o servidor lento. Para períodos longos, use recording rules. |
+| PromQL | Janela de rate() com no mínimo 4x o scrape_interval | Ex;: [1m] com scrape de 15s. Garante amostras suficientes para um cálculo estável. |
+| PromQL | Usar histogram_quantile() sobre rate() dos buckets | Ex.: histogram_quantile(0.95, sum by (le,job) (rate(http_request_duration_seconds_bucket[5m]))). |
+| Segurança | Desabilitar APIs administrativas se não forem necessárias | Evite --web.enable-admin-api sem necessidade, pois permite operações destrutivas. |
+| Segurança | Evitar dados sensíveis em Labels | E-mails, tokens e dados pessoais em labels ficam aarmazenados e visíveis nas consultas. |
 | Segurança | Habilitar TLS e autenticação | Usar web.config.file ou um proxy reverso à frente do Prometheus. |
 | Segurança | Não expor Prometheus nem exporters diretamento à internet | Reduz superfície de ataque e evita vazamento de informações do ambiente. | 
-| Segurança | Evitar dados sensíveis em Labels | E-mails, tokens e dados pessoais em labels ficam aarmazenados e visíveis nas consultas. |
-| Segurança | Desabilitar APIs administrativas se não forem necessárias | Evite --web.enable-admin-api sem necessidade, pois permite operações destrutivas. |
-| Operação | Monitorar o próprio Prometheus | Acompanhar métricas prometheus_tsdb_head_series, scrape_duration_seconds, prometheus_rule_evaluation_failures_total, memória e disco. |
-| Operação | Versionar configuração e regras em Git | Permite rastreabilidade, revisão por pares e facilidade de rollback. |
-| Operação | Validar com promtool no CI | Usar promtool check config e promtool check rules para detectar erros antes do deploy. |
-| Operação | Testar regras de alerta com promtool test rules | Garante que os alertas disparem nas condições esperadas. |
-| Operação | Manter Prometheus e Exporters atualizados | Traz correções de segurança, melhorias de desempenho e novos recursos. |
-| Operação | Padronizar Dashboards no Grafana com Variáveis | Variáveis como $job e $instance permitem reutilizar o mesmo painel em vários serviços. | 
-
+| Tipos de Métrica | Alinha os buckets do Histograma aos SLOs | Coloque um bucket exatamente no limite do SLO (ex.: 300 ms), para medir o cumprimento com precisão. |
+| Tipos de Métrica | Nunca exibir counters em valor bruto | Usar sempre rate() ou increase(), pois o valor absoluto é pouco informativo. |
+| Tipos de Métrica | Preferir Histogram a Summary, para percentis | Histogramas são agregáveis entre instâncias (pods, hosts). Quantis de summary são calculados no cliente e não podem ser agregados. |
+| Tipos de Métrica | Usar Counter para valores que só crescem | Exemplo: http_requests_total. O valor zera em reinícios, o que é tratado por rate() e increase(). |
+| Tipos de Métrica | Usar Gauge para valores que sobem e descem | Exemplo: memory_usage_bytes, número de conexões ou tamanho de fila. |
 
 <br>
 
