@@ -119,6 +119,14 @@
 | HA e Escala | Considerar o Prometheus Operator em Kubernetes | Gerencia a configuração por meio de CRDs (ServiceMonitor, PodMonitor, PrometheusRule). | 
 | Segurança | Habilitar TLS e autenticação | Usar web.config.file ou um proxy reverso à frente do Prometheus. |
 | Segurança | Não expor Prometheus nem exporters diretamento à internet | Reduz superfície de ataque e evita vazamento de informações do ambiente. | 
+| Segurança | Evitar dados sensíveis em Labels | E-mails, tokens e dados pessoais em labels ficam aarmazenados e visíveis nas consultas. |
+| Segurança | Desabilitar APIs administrativas se não forem necessárias | Evite --web.enable-admin-api sem necessidade, pois permite operações destrutivas. |
+| Operação | Monitorar o próprio Prometheus | Acompanhar métricas prometheus_tsdb_head_series, scrape_duration_seconds, prometheus_rule_evaluation_failures_total, memória e disco. |
+| Operação | Versionar configuração e regras em Git | Permite rastreabilidade, revisão por pares e facilidade de rollback. |
+| Operação | Validar com promtool no CI | Usar promtool check config e promtool check rules para detectar erros antes do deploy. |
+| Operação | Testar regras de alerta com promtool test rules | Garante que os alertas disparem nas condições esperadas. |
+| Operação | Manter Prometheus e Exporters atualizados | Traz correções de segurança, melhorias de desempenho e novos recursos. |
+| Operação | Padronizar Dashboards no Grafana com Variáveis | Variáveis como $job e $instance permitem reutilizar o mesmo painel em vários serviços. | 
 
 
 <br>
