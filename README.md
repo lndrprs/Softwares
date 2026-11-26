@@ -891,10 +891,40 @@
 | Webhook | Notificação enviada pelo provedor Git ao ArgoCD a cada push, para acionar o refresh sem esperar o polling. | 
  
   </div>
-  </details>        
+  </details>      
+
+</div>
+</details>  
 
 </div>
 </details>
+
+----
+
+<details>
+  <summary><b> 3. Containers / Orquestração de Containers </b></summary>
+  <div align="left">
+
+<br>
+
+<details>
+  <summary><b> 3.1. Docker - Referência: <a href="https://docs.docker.com/c/"> Documentação Técnica</a></b></summary>
+  <div align="left">
+
+<br>
+    
+  <details>
+  <summary> 3.1.1. Glossário </summary>
+  <div align="Center">
+
+<br>  
+
+| Termo | Descrição |
+|-------|-----------|
+
+ 
+  </div>
+  </details>        
 
 </div>
 </details>
