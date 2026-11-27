@@ -921,6 +921,17 @@
 
 | Termo | Descrição |
 |-------|-----------|
+| Base Image | Imagem inicial sobre a qual outra é construída, definida pela instrução "FROM". |
+| BuildKit | Motor de Build do Docker. Padrão nas versões recentes. |
+| Build args (ARG) | Variáveis disponíveis durante o build da imagem. Não persistem no contêiner em execução. |
+| Build Cache | Camadas reaproveitadas de builds anteriores quando as instruções e os arquivos não mudaram, acelerando novos builds. |
+| Build Context | Conjunto de arquivos enviados ao Docker no momento do Build - Diretório indicado no comando "docker build". |
+| Buildx | Plugin da CLI que expõe os recursos do BuildKit, como builds multiplataforma, builders customizados, etc. |
+| cgroups (Control Groups) | Recurso do Kernel Linux que limita e contabiliza o uso de CPU, memória, I/O e rede por processo. Usado para limitar os contêineres. |
+| CLI (Docker) | Ferramenta de linha de comando que se comunica com o Docker daemon, para gerenciamento de imagens, contêineres, redes e volumes. |
+| CMD | Instrução do Dockerfile que define o comando padrão do contêiner. Pode ser sobrescrita ao executar "docker run". |
+| Compose | Ferramenta para definir e executar aplicações com vários contêineres a partir de um arquivo YAML. |
+| 
 
  
   </div>
