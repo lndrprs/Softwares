@@ -931,6 +931,9 @@
 | CLI (Docker) | Ferramenta de linha de comando que se comunica com o Docker daemon, para gerenciamento de imagens, contêineres, redes e volumes. |
 | CMD | Instrução do Dockerfile que define o comando padrão do contêiner. Pode ser sobrescrita ao executar "docker run". |
 | Compose | Ferramenta para definir e executar aplicações com vários contêineres a partir de um arquivo YAML. |
+| Container | Instância em execução de uma imagem, isolada por namespaces e limitada por cgroups, compartilhando o kernel do host. |
+| COPY / ADD | Instruções do Dockerfile que copiam arquivos para a imagem. ADD também extrai arquivos compactados e aceita URLS, COPY normalmente é preferido. |
+| Dangling Image | Imagem sem tag e sem referência por outra imagem (Aparece como <none>), geralmente sobra de builds. Pode ser removida com "docker image prune". |
 | 
 
  
