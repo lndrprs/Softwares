@@ -934,7 +934,7 @@
 | Container | Instância em execução de uma imagem, isolada por namespaces e limitada por cgroups, compartilhando o kernel do host. |
 | COPY / ADD | Instruções do Dockerfile que copiam arquivos para a imagem. ADD também extrai arquivos compactados e aceita URLS, COPY normalmente é preferido. |
 | Dangling Image | Imagem sem tag e sem referência por outra imagem (Aparece como <none>), geralmente sobra de builds. Pode ser removida com "docker image prune". |
-| 
+
 
  
   </div>
